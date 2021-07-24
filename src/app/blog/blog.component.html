@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-lg-9">
+    <app-article-in-evidence></app-article-in-evidence>
+    <app-article-category [category]="inEvidenceCategory"></app-article-category>
+  </div>
+  <div class="col-lg-3">
+    <app-blog-side-banner></app-blog-side-banner>
+  </div>
+</div>
+<div class="row" *ngFor="let category of categories">
+  <div class="col-12">
+    <app-article-category [category]="category"></app-article-category>
+  </div>
+</div>

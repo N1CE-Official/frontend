@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md">
+  <a class="navbar-brand" href="#"><img src="assets/img/web-logo-12.png" alt="..." class="brand-logo"></a>
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <span class="example-spacer"></span>
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Catalog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="blog" routerLinkActive="active">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <button type="button" class="btn btn-n1ce btn-oval">Connect Wallet</button>
+</nav>

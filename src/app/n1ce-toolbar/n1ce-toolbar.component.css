@@ -1,0 +1,33 @@
+.example-spacer {
+  flex: 100;
+}
+
+.navbar {
+  padding: 10px 140px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.161);
+}
+
+img.brand-logo{
+  width: 128px;
+  margin-top: 5px;
+}
+
+.navbar .nav-link {
+  color: rgba(62,62,62,1);
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar .nav-link.active{
+  color: #009688;
+}
+
+.btn.btn-n1ce {
+  background-color: rgba(5,178,176,1);
+  color: white;
+}
+
+.btn.btn-oval {
+  border-radius: 50px;
+}

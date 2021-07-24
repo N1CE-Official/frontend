@@ -1,0 +1,57 @@
+.category-title {
+  overflow: visible;
+  height: 40px;
+}
+
+.title-text {
+  white-space: nowrap;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(45,45,45,1);
+}
+
+#Rectangle_10 {
+  fill: rgba(5,178,176,1);
+}
+.Rectangle_10 {
+  overflow: visible;
+  width: 50px;
+  height: 4px;
+  vertical-align: top;
+}
+#Rectangle_11 {
+  opacity: 0.75;
+  fill: rgba(5,178,176,1);
+}
+.Rectangle_11 {
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  margin-left: 1px;
+  vertical-align: top;
+}
+#Rectangle_12 {
+  opacity: 0.5;
+  fill: rgba(5,178,176,1);
+}
+.Rectangle_12 {
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  margin-left: 1px;
+  vertical-align: top;
+}
+#Rectangle_13 {
+  opacity: 0.25;
+  fill: rgba(5,178,176,1);
+}
+.Rectangle_13 {
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  margin-left: 1px;
+  vertical-align: top;
+}

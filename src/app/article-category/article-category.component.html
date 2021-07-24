@@ -1,0 +1,8 @@
+<div class="my-3">
+  <app-category-title *ngIf="category && category.title" [titleText]="category.title"></app-category-title>
+  <div class="row">
+    <div [className]="divSize" *ngFor="let article of category.articles">
+      <app-article-card></app-article-card>
+    </div>
+  </div>
+</div>
