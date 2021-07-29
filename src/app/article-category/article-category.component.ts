@@ -8,15 +8,12 @@ import { Category } from '../models';
 })
 export class ArticleCategoryComponent implements OnInit {
   @Input() category: Category;
-  divSize = 'col-lg-3';
 
   constructor() {
     this.category = {};
   }
 
   ngOnInit(): void {
-    if(this.category && this.category.articlesPerRow === 3) {
-      this.divSize = 'col-lg-4';
-    }
+
   }
 }

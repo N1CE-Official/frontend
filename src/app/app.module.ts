@@ -12,6 +12,12 @@ import { ArticleCategoryComponent } from './article-category/article-category.co
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogSideBannerComponent } from './blog-side-banner/blog-side-banner.component';
 import { CategoryTitleComponent } from './category-title/category-title.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { AuthorBoxComponent } from './author-box/author-box.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { SystemMessagesComponent } from './system-messages/system-messages.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +28,18 @@ import { CategoryTitleComponent } from './category-title/category-title.componen
     ArticleInEvidenceComponent,
     ArticleCategoryComponent,
     BlogSideBannerComponent,
-    CategoryTitleComponent
+    CategoryTitleComponent,
+    ArticleDetailComponent,
+    AuthorBoxComponent,
+    SystemMessagesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule, NgbModule
+    AppRoutingModule, NgbModule, HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

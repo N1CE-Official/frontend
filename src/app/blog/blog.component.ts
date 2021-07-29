@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../models';
+import { BlogService } from '../blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,52 +8,19 @@ import { Category } from '../models';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  categories: Category [] = [{
-    title: 'Blockchain', articles: [{
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }]
-  }, {
-    title: 'DeFi', articles: [{
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }]
-  }];
-  inEvidenceCategory: Category = {
-    title: 'Trending', articles: [{
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }, {
-      title: '',
-      content: ''
-    }], articlesPerRow: 3
-  };
+  categories: Category [] = [];
+  inEvidenceCategory!: Category;
 
-  constructor() {
+  constructor(public blogService: BlogService) {
   }
 
   ngOnInit(): void {
+    this.blogService.listCategories().subscribe(list => {
+      this.categories = list;
+    });
+    this.blogService.inEvidenceCategory().subscribe(inEvidenceCategory => {
+      this.inEvidenceCategory = inEvidenceCategory;
+    });
   }
 
 }
