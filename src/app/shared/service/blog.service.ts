@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Article, Category } from './models';
+import { Article, Category } from '../models';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError} from 'rxjs/operators';

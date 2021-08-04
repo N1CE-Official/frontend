@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../models';
-import { BlogService } from '../blog.service';
+import { Category } from '../../../shared/models';
+import { BlogService } from '../../../shared/service/blog.service';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  selector: 'app-blog-backbone',
+  templateUrl: './blog-backbone.component.html',
+  styleUrls: ['./blog-backbone.component.css']
 })
-export class BlogComponent implements OnInit {
+export class BlogBackboneComponent implements OnInit {
   categories: Category [] = [];
   inEvidenceCategory!: Category;
 

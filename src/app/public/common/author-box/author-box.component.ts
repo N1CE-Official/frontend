@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Expert } from '../models';
+import { Expert } from '../../../shared/models';
 
 @Component({
   selector: 'app-author-box',
