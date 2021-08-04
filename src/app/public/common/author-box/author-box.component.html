@@ -1,6 +1,10 @@
 <div *ngIf="expert" class="card author-card text-center p-3" routerLink="/expert/{{expert.id}}">
-  <img src="https://www.w3schools.com/howto/img_avatar2.png" class="img-round author-img mx-auto" alt="Profile">
+  <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
   <div class="card-body">
+    <h5 class="card-title">{{expert.name}}</h5>
+    <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 my-3">Hire (Starting from $80)</button>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <app-author-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-author-tags>
+    <app-author-social></app-author-social>
   </div>
 </div>

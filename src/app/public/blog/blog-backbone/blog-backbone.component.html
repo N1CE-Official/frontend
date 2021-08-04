@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-lg-9">
-    <app-article-in-evidence></app-article-in-evidence>
+    <app-article-in-evidence
+      *ngIf="inEvidenceCategory && inEvidenceCategory.articles && inEvidenceCategory.articles[0]"
+      [article]="inEvidenceCategory.articles[0]"></app-article-in-evidence>
     <app-article-category [category]="inEvidenceCategory"></app-article-category>
   </div>
   <div class="col-lg-3">

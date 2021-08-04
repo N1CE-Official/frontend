@@ -1,6 +1,11 @@
-<div *ngIf="article" class="card" routerLink="/post/{{article.id}}">
-  <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img-top" alt="...">
+<div *ngIf="article" class="card rounded-18" routerLink="/post/{{article.id}}">
+  <img src="{{article.featuredImg}}" class="card-img-top img-rounded" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">{{article.title}}</h5>
+    <p class="card-text article-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <app-author-badge *ngIf="article.expert" [expert]="article.expert"></app-author-badge>
+    <div class="card-footer text-muted mt-2 font-size-small">
+      2 hours ago
+    </div>
   </div>
 </div>

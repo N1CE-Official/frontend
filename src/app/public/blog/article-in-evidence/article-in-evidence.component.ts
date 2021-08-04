@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ArticleCardComponent } from '../article-card/article-card.component';
+import { Article } from '../../../shared/models';
 
 @Component({
   selector: 'app-article-in-evidence',
@@ -7,6 +8,7 @@ import { ArticleCardComponent } from '../article-card/article-card.component';
   styleUrls: ['./article-in-evidence.component.css']
 })
 export class ArticleInEvidenceComponent extends ArticleCardComponent implements OnInit {
+  @Input() article!: Article;
 
   constructor() {
     super();

@@ -2,11 +2,50 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+html, body {
+  height: 100%;
+}
 
-img.img-round{
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+img.img-round {
   border-radius: 50%;
+}
+
+img.img-rounded{
+  border-radius: 18px;
+  margin: 10px;
+  width: 95%;
+}
+
+.btn.btn-n1ce {
+  background-color: rgba(5, 178, 176, 1);
+  color: white;
+}
+
+.btn.btn-n1ce-outline {
+  background-color: white;
+  border: 1px solid rgba(5, 178, 176, 1);
+  color: rgba(5, 178, 176, 1);
+}
+
+.color-black {
+  color: black;
+}
+
+.whitespace-preline {
+  white-space: pre-line;
+}
+
+.btn.btn-oval {
+  border-radius: 50px;
+}
+
+.font-size-small {
+  font-size: 13px;
 }
 
 @media (min-width: 1800px) {

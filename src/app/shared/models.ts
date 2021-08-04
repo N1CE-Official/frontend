@@ -17,4 +17,5 @@ export class Expert {
   id?: string;
   name?: string;
   picture?: string;
+  expertise?: string [];
 }

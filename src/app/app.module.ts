@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ArticleCardComponent } from './public/blog/article-card/article-card.component';
 import { N1ceToolbarComponent } from './shared/n1ce-toolbar/n1ce-toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/service/in-memory-data.service';
 import { SystemMessagesComponent } from './shared/system-messages/system-messages.component';
+import { AuthorTagsComponent } from './public/common/author-tags/author-tags.component';
+import { AuthorSocialComponent } from './public/common/author-social/author-social.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {
+  faDribbble,
+  faFacebook,
+  faFacebookSquare,
+  faInstagram,
+  faLinkedin,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons';
+import { AuthorBadgeComponent } from './public/common/author-badge/author-badge.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +45,11 @@ import { SystemMessagesComponent } from './shared/system-messages/system-message
     CategoryTitleComponent,
     ArticleDetailComponent,
     AuthorBoxComponent,
-    SystemMessagesComponent
+    SystemMessagesComponent,
+    AuthorTagsComponent,
+    AuthorSocialComponent,
+    AuthorBadgeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +57,13 @@ import { SystemMessagesComponent } from './shared/system-messages/system-message
     AppRoutingModule, NgbModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
-    )
+    ), FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor(library: FaIconLibrary){
+    library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faInstagram, faDribbble)
+  }
 }

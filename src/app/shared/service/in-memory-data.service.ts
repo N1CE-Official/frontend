@@ -17,7 +17,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development', 'UI/UX Design'
+          ]
         },
         category: 'Blockchain',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -28,7 +31,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'Blockchain',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -39,7 +45,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'Blockchain',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -50,7 +59,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'Blockchain',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -61,7 +73,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -72,7 +87,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -83,7 +101,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -94,18 +115,39 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       },{
         id: 't1',
         title: 'Trending Article 1',
-        content: '',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis condimentum quam. Sed sed accumsan diam. Curabitur sed nisi malesuada, dignissim leo in, semper metus. Donec elementum leo at feugiat faucibus. Suspendisse volutpat ultricies erat, et convallis urna hendrerit id. Donec id elementum dolor, non condimentum dui. Nulla magna erat, pulvinar in felis a, dapibus rhoncus ipsum. Nulla non aliquam augue, sit amet mattis justo. Maecenas eu sapien in felis mollis faucibus malesuada ornare risus. Phasellus sed augue fringilla, feugiat lorem vitae, tempor arcu. Morbi ipsum velit, volutpat at lobortis ac, viverra ac risus.\n' +
+          '\n' +
+          'Nam tincidunt, massa eu congue imperdiet, neque arcu ullamcorper massa, eu ullamcorper mi eros id sapien. Vestibulum sagittis sem magna, sit amet molestie velit tristique in. Morbi vulputate nec neque eget commodo. Proin pharetra magna et est tempor, eget dignissim magna congue. Cras euismod pretium ullamcorper. Vivamus consectetur venenatis luctus. Ut nec tempor massa. Etiam in justo velit. Aenean porta sagittis congue. Donec sagittis ornare varius.\n' +
+          '\n' +
+          'Curabitur vitae lacus elementum arcu laoreet malesuada eget sed libero. Nullam pellentesque orci eget dui aliquam, a interdum ante blandit. Vestibulum nunc odio, imperdiet ac ex ut, aliquet vestibulum nisi. Maecenas commodo mi in aliquet pellentesque. Praesent bibendum felis at luctus vehicula. Aliquam sodales leo nec pulvinar dapibus. Fusce imperdiet velit et volutpat tincidunt. Maecenas tristique turpis at enim vestibulum ultricies. Cras tristique consequat augue, euismod posuere metus interdum non.\n' +
+          '\n' +
+          'Mauris augue nibh, elementum vitae sagittis vitae, imperdiet vel leo. Sed eu diam cursus, maximus justo nec, gravida ipsum. Quisque condimentum orci nunc. Duis sit amet elit eu lorem dictum maximus in at dui. Donec imperdiet neque sit amet ex iaculis semper. Vestibulum rhoncus et magna in condimentum. Duis ultricies interdum commodo. Aliquam luctus mattis semper. Donec eu ex quis nisi ornare consectetur quis nec nisi. Vivamus fermentum ullamcorper nisl, eu tincidunt nisi tempor in. In pellentesque, tortor eget aliquet aliquet, dui massa condimentum massa, sodales pharetra lectus augue vitae elit. Proin ac commodo eros. Nunc auctor auctor lobortis. Etiam vitae orci mauris.\n' +
+          '\n' +
+          'Suspendisse potenti. Nullam ultricies, velit quis semper tristique, tortor elit vestibulum augue, a hendrerit mauris tortor sed felis. Ut aliquet mauris quam, in dignissim eros imperdiet dignissim. Proin pulvinar magna placerat arcu tincidunt faucibus. Sed tincidunt aliquam tellus, eu eleifend urna pharetra eu. Nam fringilla justo ut orci dictum pretium. Sed laoreet tristique dui ut consequat. Nam sollicitudin ipsum magna, non ultrices lacus tincidunt a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vehicula purus id urna efficitur sollicitudin. Vivamus et lacus libero. Aliquam varius sem in luctus tristique.\n' +
+          '\n' +
+          'Suspendisse vel rutrum lorem. Ut ut pharetra justo. Sed vitae nisi eu neque commodo facilisis at a erat. Duis sagittis, velit in porttitor accumsan, risus urna facilisis ante, ac dictum nisl metus ut tellus. Sed nulla libero, tristique a efficitur ac, iaculis a arcu. Donec tincidunt vehicula tincidunt. Proin eu purus in justo condimentum hendrerit in mattis est. Sed varius sapien nulla, in venenatis elit sollicitudin quis. Quisque diam lectus, tincidunt ut varius sed, hendrerit sed purus.\n' +
+          '\n' +
+          'Integer et sagittis nisi. Nunc ac eros in urna lacinia pharetra et eu massa. Nunc facilisis at erat a finibus. Etiam euismod dignissim purus ac fermentum. Nullam elementum ipsum id finibus sodales. Nunc elementum quam ac sapien viverra aliquet. Suspendisse scelerisque magna leo. Vestibulum ullamcorper sodales felis vel feugiat. Aenean elementum varius turpis, et facilisis nibh lacinia nec. Proin consectetur vestibulum magna. Praesent bibendum ornare urna sed efficitur. Praesent eros purus, maximus in volutpat a, accumsan sed lorem. Fusce iaculis facilisis dictum. Aliquam erat volutpat. Etiam feugiat eros a ornare malesuada.\n' +
+          '\n' +
+          'Donec convallis enim in quam sodales tempor. Morbi in posuere sapien. Suspendisse potenti. Praesent quis quam eu sapien scelerisque auctor at non leo. Fusce pretium mi eget mi pretium bibendum. Aenean vel lobortis justo. Sed et luctus elit, laoreet elementum lacus. Donec non libero elementum, rutrum diam a, pretium leo.\n' +
+          '\n',
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development', 'UI/UX Design'
+          ]
         },
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -116,7 +158,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -127,7 +172,10 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
         },
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
@@ -141,8 +189,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Blockchain',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: '2',
         title: 'Article 2',
@@ -150,8 +203,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Blockchain',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: '3',
         title: 'Article 3',
@@ -159,8 +217,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Blockchain',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: '4',
         title: 'Article 4',
@@ -168,8 +231,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Blockchain',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }]
     }, {
       title: 'DeFi', articles: [{
@@ -179,8 +247,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'DeFi',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: '6',
         title: 'Article 6',
@@ -188,8 +261,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'DeFi',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: '7',
         title: 'Article 7',
@@ -197,8 +275,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'DeFi',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: '8',
         title: 'Article 8',
@@ -206,20 +289,45 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'DeFi',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }]
     }];
     const inEvidence = {
       title: 'Trending', articles: [{
         id: 't1',
         title: 'Trending Article 1',
-        content: '',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis condimentum quam. Sed sed accumsan diam. Curabitur sed nisi malesuada, dignissim leo in, semper metus. Donec elementum leo at feugiat faucibus. Suspendisse volutpat ultricies erat, et convallis urna hendrerit id. Donec id elementum dolor, non condimentum dui. Nulla magna erat, pulvinar in felis a, dapibus rhoncus ipsum. Nulla non aliquam augue, sit amet mattis justo. Maecenas eu sapien in felis mollis faucibus malesuada ornare risus. Phasellus sed augue fringilla, feugiat lorem vitae, tempor arcu. Morbi ipsum velit, volutpat at lobortis ac, viverra ac risus.\n' +
+          '\n' +
+          'Nam tincidunt, massa eu congue imperdiet, neque arcu ullamcorper massa, eu ullamcorper mi eros id sapien. Vestibulum sagittis sem magna, sit amet molestie velit tristique in. Morbi vulputate nec neque eget commodo. Proin pharetra magna et est tempor, eget dignissim magna congue. Cras euismod pretium ullamcorper. Vivamus consectetur venenatis luctus. Ut nec tempor massa. Etiam in justo velit. Aenean porta sagittis congue. Donec sagittis ornare varius.\n' +
+          '\n' +
+          'Curabitur vitae lacus elementum arcu laoreet malesuada eget sed libero. Nullam pellentesque orci eget dui aliquam, a interdum ante blandit. Vestibulum nunc odio, imperdiet ac ex ut, aliquet vestibulum nisi. Maecenas commodo mi in aliquet pellentesque. Praesent bibendum felis at luctus vehicula. Aliquam sodales leo nec pulvinar dapibus. Fusce imperdiet velit et volutpat tincidunt. Maecenas tristique turpis at enim vestibulum ultricies. Cras tristique consequat augue, euismod posuere metus interdum non.\n' +
+          '\n' +
+          'Mauris augue nibh, elementum vitae sagittis vitae, imperdiet vel leo. Sed eu diam cursus, maximus justo nec, gravida ipsum. Quisque condimentum orci nunc. Duis sit amet elit eu lorem dictum maximus in at dui. Donec imperdiet neque sit amet ex iaculis semper. Vestibulum rhoncus et magna in condimentum. Duis ultricies interdum commodo. Aliquam luctus mattis semper. Donec eu ex quis nisi ornare consectetur quis nec nisi. Vivamus fermentum ullamcorper nisl, eu tincidunt nisi tempor in. In pellentesque, tortor eget aliquet aliquet, dui massa condimentum massa, sodales pharetra lectus augue vitae elit. Proin ac commodo eros. Nunc auctor auctor lobortis. Etiam vitae orci mauris.\n' +
+          '\n' +
+          'Suspendisse potenti. Nullam ultricies, velit quis semper tristique, tortor elit vestibulum augue, a hendrerit mauris tortor sed felis. Ut aliquet mauris quam, in dignissim eros imperdiet dignissim. Proin pulvinar magna placerat arcu tincidunt faucibus. Sed tincidunt aliquam tellus, eu eleifend urna pharetra eu. Nam fringilla justo ut orci dictum pretium. Sed laoreet tristique dui ut consequat. Nam sollicitudin ipsum magna, non ultrices lacus tincidunt a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vehicula purus id urna efficitur sollicitudin. Vivamus et lacus libero. Aliquam varius sem in luctus tristique.\n' +
+          '\n' +
+          'Suspendisse vel rutrum lorem. Ut ut pharetra justo. Sed vitae nisi eu neque commodo facilisis at a erat. Duis sagittis, velit in porttitor accumsan, risus urna facilisis ante, ac dictum nisl metus ut tellus. Sed nulla libero, tristique a efficitur ac, iaculis a arcu. Donec tincidunt vehicula tincidunt. Proin eu purus in justo condimentum hendrerit in mattis est. Sed varius sapien nulla, in venenatis elit sollicitudin quis. Quisque diam lectus, tincidunt ut varius sed, hendrerit sed purus.\n' +
+          '\n' +
+          'Integer et sagittis nisi. Nunc ac eros in urna lacinia pharetra et eu massa. Nunc facilisis at erat a finibus. Etiam euismod dignissim purus ac fermentum. Nullam elementum ipsum id finibus sodales. Nunc elementum quam ac sapien viverra aliquet. Suspendisse scelerisque magna leo. Vestibulum ullamcorper sodales felis vel feugiat. Aenean elementum varius turpis, et facilisis nibh lacinia nec. Proin consectetur vestibulum magna. Praesent bibendum ornare urna sed efficitur. Praesent eros purus, maximus in volutpat a, accumsan sed lorem. Fusce iaculis facilisis dictum. Aliquam erat volutpat. Etiam feugiat eros a ornare malesuada.\n' +
+          '\n' +
+          'Donec convallis enim in quam sodales tempor. Morbi in posuere sapien. Suspendisse potenti. Praesent quis quam eu sapien scelerisque auctor at non leo. Fusce pretium mi eget mi pretium bibendum. Aenean vel lobortis justo. Sed et luctus elit, laoreet elementum lacus. Donec non libero elementum, rutrum diam a, pretium leo.\n' +
+          '\n',
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development', 'UI/UX Design'
+          ]
+        },
+        category: 'Trending',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: 't2',
         title: 'Trending Article 2',
@@ -227,8 +335,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Trending',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }, {
         id: 't3',
         title: 'Trending Article 3',
@@ -236,8 +349,13 @@ export class InMemoryDataService implements InMemoryDbService{
         expert: {
           id: 'Expert 1',
           name: 'Expert 1',
-          picture: 'https://www.w3schools.com/howto/img_avatar2.png'
-        }
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Trending',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }], articlesPerRow: 3
     };
     return {posts, categories, inEvidence};

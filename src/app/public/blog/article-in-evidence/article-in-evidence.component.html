@@ -1,4 +1,4 @@
-<div class="card bg-dark text-white">
+<div *ngIf="article" class="card text-white border-0" routerLink="/post/{{article.id}}">
   <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="card-img" alt="...">
   <div class="card-img-overlay">
     <h5 class="card-title">Card title</h5>

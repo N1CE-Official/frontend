@@ -6,4 +6,11 @@
       <app-author-box *ngIf="article.expert" [expert]="article.expert"></app-author-box>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12 p-4 text-justify whitespace-preline">
+      <p>
+        {{article.content}}
+      </p>
+    </div>
+  </div>
 </ng-container>

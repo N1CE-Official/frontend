@@ -1,0 +1,13 @@
+<div *ngIf="expert" routerLink="/expert/{{expert.id}}" class="row">
+  <div class="col-3">
+    <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+  </div>
+  <div class="col-9">
+    <div>
+      <span class="expert-name">{{expert.name}}</span>
+    </div>
+    <div>
+      <a href="#" *ngFor="let tag of expert.expertise" class="mr-1 expert-tag">{{tag}}</a>
+    </div>
+  </div>
+</div>
