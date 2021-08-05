@@ -24,7 +24,6 @@ import { AuthorSocialComponent } from './public/common/author-social/author-soci
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faDribbble,
-  faFacebook,
   faFacebookSquare,
   faInstagram,
   faLinkedin,
@@ -32,6 +31,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { AuthorBadgeComponent } from './public/common/author-badge/author-badge.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { AuthorBadgeInEvidenceComponent } from './public/common/author-badge-in-evidence/author-badge-in-evidence.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,8 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     AuthorTagsComponent,
     AuthorSocialComponent,
     AuthorBadgeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AuthorBadgeInEvidenceComponent
   ],
   imports: [
     BrowserModule,

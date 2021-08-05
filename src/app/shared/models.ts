@@ -2,6 +2,7 @@ export class Article {
   id?: string;
   title?: string;
   content?: string;
+  snippet?: string;
   expert?: Expert;
   featuredImg?: string;
   category?: string;

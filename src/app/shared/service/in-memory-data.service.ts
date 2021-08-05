@@ -23,7 +23,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '2',
         title: 'Article 2',
@@ -37,7 +38,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '3',
         title: 'Article 3',
@@ -51,7 +53,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '4',
         title: 'Article 4',
@@ -65,7 +68,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '5',
         title: 'Article 5',
@@ -79,7 +83,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '6',
         title: 'Article 6',
@@ -93,7 +98,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '7',
         title: 'Article 7',
@@ -107,7 +113,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '8',
         title: 'Article 8',
@@ -121,7 +128,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       },{
         id: 't1',
         title: 'Trending Article 1',
@@ -150,7 +158,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Trending',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: 't2',
         title: 'Trending Article 2',
@@ -164,7 +173,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Trending',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: 't3',
         title: 'Trending Article 3',
@@ -178,7 +188,23 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Trending',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+      }, {
+        id: 't4',
+        title: 'Trending Article 4',
+        content: '',
+        expert: {
+          id: 'Expert 1',
+          name: 'Expert 1',
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Trending',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }
     ];
     const categories = [{
@@ -195,7 +221,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '2',
         title: 'Article 2',
@@ -209,7 +236,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '3',
         title: 'Article 3',
@@ -223,7 +251,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '4',
         title: 'Article 4',
@@ -237,7 +266,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Blockchain',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }]
     }, {
       title: 'DeFi', articles: [{
@@ -253,7 +283,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '6',
         title: 'Article 6',
@@ -267,7 +298,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '7',
         title: 'Article 7',
@@ -281,7 +313,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: '8',
         title: 'Article 8',
@@ -295,7 +328,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'DeFi',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }]
     }];
     const inEvidence = {
@@ -327,7 +361,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Trending',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: 't2',
         title: 'Trending Article 2',
@@ -341,7 +376,8 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Trending',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: 't3',
         title: 'Trending Article 3',
@@ -355,7 +391,23 @@ export class InMemoryDataService implements InMemoryDbService{
           ]
         },
         category: 'Trending',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+      }, {
+        id: 't4',
+        title: 'Trending Article 4',
+        content: '',
+        expert: {
+          id: 'Expert 1',
+          name: 'Expert 1',
+          picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+          expertise: [
+            'Blockchain', 'Web Development'
+          ]
+        },
+        category: 'Trending',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }], articlesPerRow: 3
     };
     return {posts, categories, inEvidence};
