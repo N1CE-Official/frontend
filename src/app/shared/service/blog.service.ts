@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Article, Category } from '../models';
+import { Article, Category, Expert } from '../models';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError} from 'rxjs/operators';
@@ -12,6 +12,7 @@ export class BlogService {
   private articlesUrl = 'api/posts';
   private categoriesUrl = 'api/categories';
   private inEvidenceUrl = 'api/inEvidence';
+  private expertsUrl = 'api/experts';
 
   constructor(
     private http: HttpClient,
@@ -29,8 +30,14 @@ export class BlogService {
   public getArticle(id: string): Observable<Article> {
     const url = `${this.articlesUrl}/${id}`;
     return this.http.get<Article>(url).pipe(
-      // tap(_ => this.log(`fetched article id=${id}`)),
       catchError(this.handleError<Article>(`getArticle id=${id}`))
+    );
+  }
+
+  public getExpert(id: string): Observable<Expert> {
+    const url = `${this.expertsUrl}/${id}`;
+    return this.http.get<Expert>(url).pipe(
+      catchError(this.handleError<Expert>(`getExpert id=${id}`))
     );
   }
 

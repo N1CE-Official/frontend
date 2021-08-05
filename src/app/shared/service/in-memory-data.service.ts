@@ -4,9 +4,10 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryDataService implements InMemoryDbService{
+export class InMemoryDataService implements InMemoryDbService {
 
-  constructor() { }
+  constructor() {
+  }
 
   createDb() {
     const posts = [
@@ -130,7 +131,7 @@ export class InMemoryDataService implements InMemoryDbService{
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-      },{
+      }, {
         id: 't1',
         title: 'Trending Article 1',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis condimentum quam. Sed sed accumsan diam. Curabitur sed nisi malesuada, dignissim leo in, semper metus. Donec elementum leo at feugiat faucibus. Suspendisse volutpat ultricies erat, et convallis urna hendrerit id. Donec id elementum dolor, non condimentum dui. Nulla magna erat, pulvinar in felis a, dapibus rhoncus ipsum. Nulla non aliquam augue, sit amet mattis justo. Maecenas eu sapien in felis mollis faucibus malesuada ornare risus. Phasellus sed augue fringilla, feugiat lorem vitae, tempor arcu. Morbi ipsum velit, volutpat at lobortis ac, viverra ac risus.\n' +
@@ -410,6 +411,16 @@ export class InMemoryDataService implements InMemoryDbService{
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }], articlesPerRow: 3
     };
-    return {posts, categories, inEvidence};
+    const experts = [
+      {
+        id: 'Expert 1',
+        name: 'Expert 1',
+        picture: 'https://www.w3schools.com/howto/img_avatar2.png',
+        expertise: [
+          'Blockchain', 'Web Development', 'UI/UX Design'
+        ]
+      }
+    ];
+    return {posts, categories, inEvidence, experts};
   }
 }

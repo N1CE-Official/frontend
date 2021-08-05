@@ -32,6 +32,7 @@ import {
 import { AuthorBadgeComponent } from './public/common/author-badge/author-badge.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { AuthorBadgeInEvidenceComponent } from './public/common/author-badge-in-evidence/author-badge-in-evidence.component';
+import { ExpertDetailComponent } from './public/common/expert-detail/expert-detail.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AuthorBadgeInEvidenceComponent } from './public/common/author-badge-in-
     BlogSideBannerComponent,
     CategoryTitleComponent,
     ArticleDetailComponent,
+    ExpertDetailComponent,
     AuthorBoxComponent,
     SystemMessagesComponent,
     AuthorTagsComponent,
