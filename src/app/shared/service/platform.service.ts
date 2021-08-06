@@ -56,6 +56,6 @@ export class PlatformService {
   }
 
   public listServices(): Observable<Service[]> {
-    return this.http.get<BlogPost[]>(this.servicesUrl);
+    return this.http.get<Service[]>(this.servicesUrl);
   }
 }

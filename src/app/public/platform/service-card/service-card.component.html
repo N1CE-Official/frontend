@@ -1,10 +1,11 @@
 <div *ngIf="service" class="card rounded-18" routerLink="/service/{{service.id}}">
   <img src="{{service.featuredImg}}" class="card-img-top img-rounded" alt="...">
-  <div class="card-body">
+  <div class="card-body py-1">
     <h5 class="card-title">{{service.title}}</h5>
-    <app-expert-badge *ngIf="service.expertId" [expertId]="service.expertId"></app-expert-badge>
-    <div class="card-footer text-muted mt-2 font-size-small">
-      2 hours ago
+    <hr class="solid"/>
+    <app-expert-badge-for-services *ngIf="service.expertId" [expertId]="service.expertId"></app-expert-badge-for-services>
+    <div class="card-footer mt-2 font-size-small">
+      <span class="font-weight-bold">Starting from ${{service.startingPrice}}</span>
     </div>
   </div>
 </div>

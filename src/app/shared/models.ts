@@ -20,6 +20,8 @@ export class Expert {
   picture?: string;
   shortBio?: string;
   expertise?: string [];
+  rating?: number;
+  reviews?: number;
 }
 
 export class ServiceCategory {
@@ -34,4 +36,5 @@ export class Service {
   expertId?: string;
   featuredImg?: string;
   category?: string;
+  startingPrice?: number;
 }

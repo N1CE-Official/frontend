@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogCategory, ServiceCategory } from '../../../shared/models';
-import { BlogService } from '../../../shared/service/blog.service';
+import { Service, ServiceCategory } from '../../../shared/models';
 import { PlatformService } from '../../../shared/service/platform.service';
 
 @Component({
@@ -10,13 +9,15 @@ import { PlatformService } from '../../../shared/service/platform.service';
 })
 export class CatalogHomeComponent implements OnInit {
   categories: ServiceCategory [] = [];
+  services: Service[] = [];
 
   constructor(public platformService: PlatformService) {
   }
 
   ngOnInit(): void {
-    this.platformService.listCategories().subscribe(list => {
-      this.categories = list;
+    this.platformService.listCategories().subscribe(list => this.categories = list);
+    this.platformService.listServices().subscribe(list => {
+      this.services = list;
     });
   }
 

@@ -1,0 +1,14 @@
+span.expert-rating {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+span.expert-reviews {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+.expert-rating-icon {
+  color: rgba(239,218,67,1);
+  font-size: 12px;
+}

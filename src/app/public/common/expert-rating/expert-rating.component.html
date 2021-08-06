@@ -1,0 +1,5 @@
+<div *ngIf="rating && reviews" class="d-flex">
+  <span class="expert-rating">{{rating}}</span>
+  <fa-icon [icon]="['fas', 'star']" class="mx-1 expert-rating-icon"></fa-icon>
+  <span class="expert-reviews">({{reviews}})</span>
+</div>

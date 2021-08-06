@@ -48,6 +48,10 @@ img.img-rounded{
   font-size: 13px;
 }
 
+hr.solid {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
 @media (min-width: 1800px) {
   .container {
     min-width: 1640px;

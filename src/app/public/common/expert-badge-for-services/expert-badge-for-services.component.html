@@ -1,0 +1,16 @@
+<div *ngIf="expert" routerLink="/expert/{{expert.id}}" class="row">
+  <div class="col-2">
+    <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+  </div>
+  <div class="col-10">
+    <div>
+      <span class="expert-name">{{expert.name}}</span>
+    </div>
+    <div>
+      <app-expert-rating *ngIf="expert.rating && expert.reviews" [rating]="expert.rating" [reviews]="expert.reviews"></app-expert-rating>
+    </div>
+  </div>
+  <div class="col-12 mt-2 expert-bio">
+    {{expert.shortBio}}
+  </div>
+</div>

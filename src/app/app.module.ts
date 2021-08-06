@@ -38,6 +38,9 @@ import { ServiceCardComponent } from './public/platform/service-card/service-car
 import { CatalogHomeComponent } from './public/platform/catalog-home/catalog-home.component';
 import { PlatformCategoryComponent } from './public/platform/platform-category/platform-category.component';
 import { ServiceListComponent } from './public/platform/service-list/service-list.component';
+import { ExpertBadgeForServicesComponent } from './public/common/expert-badge-for-services/expert-badge-for-services.component';
+import { ExpertRatingComponent } from './public/common/expert-rating/expert-rating.component';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,9 @@ import { ServiceListComponent } from './public/platform/service-list/service-lis
     ServiceCardComponent,
     CatalogHomeComponent,
     PlatformCategoryComponent,
-    ServiceListComponent
+    ServiceListComponent,
+    ExpertBadgeForServicesComponent,
+    ExpertRatingComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +82,6 @@ import { ServiceListComponent } from './public/platform/service-list/service-lis
 })
 export class AppModule {
   constructor(library: FaIconLibrary){
-    library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faInstagram, faDribbble)
+    library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faInstagram, faDribbble, faStar)
   }
 }

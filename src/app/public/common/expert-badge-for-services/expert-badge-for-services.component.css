@@ -1,0 +1,15 @@
+img.author-img {
+  width: 48px;
+  height: 48px;
+}
+
+.expert-bio {
+  color: darkgrey;
+  font-size: 11px;
+}
+
+span.expert-name {
+  color: rgba(5, 178, 176, 1);
+  font-size: 14px;
+  font-weight: bold;
+}

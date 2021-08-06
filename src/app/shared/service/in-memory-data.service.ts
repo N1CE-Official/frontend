@@ -141,7 +141,9 @@ export class InMemoryDataService implements InMemoryDbService {
         expertise: [
           'Blockchain', 'Web Development', 'UI/UX Design'
         ],
-        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        rating: 4.6,
+        reviews: 189
       },
       {
         id: 'Expert 2',
@@ -150,7 +152,9 @@ export class InMemoryDataService implements InMemoryDbService {
         expertise: [
           'Smart Contract Development'
         ],
-        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        rating: 4.4,
+        reviews: 231
       }
     ];
     const serviceCategories: ServiceCategory[] = [{
@@ -164,7 +168,8 @@ export class InMemoryDataService implements InMemoryDbService {
         content: '',
         expertId: 'Expert 2',
         category: 'Smart Contract Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 39
       },
       {
         id: '2',
@@ -172,7 +177,8 @@ export class InMemoryDataService implements InMemoryDbService {
         content: '',
         expertId: 'Expert 1',
         category: 'Smart Contract Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 79
       },
       {
         id: '3',
@@ -180,45 +186,51 @@ export class InMemoryDataService implements InMemoryDbService {
         content: '',
         expertId: 'Expert 2',
         category: 'Smart Contract Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 49
       }, {
         id: '4',
         title: 'Write a complete DApp smart contract using Solidity',
         content: '',
         expertId: 'Expert 1',
         category: 'Smart Contract Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 150
       },
       {
         id: '5',
-        title: 'Create a frontend application using React',
+        title: 'Create a complex frontend application using React',
         content: '',
         expertId: 'Expert 1',
         category: 'Web Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 280
       },
       {
         id: '6',
-        title: 'Create a frontend application using Vue',
+        title: 'Create a simple frontend application using Vue',
         content: '',
         expertId: 'Expert 2',
         category: 'Web Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 99
       },
       {
         id: '7',
-        title: 'Create a RESTful web service using Java and Spring Boot',
+        title: 'Create a simple RESTful web service using Java and Spring Boot',
         content: '',
         expertId: 'Expert 2',
         category: 'Web Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 120
       }, {
         id: '8',
-        title: 'Create a RESTful web service using nodeJs and express',
+        title: 'Create a complex RESTful web service using nodeJs and express',
         content: '',
         expertId: 'Expert 1',
         category: 'Web Development',
-        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 399
       }];
     return {posts, blogCategories, inEvidence, experts, serviceCategories, services};
   }
