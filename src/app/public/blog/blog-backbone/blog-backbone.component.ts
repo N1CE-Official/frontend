@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../../../shared/models';
+import { BlogCategory } from '../../../shared/models';
 import { BlogService } from '../../../shared/service/blog.service';
 
 @Component({
@@ -8,8 +8,8 @@ import { BlogService } from '../../../shared/service/blog.service';
   styleUrls: ['./blog-backbone.component.css']
 })
 export class BlogBackboneComponent implements OnInit {
-  categories: Category [] = [];
-  inEvidenceCategory!: Category;
+  categories: BlogCategory [] = [];
+  inEvidenceCategory!: BlogCategory;
 
   constructor(public blogService: BlogService) {
   }

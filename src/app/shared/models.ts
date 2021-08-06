@@ -1,16 +1,16 @@
-export class Article {
+export class BlogPost {
   id?: string;
   title?: string;
   content?: string;
   snippet?: string;
-  expert?: Expert;
+  expertId?: string;
   featuredImg?: string;
   category?: string;
 }
 
-export class Category {
+export class BlogCategory {
   title?: string;
-  articles?: Article [];
+  articles?: string [];
   articlesPerRow?: number;
 }
 
@@ -18,5 +18,20 @@ export class Expert {
   id?: string;
   name?: string;
   picture?: string;
+  shortBio?: string;
   expertise?: string [];
+}
+
+export class ServiceCategory {
+  title?: string;
+  services?: string [];
+}
+
+export class Service {
+  id?: string;
+  title?: string;
+  content?: string;
+  expertId?: string;
+  featuredImg?: string;
+  category?: string;
 }

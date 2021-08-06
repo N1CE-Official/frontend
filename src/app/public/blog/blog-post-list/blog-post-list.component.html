@@ -1,0 +1,5 @@
+<div class="row" *ngIf="blogPosts">
+  <div [className]="this.postsPerRow === 3 ? 'col-lg-4' : 'col-lg-3'" *ngFor="let article of blogPosts">
+    <app-blog-post-card *ngIf="article.id" [articleId]="article.id"></app-blog-post-card>
+  </div>
+</div>

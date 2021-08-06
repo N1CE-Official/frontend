@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Article, Expert } from '../../../shared/models';
+import { BlogPost, Expert } from '../../../shared/models';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../../shared/service/blog.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-expert-detail',
@@ -10,6 +11,7 @@ import { BlogService } from '../../../shared/service/blog.service';
 })
 export class ExpertDetailComponent implements OnInit {
   @Input() expert!: Expert;
+  articles!: BlogPost[];
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +26,12 @@ export class ExpertDetailComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (id != null)
       this.blogService.getExpert(id)
-        .subscribe(expert => this.expert = expert);
+        .subscribe(expert => {
+          this.expert = expert;
+          this.blogService.listBlogPosts()
+            .pipe(map(list => list.filter(article => article.expertId && article.expertId === expert.id)))
+            .subscribe(list => this.articles = list)
+        });
   }
 
 }

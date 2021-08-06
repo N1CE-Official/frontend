@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BlogPost, BlogCategory, Expert } from '../models';
+import { BlogPost, BlogCategory, Expert, ServiceCategory, Service } from '../models';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
@@ -8,10 +8,9 @@ import { MessageService } from './message.service';
 @Injectable({
   providedIn: 'root'
 })
-export class BlogService {
-  private postsUrl = 'api/posts';
-  private categoriesUrl = 'api/blogCategories';
-  private inEvidenceUrl = 'api/inEvidence';
+export class PlatformService {
+  private servicesUrl = 'api/services';
+  private categoriesUrl = 'api/serviceCategories';
   private expertsUrl = 'api/experts';
 
   constructor(
@@ -19,18 +18,14 @@ export class BlogService {
     private messageService: MessageService) {
   }
 
-  public listCategories(): Observable<BlogCategory[]> {
+  public listCategories(): Observable<ServiceCategory[]> {
     return this.http.get<BlogCategory[]>(this.categoriesUrl)
   }
 
-  public inEvidenceCategory(): Observable<BlogCategory> {
-    return this.http.get<BlogCategory>(this.inEvidenceUrl);
-  }
-
-  public getPost(id: string): Observable<BlogPost> {
-    const url = `${this.postsUrl}/${id}`;
-    return this.http.get<BlogPost>(url).pipe(
-      catchError(this.handleError<BlogPost>(`getPost id=${id}`))
+  public getService(id: string): Observable<Service> {
+    const url = `${this.servicesUrl}/${id}`;
+    return this.http.get<Service>(url).pipe(
+      catchError(this.handleError<Service>(`getService id=${id}`))
     );
   }
 
@@ -60,7 +55,7 @@ export class BlogService {
     this.messageService.add(`BlogService: ${message}`);
   }
 
-  public listBlogPosts(): Observable<BlogPost[]> {
-    return this.http.get<BlogPost[]>(this.postsUrl);
+  public listServices(): Observable<Service[]> {
+    return this.http.get<BlogPost[]>(this.servicesUrl);
   }
 }

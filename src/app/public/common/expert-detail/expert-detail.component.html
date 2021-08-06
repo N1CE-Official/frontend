@@ -1,10 +1,24 @@
 <ng-container *ngIf="expert">
-  <h1>{{expert.name}}</h1>
   <div class="row">
-    <div class="col-lg-9"><img src="{{expert.picture}}" alt="{{expert.name}}" class="article-featured"/></div>
+    <div class="col-12 d-flex">
+      <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+      <div class="card-body">
+        <h5 class="card-title">{{expert.name}}</h5>
+        <p class="card-text">{{expert.shortBio}}</p>
+        <app-expert-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-expert-tags>
+        <app-expert-social-icons></app-expert-social-icons>
+      </div>
+    </div>
   </div>
   <div class="row">
-    <div class="col-12 p-4 text-justify whitespace-preline">
+    <div class="col-12">
+      <hr class="solid">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-category-title [titleText]="'Published Posts'"></app-category-title>
+      <app-blog-post-list [blogPosts]="articles"></app-blog-post-list>
     </div>
   </div>
 </ng-container>

@@ -1,3 +1,9 @@
-img.article-featured {
-  border-radius: 3%;
+img.author-img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 1px solid #eeeeee;
 }

@@ -1,0 +1,16 @@
+<ng-container *ngIf="blogPost">
+  <h1>{{blogPost.title}}</h1>
+  <div class="row">
+    <div class="col-lg-9"><img src="{{blogPost.featuredImg}}" alt="{{blogPost.title}}" class="article-featured"/></div>
+    <div class="col-lg-3">
+      <app-expert-box *ngIf="blogPost.expertId" [expertId]="blogPost.expertId"></app-expert-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 p-4 text-justify whitespace-preline">
+      <p>
+        {{blogPost.content}}
+      </p>
+    </div>
+  </div>
+</ng-container>

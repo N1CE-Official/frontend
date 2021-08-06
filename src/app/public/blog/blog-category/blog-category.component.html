@@ -1,0 +1,4 @@
+<div class="my-3" *ngIf="category">
+  <app-category-title *ngIf="category && category.title" [titleText]="category.title"></app-category-title>
+  <app-blog-post-list *ngIf="articles" [blogPosts]="articles" [postsPerRow]="category.articlesPerRow"></app-blog-post-list>
+</div>

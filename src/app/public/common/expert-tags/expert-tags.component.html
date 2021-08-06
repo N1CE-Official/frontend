@@ -1,0 +1,5 @@
+<ng-container *ngIf="tags">
+  <div>
+    <button *ngFor="let tag of tags" class="btn btn-oval btn-n1ce-outline font-size-small m-1" routerLink="/service-category/{{tag}}">{{tag}}</button>
+  </div>
+</ng-container>

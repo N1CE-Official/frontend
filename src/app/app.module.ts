@@ -4,23 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ArticleCardComponent } from './public/blog/article-card/article-card.component';
+import { BlogPostCardComponent } from './public/blog/blog-post-card/blog-post-card.component';
 import { N1ceToolbarComponent } from './shared/n1ce-toolbar/n1ce-toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BlogBackboneComponent } from './public/blog/blog-backbone/blog-backbone.component';
-import { ArticleInEvidenceComponent } from './public/blog/article-in-evidence/article-in-evidence.component';
-import { ArticleCategoryComponent } from './public/blog/article-category/article-category.component';
+import { BlogPostInEvidenceComponent } from './public/blog/blog-post-in-evidence/blog-post-in-evidence.component';
+import { BlogCategoryComponent } from './public/blog/blog-category/blog-category.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogSideBannerComponent } from './public/blog/blog-side-banner/blog-side-banner.component';
-import { CategoryTitleComponent } from './public/blog/category-title/category-title.component';
-import { ArticleDetailComponent } from './public/blog/article-detail/article-detail.component';
-import { AuthorBoxComponent } from './public/common/author-box/author-box.component';
+import { CategoryTitleComponent } from './public/common/category-title/category-title.component';
+import { BlogPostDetailComponent } from './public/blog/blog-post-detail/blog-post-detail.component';
+import { ExpertBoxComponent } from './public/common/expert-box/expert-box.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/service/in-memory-data.service';
 import { SystemMessagesComponent } from './shared/system-messages/system-messages.component';
-import { AuthorTagsComponent } from './public/common/author-tags/author-tags.component';
-import { AuthorSocialComponent } from './public/common/author-social/author-social.component';
+import { ExpertTagsComponent } from './public/common/expert-tags/expert-tags.component';
+import { ExpertSocialIconsComponent } from './public/common/expert-social-icons/expert-social-icons.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faDribbble,
@@ -29,30 +29,34 @@ import {
   faLinkedin,
   faTwitter
 } from '@fortawesome/free-brands-svg-icons';
-import { AuthorBadgeComponent } from './public/common/author-badge/author-badge.component';
+import { ExpertBadgeComponent } from './public/common/expert-badge/expert-badge.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { AuthorBadgeInEvidenceComponent } from './public/common/author-badge-in-evidence/author-badge-in-evidence.component';
+import { ExpertBadgeInEvidenceComponent } from './public/common/expert-badge-in-evidence/expert-badge-in-evidence.component';
 import { ExpertDetailComponent } from './public/common/expert-detail/expert-detail.component';
+import { BlogPostListComponent } from './public/blog/blog-post-list/blog-post-list.component';
+import { ServiceCardComponent } from './public/platform/service-card/service-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleCardComponent,
+    BlogPostCardComponent,
     N1ceToolbarComponent,
     BlogBackboneComponent,
-    ArticleInEvidenceComponent,
-    ArticleCategoryComponent,
+    BlogPostInEvidenceComponent,
+    BlogCategoryComponent,
     BlogSideBannerComponent,
     CategoryTitleComponent,
-    ArticleDetailComponent,
+    BlogPostDetailComponent,
     ExpertDetailComponent,
-    AuthorBoxComponent,
+    ExpertBoxComponent,
     SystemMessagesComponent,
-    AuthorTagsComponent,
-    AuthorSocialComponent,
-    AuthorBadgeComponent,
+    ExpertTagsComponent,
+    ExpertSocialIconsComponent,
+    ExpertBadgeComponent,
     PageNotFoundComponent,
-    AuthorBadgeInEvidenceComponent
+    ExpertBadgeInEvidenceComponent,
+    BlogPostListComponent,
+    ServiceCardComponent
   ],
   imports: [
     BrowserModule,
