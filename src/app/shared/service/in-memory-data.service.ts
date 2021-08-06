@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { BlogPost, BlogCategory, Expert } from '../models';
+import { BlogCategory, BlogPost, Expert, Service, ServiceCategory } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -153,6 +153,73 @@ export class InMemoryDataService implements InMemoryDbService {
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }
     ];
-    return {posts, blogCategories, inEvidence, experts};
+    const serviceCategories: ServiceCategory[] = [{
+      title: 'Smart Contract Development',
+      services: ['1', '2', '3', '4']
+    }, {title: 'Web Development', services: ['5', '6', '7', '8']}];
+    const services: Service[] = [
+      {
+        id: '1',
+        title: 'Write an ERC-20 token smart contract in Solidity',
+        content: '',
+        expertId: 'Expert 2',
+        category: 'Smart Contract Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      },
+      {
+        id: '2',
+        title: 'Write a staking smart contract in Solidity',
+        content: '',
+        expertId: 'Expert 1',
+        category: 'Smart Contract Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      },
+      {
+        id: '3',
+        title: 'Write a locking smart contract in Solidity',
+        content: '',
+        expertId: 'Expert 2',
+        category: 'Smart Contract Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      }, {
+        id: '4',
+        title: 'Write a complete DApp smart contract using Solidity',
+        content: '',
+        expertId: 'Expert 1',
+        category: 'Smart Contract Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      },
+      {
+        id: '5',
+        title: 'Create a frontend application using React',
+        content: '',
+        expertId: 'Expert 1',
+        category: 'Web Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      },
+      {
+        id: '6',
+        title: 'Create a frontend application using Vue',
+        content: '',
+        expertId: 'Expert 2',
+        category: 'Web Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      },
+      {
+        id: '7',
+        title: 'Create a RESTful web service using Java and Spring Boot',
+        content: '',
+        expertId: 'Expert 2',
+        category: 'Web Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      }, {
+        id: '8',
+        title: 'Create a RESTful web service using nodeJs and express',
+        content: '',
+        expertId: 'Expert 1',
+        category: 'Web Development',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      }];
+    return {posts, blogCategories, inEvidence, experts, serviceCategories, services};
   }
 }

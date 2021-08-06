@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlogPostCardComponent } from './public/blog/blog-post-card/blog-post-card.component';
 import { N1ceToolbarComponent } from './shared/n1ce-toolbar/n1ce-toolbar.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BlogBackboneComponent } from './public/blog/blog-backbone/blog-backbone.component';
+import { BlogHomeComponent } from './public/blog/blog-home/blog-home.component';
 import { BlogPostInEvidenceComponent } from './public/blog/blog-post-in-evidence/blog-post-in-evidence.component';
 import { BlogCategoryComponent } from './public/blog/blog-category/blog-category.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -35,13 +35,16 @@ import { ExpertBadgeInEvidenceComponent } from './public/common/expert-badge-in-
 import { ExpertDetailComponent } from './public/common/expert-detail/expert-detail.component';
 import { BlogPostListComponent } from './public/blog/blog-post-list/blog-post-list.component';
 import { ServiceCardComponent } from './public/platform/service-card/service-card.component';
+import { CatalogHomeComponent } from './public/platform/catalog-home/catalog-home.component';
+import { PlatformCategoryComponent } from './public/platform/platform-category/platform-category.component';
+import { ServiceListComponent } from './public/platform/service-list/service-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogPostCardComponent,
     N1ceToolbarComponent,
-    BlogBackboneComponent,
+    BlogHomeComponent,
     BlogPostInEvidenceComponent,
     BlogCategoryComponent,
     BlogSideBannerComponent,
@@ -56,7 +59,10 @@ import { ServiceCardComponent } from './public/platform/service-card/service-car
     PageNotFoundComponent,
     ExpertBadgeInEvidenceComponent,
     BlogPostListComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    CatalogHomeComponent,
+    PlatformCategoryComponent,
+    ServiceListComponent
   ],
   imports: [
     BrowserModule,

@@ -3,11 +3,11 @@ import { BlogCategory } from '../../../shared/models';
 import { BlogService } from '../../../shared/service/blog.service';
 
 @Component({
-  selector: 'app-blog-backbone',
-  templateUrl: './blog-backbone.component.html',
-  styleUrls: ['./blog-backbone.component.css']
+  selector: 'app-blog-home',
+  templateUrl: './blog-home.component.html',
+  styleUrls: ['./blog-home.component.css']
 })
-export class BlogBackboneComponent implements OnInit {
+export class BlogHomeComponent implements OnInit {
   categories: BlogCategory [] = [];
   inEvidenceCategory!: BlogCategory;
 
