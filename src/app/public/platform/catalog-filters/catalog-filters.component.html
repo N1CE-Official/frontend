@@ -1,0 +1,6 @@
+<ng-container *ngIf="categories">
+  <div>
+    <button [class]="selectedCategory === '' ? 'btn btn-oval font-size-small m-1 btn-n1ce': 'btn btn-oval font-size-small m-1 btn-n1ce-outline'" (click)="filter('')">All Services</button>
+    <button *ngFor="let tag of categories" [class]="selectedCategory === tag ? 'btn btn-oval font-size-small m-1 btn-n1ce': 'btn btn-oval font-size-small m-1 btn-n1ce-outline'" (click)="filter(tag)">{{tag}}</button>
+  </div>
+</ng-container>

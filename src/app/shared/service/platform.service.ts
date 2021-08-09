@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BlogPost, BlogCategory, Expert, ServiceCategory, Service } from '../models';
+import { Expert, ServiceCategory, Service } from '../models';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class PlatformService {
   }
 
   public listCategories(): Observable<ServiceCategory[]> {
-    return this.http.get<BlogCategory[]>(this.categoriesUrl)
+    return this.http.get<ServiceCategory[]>(this.categoriesUrl)
   }
 
   public getService(id: string): Observable<Service> {
@@ -52,7 +52,7 @@ export class PlatformService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`BlogService: ${message}`);
+    this.messageService.add(`PlatformService: ${message}`);
   }
 
   public listServices(): Observable<Service[]> {

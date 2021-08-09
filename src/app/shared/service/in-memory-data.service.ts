@@ -24,7 +24,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: '2',
         title: 'Article 2',
         content: '',
-        expertId: 'Expert 1',
+        expertId: 'Expert 3',
         category: 'Blockchain',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
@@ -48,7 +48,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: '5',
         title: 'Article 5',
         content: '',
-        expertId: 'Expert 1',
+        expertId: 'Expert 3',
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
@@ -103,7 +103,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 't2',
         title: 'Trending Article 2',
         content: '',
-        expertId: 'Expert 1',
+        expertId: 'Expert 3',
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
@@ -155,12 +155,23 @@ export class InMemoryDataService implements InMemoryDbService {
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.4,
         reviews: 231
+      },
+      {
+        id: 'Expert 3',
+        name: 'Expert 3',
+        picture: 'https://www.w3schools.com/w3images/avatar5.png',
+        expertise: [
+          'Graphic Design'
+        ],
+        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        rating: 4.9,
+        reviews: 48
       }
     ];
     const serviceCategories: ServiceCategory[] = [{
       title: 'Smart Contract Development',
       services: ['1', '2', '3', '4']
-    }, {title: 'Web Development', services: ['5', '6', '7', '8']}];
+    }, {title: 'Web Development', services: ['5', '6', '7', '8']}, {title: 'Graphic Design', services: ['9']}];
     const services: Service[] = [
       {
         id: '1',
@@ -231,6 +242,14 @@ export class InMemoryDataService implements InMemoryDbService {
         category: 'Web Development',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         startingPrice: 399
+      }, {
+        id: '9',
+        title: 'Design a minimal logo for your crypto project',
+        content: '',
+        expertId: 'Expert 3',
+        category: 'Graphic Design',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 15
       }];
     return {posts, blogCategories, inEvidence, experts, serviceCategories, services};
   }

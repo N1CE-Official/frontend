@@ -1,5 +1,5 @@
 <div class="row" *ngIf="services">
-  <div [className]="this.postsPerRow === 3 ? 'col-lg-4' : 'col-lg-3'" *ngFor="let service of services">
+  <div [className]="this.postsPerRow === 3 ? 'col-lg-4 my-1' : 'col-lg-3 my-2'" *ngFor="let service of services">
     <app-service-card *ngIf="service.id" [serviceId]="service.id"></app-service-card>
   </div>
 </div>

@@ -41,6 +41,7 @@ import { ServiceListComponent } from './public/platform/service-list/service-lis
 import { ExpertBadgeForServicesComponent } from './public/common/expert-badge-for-services/expert-badge-for-services.component';
 import { ExpertRatingComponent } from './public/common/expert-rating/expert-rating.component';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { CatalogFiltersComponent } from './public/platform/catalog-filters/catalog-filters.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
     PlatformCategoryComponent,
     ServiceListComponent,
     ExpertBadgeForServicesComponent,
-    ExpertRatingComponent
+    ExpertRatingComponent,
+    CatalogFiltersComponent
   ],
   imports: [
     BrowserModule,

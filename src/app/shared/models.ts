@@ -25,7 +25,7 @@ export class Expert {
 }
 
 export class ServiceCategory {
-  title?: string;
+  title: string = '';
   services?: string [];
 }
 
