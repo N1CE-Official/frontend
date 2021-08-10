@@ -9,8 +9,8 @@
     <app-blog-side-banner></app-blog-side-banner>
   </div>
 </div>
-<div class="row" *ngFor="let category of categories">
+<div class="row" *ngFor="let category of categories$ | async">
   <div class="col-12">
-    <app-blog-category [category]="category"></app-blog-category>
+    <app-blog-category [category]="category" [allPosts]="posts$ | async"></app-blog-category>
   </div>
 </div>
