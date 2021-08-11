@@ -6,3 +6,10 @@ img.author-img {
 .author-card {
   border-radius: 3%;
 }
+
+@media screen and (max-width: 1200px) {
+  img.author-img {
+    width: 120px;
+    height: 120px;
+  }
+}

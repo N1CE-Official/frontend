@@ -3,7 +3,7 @@
     <app-blog-post-in-evidence
       *ngIf="inEvidenceCategory && inEvidenceCategory.articles && inEvidenceCategory.articles[0]"
       [articleId]="inEvidenceCategory.articles[0]"></app-blog-post-in-evidence>
-    <app-blog-category [category]="inEvidenceCategory"></app-blog-category>
+    <app-blog-category [category]="inEvidenceCategory" [allPosts]="posts$ | async"></app-blog-category>
   </div>
   <div class="col-lg-3">
     <app-blog-side-banner></app-blog-side-banner>

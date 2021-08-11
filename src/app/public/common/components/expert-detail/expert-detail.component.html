@@ -1,7 +1,9 @@
 <ng-container *ngIf="expert">
   <div class="row">
-    <div class="col-12 d-flex">
+    <div class="col-md-3 text-center my-auto">
       <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+    </div>
+    <div class="col-md-9">
       <div class="card-body">
         <h5 class="card-title">{{expert.name}}</h5>
         <p class="card-text">{{expert.shortBio}}</p>

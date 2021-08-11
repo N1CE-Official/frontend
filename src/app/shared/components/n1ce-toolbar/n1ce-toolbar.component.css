@@ -3,7 +3,6 @@
 }
 
 .navbar {
-  padding: 10px 140px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.161);
 }
 
@@ -22,4 +21,20 @@ img.brand-logo{
 
 .navbar .nav-link.active{
   color: #009688;
+}
+
+a.navbar-brand {
+  margin: 10px 140px;
+}
+
+@media screen and (max-width: 430px) {
+  a.navbar-brand {
+    margin: 10px 95px;
+  }
+}
+
+@media screen and (min-width: 430px) and (max-width: 500px) {
+  a.navbar-brand {
+    margin: 10px 105px;
+  }
 }

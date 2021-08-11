@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./n1ce-toolbar.component.css']
 })
 export class N1ceToolbarComponent implements OnInit {
-  public isMenuCollapsed = false;
+  public isMenuCollapsed = true;
 
   constructor() { }
 

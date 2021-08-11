@@ -2,7 +2,7 @@
   <h1>{{blogPost.title}}</h1>
   <div class="row">
     <div class="col-lg-9"><img src="{{blogPost.featuredImg}}" alt="{{blogPost.title}}" class="article-featured"/></div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 mt-3 mt-lg-0">
       <app-expert-box *ngIf="blogPost.expertId" [expertId]="blogPost.expertId"></app-expert-box>
     </div>
   </div>
