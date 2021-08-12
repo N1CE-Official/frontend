@@ -9,7 +9,7 @@ import { BlogService } from '../../services/blog.service';
 })
 export class BlogCategoryComponent implements OnInit, OnChanges {
   @Input() category!: BlogCategory;
-  @Input() allPosts!: BlogPost[] | null;
+  @Input() posts!: BlogPost[] | null;
   articles!: BlogPost[];
 
   constructor(
@@ -22,8 +22,8 @@ export class BlogCategoryComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     if (this.category && this.category.articles) {
-      if (this.allPosts) {
-        const list = this.allPosts.filter(article => article.id && this.category.articles && this.category.articles.includes(article.id));
+      if (this.posts) {
+        const list = this.posts;
 
         if (this.category.articlesPerRow === 3)
           this.articles = list.slice(1);

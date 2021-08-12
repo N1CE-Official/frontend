@@ -7,9 +7,16 @@ import { ExpertDetailComponent } from './public/common/components/expert-detail/
 import { CatalogHomeComponent } from './public/platform/components/catalog-home/catalog-home.component';
 import { BlogCategoryResolverService } from './public/blog/resolvers/blog-category-resolver.service';
 import { BlogPostsResolverService } from './public/blog/resolvers/blog-posts-resolver.service';
+import { InEvidencePostResolverService } from './public/blog/resolvers/in-evidence-post-resolver.service';
 
 const routes: Routes = [
-  {path: 'blog', component: BlogHomeComponent, resolve: {categories: BlogCategoryResolverService, posts: BlogPostsResolverService}},
+  {
+    path: 'blog', component: BlogHomeComponent, resolve: {
+      categories: BlogCategoryResolverService,
+      posts: BlogPostsResolverService,
+      inEvidencePost: InEvidencePostResolverService
+    }
+  },
   {path: 'post/:id', component: BlogPostDetailComponent},
   {path: 'expert/:id', component: ExpertDetailComponent},
   {path: 'catalog', component: CatalogHomeComponent},

@@ -12,6 +12,7 @@ export class BlogService {
   private postsUrl = 'api/posts';
   private categoriesUrl = 'api/blogCategories';
   private inEvidenceUrl = 'api/inEvidence';
+  private inEvidencePostUrl = 'api/inEvidencePost';
   private expertsUrl = 'api/experts';
 
   constructor(
@@ -25,6 +26,10 @@ export class BlogService {
 
   public inEvidenceCategory(): Observable<BlogCategory> {
     return this.http.get<BlogCategory>(this.inEvidenceUrl);
+  }
+
+  public inEvidencePost(): Observable<BlogPost> {
+    return this.http.get<BlogPost>(this.inEvidencePostUrl);
   }
 
   public getPost(id: string): Observable<BlogPost> {

@@ -5,11 +5,11 @@ export class BlogPost {
   snippet?: string;
   expertId: string = '';
   featuredImg?: string;
-  category?: string;
+  category: string = '';
 }
 
 export class BlogCategory {
-  title?: string;
+  title: string = '';
   articles?: string [];
   articlesPerRow?: number;
 }

@@ -8,8 +8,8 @@ import { BlogService } from '../../services/blog.service';
   styleUrls: ['./blog-post-card.component.css']
 })
 export class BlogPostCardComponent implements OnInit, OnChanges {
-  @Input() articleId!: string;
-  article!: BlogPost;
+  @Input() postId!: string;
+  @Input() post!: BlogPost | null;
 
   constructor(public blogService: BlogService) { }
 
@@ -17,9 +17,9 @@ export class BlogPostCardComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    if (this.articleId) {
-      this.blogService.getPost(this.articleId).subscribe(
-        art => this.article = art
+    if (!this.post && this.postId) {
+      this.blogService.getPost(this.postId).subscribe(
+        p => this.post = p
       )
     }
   }
