@@ -1,0 +1,17 @@
+<ng-container *ngIf="(service$ | async) as service">
+  <h1>{{service.title}}</h1>
+  <div class="row">
+    <div class="col-lg-8"><img src="{{service.featuredImg}}" alt="{{service.title}}" class="article-featured"/></div>
+    <div class="col-lg-3 offset-lg-1 mt-3 mt-lg-0">
+      <app-expert-box *ngIf="service.expertId" [expertId]="service.expertId"></app-expert-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 p-4 text-justify whitespace-preline">
+      <h4>About this service</h4>
+      <p>
+        {{service.content}}
+      </p>
+    </div>
+  </div>
+</ng-container>

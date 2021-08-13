@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Service, ServiceCategory } from '../../../../shared/classes/models';
-import { PlatformService } from '../../services/platform.service';
+import { ExpertPlatformService} from '../../../../shared/classes/models';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-catalog-home',
@@ -9,29 +11,32 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./catalog-home.component.css']
 })
 export class CatalogHomeComponent implements OnInit {
-  categories: ServiceCategory [] = [];
-  services: Service[] = [];
-  categoryTitles: string [] = [];
+  categoryTitles$!: Observable<string[]>;
+  originalServices$!: Observable<ExpertPlatformService[]>;
+  services$!: Observable<ExpertPlatformService[]>;
+  selectedCategory!: string | null;
 
-  constructor(public platformService: PlatformService) {
+  constructor(
+    public route: ActivatedRoute,
+    public location: Location) {
   }
 
   ngOnInit(): void {
-    this.platformService.listCategories().subscribe(list => {
-      this.categories = list;
-      this.categoryTitles = this.categories.map(category => category.title)
-    });
-    this.platformService.listServices().subscribe(list => this.services = list);
+    this.categoryTitles$ = this.route.data.pipe(map(data => data.categoryTitles));
+    this.originalServices$ = this.route.data.pipe(map(data => data.services));
+    this.selectedCategory = this.route.snapshot.paramMap.get('category');
+    if(!this.selectedCategory) this.selectedCategory = '';
+    this.filter(this.selectedCategory);
   }
 
   filter(evt: string) {
     if (evt === '') {
-      this.platformService.listServices().subscribe(list => this.services = list);
+      this.services$ = this.originalServices$;
     } else {
-      this.platformService.listServices()
-        .pipe(map(list => list.filter(service => service.category === evt)))
-        .subscribe(list =>  this.services = list);
+      this.services$ = this.originalServices$
+        .pipe(map(list => list.filter(service => service.category === evt)));
     }
+    this.location.replaceState("/catalog/" + evt);
   }
 
 }

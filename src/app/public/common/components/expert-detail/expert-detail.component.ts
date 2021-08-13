@@ -1,9 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { BlogPost, Expert, Service } from '../../../../shared/classes/models';
+import { Component, OnInit } from '@angular/core';
+import { BlogPost, Expert, ExpertPlatformService } from '../../../../shared/classes/models';
 import { ActivatedRoute } from '@angular/router';
-import { BlogService } from '../../../blog/services/blog.service';
 import { map } from 'rxjs/operators';
-import { PlatformService } from '../../../platform/services/platform.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-expert-detail',
@@ -11,34 +10,19 @@ import { PlatformService } from '../../../platform/services/platform.service';
   styleUrls: ['./expert-detail.component.css']
 })
 export class ExpertDetailComponent implements OnInit {
-  @Input() expert!: Expert;
-  articles!: BlogPost[];
-  services!: Service[];
+  expert$!: Observable<Expert>;
+  posts$!: Observable<BlogPost[]>;
+  services$!: Observable<ExpertPlatformService[]>;
 
   constructor(
-    private route: ActivatedRoute,
-    private blogService: BlogService,
-    private platformService: PlatformService
+    private route: ActivatedRoute
   ) {
   }
 
   ngOnInit(): void {
-    this.getExpert();
-  }
-
-  getExpert(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id != null)
-      this.blogService.getExpert(id)
-        .subscribe(expert => {
-          this.expert = expert;
-          this.blogService.listBlogPosts()
-            .pipe(map(list => list.filter(article => article.expertId && article.expertId === expert.id)))
-            .subscribe(list => this.articles = list);
-          this.platformService.listServices()
-            .pipe(map(list => list.filter(service => service.expertId && service.expertId === expert.id)))
-            .subscribe(list => this.services = list);
-        });
+    this.expert$ = this.route.data.pipe(map( data => data.expert));
+    this.posts$ = this.route.data.pipe(map(data => data.blogPosts));
+    this.services$ = this.route.data.pipe(map( data => data.services));
   }
 
 }

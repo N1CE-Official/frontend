@@ -13,7 +13,6 @@ export class BlogService {
   private categoriesUrl = 'api/blogCategories';
   private inEvidenceUrl = 'api/inEvidence';
   private inEvidencePostUrl = 'api/inEvidencePost';
-  private expertsUrl = 'api/experts';
 
   constructor(
     private http: HttpClient,
@@ -36,13 +35,6 @@ export class BlogService {
     const url = `${this.postsUrl}/${id}`;
     return this.http.get<BlogPost>(url).pipe(
       catchError(this.handleError<BlogPost>(`getPost id=${id}`))
-    );
-  }
-
-  public getExpert(id: string): Observable<Expert> {
-    const url = `${this.expertsUrl}/${id}`;
-    return this.http.get<Expert>(url).pipe(
-      catchError(this.handleError<Expert>(`getExpert id=${id}`))
     );
   }
 

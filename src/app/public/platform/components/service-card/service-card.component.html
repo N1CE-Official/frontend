@@ -1,7 +1,7 @@
-<div *ngIf="service" class="card rounded-18" routerLink="/service/{{service.id}}">
-  <img src="{{service.featuredImg}}" class="card-img-top img-rounded" alt="...">
+<div *ngIf="service" class="card rounded-18">
+  <img src="{{service.featuredImg}}" class="card-img-top img-rounded" alt="..." routerLink="/service/{{service.id}}">
   <div class="card-body py-1">
-    <h5 class="card-title">{{service.title}}</h5>
+    <h5 class="card-title" routerLink="/service/{{service.id}}">{{service.title}}</h5>
     <hr class="solid"/>
     <app-expert-badge-for-services *ngIf="service.expertId" [expertId]="service.expertId"></app-expert-badge-for-services>
     <div class="card-footer mt-2 font-size-small">

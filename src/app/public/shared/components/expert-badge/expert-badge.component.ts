@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Expert } from '../../../../shared/classes/models';
-import { BlogService } from '../../../blog/services/blog.service';
+import { ExpertService } from '../../../common/services/expert.service';
 
 @Component({
   selector: 'app-expert-badge',
@@ -11,7 +11,7 @@ export class ExpertBadgeComponent implements OnInit, OnChanges {
   @Input() expertId!: string;
   expert!: Expert;
 
-  constructor(public blogService: BlogService) {
+  constructor(public expertService: ExpertService) {
   }
 
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class ExpertBadgeComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     if (this.expertId) {
-      this.blogService.getExpert(this.expertId).subscribe(exp => this.expert = exp);
+      this.expertService.getExpert(this.expertId).subscribe(exp => this.expert = exp);
     }
   }
 

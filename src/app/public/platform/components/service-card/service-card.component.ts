@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { BlogPost, Expert, Service } from '../../../../shared/classes/models';
+import { BlogPost, Expert, ExpertPlatformService } from '../../../../shared/classes/models';
 import { BlogService } from '../../../blog/services/blog.service';
 import { PlatformService } from '../../services/platform.service';
 
@@ -10,7 +10,7 @@ import { PlatformService } from '../../services/platform.service';
 })
 export class ServiceCardComponent implements OnInit, OnChanges {
   @Input() serviceId!: string;
-  service!: Service;
+  service!: ExpertPlatformService;
   expert!: Expert;
 
   constructor(public platformService: PlatformService) { }

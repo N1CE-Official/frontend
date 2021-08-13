@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { Service, ServiceCategory } from '../../../../shared/classes/models';
+import { ExpertPlatformService, ServiceCategory } from '../../../../shared/classes/models';
 import { BlogService } from '../../../blog/services/blog.service';
 import { map } from 'rxjs/operators';
 import { PlatformService } from '../../services/platform.service';
@@ -11,7 +11,7 @@ import { PlatformService } from '../../services/platform.service';
 })
 export class PlatformCategoryComponent implements OnInit, OnChanges {
   @Input() category!: ServiceCategory;
-  services!: Service[];
+  services!: ExpertPlatformService[];
 
   constructor(
     public platformService: PlatformService

@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Expert } from '../../../../shared/classes/models';
+import { Component, OnInit } from '@angular/core';
 import { ExpertBadgeComponent } from '../expert-badge/expert-badge.component';
-import { BlogService } from '../../../blog/services/blog.service';
+import { ExpertService } from '../../../common/services/expert.service';
 
 @Component({
   selector: 'app-expert-badge-for-services',
@@ -9,9 +8,8 @@ import { BlogService } from '../../../blog/services/blog.service';
   styleUrls: ['./expert-badge-for-services.component.css']
 })
 export class ExpertBadgeForServicesComponent extends ExpertBadgeComponent implements OnInit {
-
-  constructor(public blogService: BlogService) {
-    super(blogService)
+  constructor(public expertService: ExpertService) {
+    super(expertService)
   }
 
   ngOnInit(): void {

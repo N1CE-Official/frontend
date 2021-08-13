@@ -1,4 +1,4 @@
-<ng-container *ngIf="expert">
+<ng-container *ngIf="(expert$ | async) as expert">
   <div class="row">
     <div class="col-md-3 text-center my-auto">
       <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
@@ -20,13 +20,13 @@
   <div class="row">
     <div class="col-12">
       <app-category-title [titleText]="'Custom Services'"></app-category-title>
-      <app-service-list [services]="services"></app-service-list>
+      <app-service-list *ngIf="(services$ | async) as services" [services]="services"></app-service-list>
     </div>
   </div>
   <div class="row">
     <div class="col-12">
       <app-category-title [titleText]="'Published Content'"></app-category-title>
-      <app-blog-post-list [blogPosts]="articles"></app-blog-post-list>
+      <app-blog-post-list *ngIf="(posts$ | async) as posts" [blogPosts]="posts"></app-blog-post-list>
     </div>
   </div>
 </ng-container>

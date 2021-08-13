@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Expert, ServiceCategory, ExpertPlatformService } from '../../../shared/classes/models';
-import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
 import { MessageService } from '../../../shared/services/message.service';
+import { Observable, of } from 'rxjs';
+import { Expert } from '../../../shared/classes/models';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlatformService {
-  private servicesUrl = 'api/services';
-  private categoriesUrl = 'api/serviceCategories';
+export class ExpertService {
   private expertsUrl = 'api/experts';
 
   constructor(
@@ -18,14 +16,10 @@ export class PlatformService {
     private messageService: MessageService) {
   }
 
-  public listCategories(): Observable<ServiceCategory[]> {
-    return this.http.get<ServiceCategory[]>(this.categoriesUrl)
-  }
-
-  public getService(id: string): Observable<ExpertPlatformService> {
-    const url = `${this.servicesUrl}/${id}`;
-    return this.http.get<ExpertPlatformService>(url).pipe(
-      catchError(this.handleError<ExpertPlatformService>(`getService id=${id}`))
+  public getExpert(id: string): Observable<Expert> {
+    const url = `${this.expertsUrl}/${id}`;
+    return this.http.get<Expert>(url).pipe(
+      catchError(this.handleError<Expert>(`getExpert id=${id}`))
     );
   }
 
@@ -45,10 +39,6 @@ export class PlatformService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`PlatformService: ${message}`);
-  }
-
-  public listServices(): Observable<ExpertPlatformService[]> {
-    return this.http.get<ExpertPlatformService[]>(this.servicesUrl);
+    this.messageService.add(`BlogService: ${message}`);
   }
 }

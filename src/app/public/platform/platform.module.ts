@@ -5,6 +5,7 @@ import { PlatformCategoryComponent } from './components/platform-category/platfo
 import { ServiceListComponent } from './components/service-list/service-list.component';
 import { CatalogFiltersComponent } from './components/catalog-filters/catalog-filters.component';
 import { PublicSharedModule } from '../shared/public.shared.module';
+import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 
 @NgModule({
   imports: [PublicSharedModule],
@@ -12,17 +13,20 @@ import { PublicSharedModule } from '../shared/public.shared.module';
     CatalogHomeComponent,
     PlatformCategoryComponent,
     ServiceListComponent,
-    CatalogFiltersComponent,],
+    CatalogFiltersComponent,
+    ServiceDetailComponent,],
   exports: [ServiceCardComponent,
     CatalogHomeComponent,
     PlatformCategoryComponent,
     ServiceListComponent,
-    CatalogFiltersComponent,],
+    CatalogFiltersComponent,
+    ServiceDetailComponent,],
   entryComponents: [ServiceCardComponent,
     CatalogHomeComponent,
     PlatformCategoryComponent,
     ServiceListComponent,
-    CatalogFiltersComponent,]
+    CatalogFiltersComponent,
+    ServiceDetailComponent,]
 })
 
 export class PlatformModule {

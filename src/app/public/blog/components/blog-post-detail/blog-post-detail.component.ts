@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BlogPost } from '../../../../shared/classes/models';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog-post-detail',
@@ -9,22 +11,14 @@ import { BlogService } from '../../services/blog.service';
   styleUrls: ['./blog-post-detail.component.css']
 })
 export class BlogPostDetailComponent implements OnInit {
-  @Input() blogPost!: BlogPost;
+  blogPost$!: Observable<BlogPost>;
 
   constructor(
-    private route: ActivatedRoute,
-    private blogService: BlogService) {
+    private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.getBlogPost();
-  }
-
-  getBlogPost(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id != null)
-      this.blogService.getPost(id)
-        .subscribe(post => this.blogPost = post);
+    this.blogPost$ = this.route.data.pipe(map( data => data.post));
   }
 
 }

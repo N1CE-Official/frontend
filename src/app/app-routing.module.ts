@@ -8,6 +8,14 @@ import { CatalogHomeComponent } from './public/platform/components/catalog-home/
 import { BlogCategoryResolverService } from './public/blog/resolvers/blog-category-resolver.service';
 import { BlogPostsResolverService } from './public/blog/resolvers/blog-posts-resolver.service';
 import { InEvidencePostResolverService } from './public/blog/resolvers/in-evidence-post-resolver.service';
+import { BlogPostDetailResolverService } from './public/blog/resolvers/blog-post-detail-resolver.service';
+import { ExpertDetailResolverService } from './public/common/resolvers/expert-detail-resolver.service';
+import { ServiceCategoryResolverService } from './public/platform/resolvers/service-category-resolver.service';
+import { PlatformServiceResolverService } from './public/platform/resolvers/platform-service-resolver.service';
+import { ServiceDetailComponent } from './public/platform/components/service-detail/service-detail.component';
+import { ServiceDetailResolverService } from './public/platform/resolvers/service-detail-resolver.service';
+import { ExpertBlogPostsResolverService } from './public/common/resolvers/expert-blog-posts-resolver.service';
+import { ExpertServiceResolverService } from './public/common/resolvers/expert-service-resolver.service';
 
 const routes: Routes = [
   {
@@ -17,9 +25,35 @@ const routes: Routes = [
       inEvidencePost: InEvidencePostResolverService
     }
   },
-  {path: 'post/:id', component: BlogPostDetailComponent},
-  {path: 'expert/:id', component: ExpertDetailComponent},
-  {path: 'catalog', component: CatalogHomeComponent},
+  {
+    path: 'post/:id', component: BlogPostDetailComponent, resolve: {
+      post: BlogPostDetailResolverService
+    }
+  },
+  {
+    path: 'expert/:id', component: ExpertDetailComponent, resolve: {
+      expert: ExpertDetailResolverService,
+      blogPosts: ExpertBlogPostsResolverService,
+      services: ExpertServiceResolverService
+    }
+  },
+  {
+    path: 'service/:id', component: ServiceDetailComponent, resolve: {
+      service: ServiceDetailResolverService
+    }
+  },
+  {
+    path: 'catalog', component: CatalogHomeComponent, resolve: {
+      categoryTitles: ServiceCategoryResolverService,
+      services: PlatformServiceResolverService
+    }
+  },
+  {
+    path: 'catalog/:category', component: CatalogHomeComponent, resolve: {
+      categoryTitles: ServiceCategoryResolverService,
+      services: PlatformServiceResolverService
+    }
+  },
   {path: '**', component: PageNotFoundComponent}
 ];
 

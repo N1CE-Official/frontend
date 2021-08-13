@@ -29,7 +29,7 @@ export class ServiceCategory {
   services?: string [];
 }
 
-export class Service {
+export class ExpertPlatformService {
   id: string = '';
   title?: string;
   content?: string;

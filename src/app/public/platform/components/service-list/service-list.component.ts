@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Service } from '../../../../shared/classes/models';
+import { ExpertPlatformService } from '../../../../shared/classes/models';
 
 @Component({
   selector: 'app-service-list',
@@ -7,7 +7,7 @@ import { Service } from '../../../../shared/classes/models';
   styleUrls: ['./service-list.component.css']
 })
 export class ServiceListComponent implements OnInit {
-  @Input() services!: Service[];
+  @Input() services!: ExpertPlatformService[];
   @Input() postsPerRow?: number = 4;
 
   constructor() {

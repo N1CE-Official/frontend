@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CatalogFiltersComponent implements OnInit {
   @Input() categories!: string[];
-  selectedCategory: string = '';
+  @Input() selectedCategory!: string | null;
   @Output() categoryChange = new EventEmitter<string>();
 
   constructor() {
