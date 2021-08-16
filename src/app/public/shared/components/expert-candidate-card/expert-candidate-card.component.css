@@ -5,6 +5,11 @@ img.author-img {
 
 .author-card {
   border-radius: 3%;
+  transition: box-shadow .4s;
+}
+
+.author-card:hover {
+  box-shadow: 3px 3px #888888;
 }
 
 @media screen and (max-width: 1200px) {
