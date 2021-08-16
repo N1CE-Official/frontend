@@ -55,7 +55,7 @@
   vertical-align: top;
 }
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 420px){
   .title-text {
     font-size: 16px;
   }
