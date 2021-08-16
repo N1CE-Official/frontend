@@ -2,3 +2,10 @@
   margin-top: 96px;
   display: grid;
 }
+
+@media screen and (max-width: 992px) {
+  .site-content {
+    margin-top: 76px;
+  }
+
+}

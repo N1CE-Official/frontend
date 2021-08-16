@@ -5,7 +5,7 @@ import { BlogModule } from '../blog/blog.module';
 import { PlatformModule } from '../platform/platform.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { HomeTopBannerSectionComponent } from './components/home-top-banner/home-top-banner-section.component';
-import { HomeCategoriesSectionComponent } from './components/home-categories/home-categories-section.component';
+import { HomeCategoriesSectionComponent } from './components/home-categories-section/home-categories-section.component';
 import { HomeLatestBlogPostsSectionComponent } from './components/home-latest-blog-posts-section/home-latest-blog-posts-section.component';
 import { HomeTopServicesSectionComponent } from './components/home-top-services-section/home-top-services-section.component';
 import { HomeVoteOurExpertsSectionComponent } from './components/home-vote-our-experts-section/home-vote-our-experts-section.component';
