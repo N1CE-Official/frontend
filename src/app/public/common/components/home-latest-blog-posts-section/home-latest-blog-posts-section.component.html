@@ -1,0 +1,14 @@
+<section id="latest-posts" class="bg-light" *ngIf="(latestBlogPosts$ | async) as latestPosts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Latest Blog Posts</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 my-2" *ngFor="let id of latestPosts">
+        <app-blog-post-card [postId]="id"></app-blog-post-card>
+      </div>
+    </div>
+  </div>
+</section>

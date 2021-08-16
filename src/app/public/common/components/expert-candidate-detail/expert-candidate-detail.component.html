@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <ng-container *ngIf="(expert$ | async) as expert">
+    <div class="row">
+      <div class="col-12">
+        <h3>Expert Selection Process</h3>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-9">
+        <div class="card rounded-18">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-center my-auto">
+                <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">{{expert.name}}</h5>
+                  <p class="card-text">{{expert.shortBio}}</p>
+                  <app-expert-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-expert-tags>
+                  <app-expert-social-icons></app-expert-social-icons>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 mt-2 mt-xl-0">
+        <div class="card rounded-18 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Vote For {{expert.name}}</h5>
+            <app-expert-candidate-approval-box [votes]="expert.candidatureVotes"></app-expert-candidate-approval-box>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr class="solid">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-category-title [titleText]="'Published Content'"></app-category-title>
+        <app-blog-post-list *ngIf="(posts$ | async) as posts" [blogPosts]="posts"></app-blog-post-list>
+      </div>
+    </div>
+  </ng-container>
+</div>

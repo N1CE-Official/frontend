@@ -1,0 +1,15 @@
+span.votes {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.vote-btn {
+  transition: color .4s;
+}
+
+.vote-btn:hover {
+  color: #009688;
+}

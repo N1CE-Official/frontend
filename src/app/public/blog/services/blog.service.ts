@@ -13,6 +13,7 @@ export class BlogService {
   private categoriesUrl = 'api/blogCategories';
   private inEvidenceUrl = 'api/inEvidence';
   private inEvidencePostUrl = 'api/inEvidencePost';
+  private latestBlogPostsUrl = 'api/latestBlogPosts';
 
   constructor(
     private http: HttpClient,
@@ -29,6 +30,14 @@ export class BlogService {
 
   public inEvidencePost(): Observable<BlogPost> {
     return this.http.get<BlogPost>(this.inEvidencePostUrl);
+  }
+
+  public listBlogPosts(): Observable<BlogPost[]> {
+    return this.http.get<BlogPost[]>(this.postsUrl);
+  }
+
+  public listLatestBlogPosts(): Observable<string[]> {
+    return this.http.get<string[]>(this.latestBlogPostsUrl);
   }
 
   public getPost(id: string): Observable<BlogPost> {
@@ -55,9 +64,5 @@ export class BlogService {
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`BlogService: ${message}`);
-  }
-
-  public listBlogPosts(): Observable<BlogPost[]> {
-    return this.http.get<BlogPost[]>(this.postsUrl);
   }
 }

@@ -24,6 +24,7 @@ export class Expert {
   expertise: string [] = [];
   rating: number = 0;
   reviews: number = 0;
+  candidatureVotes?: number = 0;
 }
 
 export class ServiceCategory {

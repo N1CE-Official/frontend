@@ -8,6 +8,7 @@ import { ExpertRatingComponent } from './components/expert-rating/expert-rating.
 import { ExpertSocialIconsComponent } from './components/expert-social-icons/expert-social-icons.component';
 import { ExpertTagsComponent } from './components/expert-tags/expert-tags.component';
 import { SharedModule } from '../../shared/shared.module';
+import { ExpertCandidateCardComponent } from './components/expert-candidate-card/expert-candidate-card.component';
 
 @NgModule({
   imports: [SharedModule],
@@ -18,7 +19,8 @@ import { SharedModule } from '../../shared/shared.module';
     ExpertBoxComponent,
     ExpertRatingComponent,
     ExpertSocialIconsComponent,
-    ExpertTagsComponent,],
+    ExpertTagsComponent,
+    ExpertCandidateCardComponent,],
   exports: [CategoryTitleComponent,
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
@@ -27,7 +29,8 @@ import { SharedModule } from '../../shared/shared.module';
     ExpertRatingComponent,
     ExpertSocialIconsComponent,
     ExpertTagsComponent,
-    SharedModule,],
+    SharedModule,
+    ExpertCandidateCardComponent,],
   entryComponents: [CategoryTitleComponent,
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
@@ -35,7 +38,8 @@ import { SharedModule } from '../../shared/shared.module';
     ExpertBoxComponent,
     ExpertRatingComponent,
     ExpertSocialIconsComponent,
-    ExpertTagsComponent,]
+    ExpertTagsComponent,
+    ExpertCandidateCardComponent,]
 })
 
 export class PublicSharedModule {

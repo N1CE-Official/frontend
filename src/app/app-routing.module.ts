@@ -16,14 +16,21 @@ import { ServiceDetailComponent } from './public/platform/components/service-det
 import { ServiceDetailResolverService } from './public/platform/resolvers/service-detail-resolver.service';
 import { ExpertBlogPostsResolverService } from './public/common/resolvers/expert-blog-posts-resolver.service';
 import { ExpertServiceResolverService } from './public/common/resolvers/expert-service-resolver.service';
-import { HomePageComponent } from './public/platform/components/home-page/home-page.component';
-import { HomeServiceCategoryResolverService } from './public/platform/resolvers/home-service-category-resolver.service';
+import { HomePageComponent } from './public/common/components/home-page/home-page.component';
+import { HomeServiceCategoryResolverService } from './public/common/resolvers/home-service-category-resolver.service';
+import { HomeTopServicesResolverService } from './public/common/resolvers/home-top-services-resolver.service';
+import { HomeLatestBlogPostsResolverService } from './public/common/resolvers/home-latest-blog-posts-resolver.service';
+import { HomeLatestExpertCandidatesResolverService } from './public/common/resolvers/home-latest-expert-candidates-resolver.service';
+import { ExpertCandidateDetailComponent } from './public/common/components/expert-candidate-detail/expert-candidate-detail.component';
 
 const routes: Routes = [
   {
     path: '', component: HomePageComponent, resolve: {
       categories: HomeServiceCategoryResolverService,
-      services: PlatformServiceResolverService
+      services: PlatformServiceResolverService,
+      topServices: HomeTopServicesResolverService,
+      latestBlogPosts: HomeLatestBlogPostsResolverService,
+      latestExpertCandidates: HomeLatestExpertCandidatesResolverService
     }
   },
   {
@@ -43,6 +50,12 @@ const routes: Routes = [
       expert: ExpertDetailResolverService,
       blogPosts: ExpertBlogPostsResolverService,
       services: ExpertServiceResolverService
+    }
+  },
+  {
+    path: 'expert-candidate/:id', component: ExpertCandidateDetailComponent, resolve: {
+      expert: ExpertDetailResolverService,
+      blogPosts: ExpertBlogPostsResolverService
     }
   },
   {

@@ -126,11 +126,9 @@ export class InMemoryDataService implements InMemoryDbService {
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }
     ];
-    const blogCategories: BlogCategory[] = [{
-      title: 'Smart Contracts', articles: ['1', '2', '3', '4']
-    }, {
-      title: 'DeFi', articles: ['5', '6', '7', '8']
-    }];
+    const blogCategories: BlogCategory[] = [
+      {title: 'Smart Contracts', articles: ['1', '2', '3', '4']},
+      {title: 'DeFi', articles: ['5', '6', '7', '8']}];
     const inEvidence: BlogCategory = {
       title: 'Trending', articles: ['t2', 't3', 't4'], articlesPerRow: 3
     };
@@ -179,7 +177,8 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.4,
-        reviews: 231
+        reviews: 231,
+        candidatureVotes: 55
       },
       {
         id: 'Expert 3',
@@ -190,7 +189,8 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.9,
-        reviews: 48
+        reviews: 48,
+        candidatureVotes: 124
       },
       {
         id: 'Expert 4',
@@ -215,17 +215,14 @@ export class InMemoryDataService implements InMemoryDbService {
         reviews: 48
       }
     ];
-    const serviceCategories: ServiceCategory[] = [{
-      title: 'Smart Contracts',
-      services: ['1', '2', '3', '4'],
-      icon: faCode
-    }, {
-      title: 'Web Development', services: ['5', '6', '7', '8'],
-      icon: faGlobe
-    }, {title: 'Graphic Design', services: ['9'], icon: faPaintBrush},
+    const serviceCategories: ServiceCategory[] = [
+      {title: 'Smart Contracts', services: ['1', '2', '3', '4'], icon: faCode},
+      {title: 'Web Development', services: ['5', '6', '7', '8'], icon: faGlobe},
+      {title: 'Graphic Design', services: ['9'], icon: faPaintBrush},
       {title: 'Marketing', services: ['10'], icon: faBullhorn},
       {title: 'Mining', services: ['11'], icon: faFan},
-      {title: 'Market Analysis', services: ['12'], icon: faChartLine}];
+      {title: 'Market Analysis', services: ['12'], icon: faChartLine}
+    ];
     const services: ExpertPlatformService[] = [
       {
         id: '1',
@@ -344,6 +341,20 @@ export class InMemoryDataService implements InMemoryDbService {
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         startingPrice: 150
       }];
-    return {posts, blogCategories, inEvidence, experts, serviceCategories, services, inEvidencePost};
+    const topServices: string[] = ["1", "4", "10", "5"];
+    const latestBlogPosts: string[] = ["1", "4", "t3", "5"];
+    const latestExpertCandidates: string[] = ["Expert 2", "Expert 3"];
+    return {
+      posts,
+      blogCategories,
+      inEvidence,
+      experts,
+      serviceCategories,
+      services,
+      inEvidencePost,
+      topServices,
+      latestBlogPosts,
+      latestExpertCandidates
+    };
   }
 }

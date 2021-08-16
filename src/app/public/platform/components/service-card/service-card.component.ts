@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { BlogPost, Expert, ExpertPlatformService } from '../../../../shared/classes/models';
-import { BlogService } from '../../../blog/services/blog.service';
+import { Expert, ExpertPlatformService } from '../../../../shared/classes/models';
 import { PlatformService } from '../../services/platform.service';
 
 @Component({

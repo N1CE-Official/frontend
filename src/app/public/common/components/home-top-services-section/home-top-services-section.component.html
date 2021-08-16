@@ -1,0 +1,12 @@
+<section id="top-services" *ngIf="(topServices$ | async) as topServices">
+  <div class="row">
+    <div class="col-12">
+      <h3>Most Requested Services</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 my-2" *ngFor="let id of topServices">
+      <app-service-card [serviceId]="id"></app-service-card>
+    </div>
+  </div>
+</section>

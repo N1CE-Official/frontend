@@ -1,0 +1,15 @@
+img.author-img {
+  width: 200px;
+  height: 200px;
+}
+
+.author-card {
+  border-radius: 3%;
+}
+
+@media screen and (max-width: 1200px) {
+  img.author-img {
+    width: 120px;
+    height: 120px;
+  }
+}

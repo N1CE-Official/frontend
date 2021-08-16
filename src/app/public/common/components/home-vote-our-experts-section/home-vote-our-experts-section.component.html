@@ -1,0 +1,15 @@
+<section id="vote-our-experts" class="bg-accent" *ngIf="(latestExpertCandidates$ | async) as latestExpertCandidates">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Make N1CE a Better Place!</h3>
+        <h5>Participate in the expert selection process and earn rewards</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 my-2" *ngFor="let id of latestExpertCandidates">
+        <app-expert-candidate-card [expertId]="id"></app-expert-candidate-card>
+      </div>
+    </div>
+  </div>
+</section>
