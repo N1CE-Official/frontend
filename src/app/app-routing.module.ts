@@ -21,7 +21,7 @@ import { HomeServiceCategoryResolverService } from './public/platform/resolvers/
 
 const routes: Routes = [
   {
-    path: 'home', component: HomePageComponent, resolve: {
+    path: '', component: HomePageComponent, resolve: {
       categories: HomeServiceCategoryResolverService,
       services: PlatformServiceResolverService
     }
