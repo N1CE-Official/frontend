@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { BlogCategory, BlogPost, Expert, ExpertPlatformService, ServiceCategory } from '../classes/models';
+import { faBullhorn, faChartLine, faCode, faFan, faGlobe, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'
@@ -190,12 +191,41 @@ export class InMemoryDataService implements InMemoryDbService {
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.9,
         reviews: 48
+      },
+      {
+        id: 'Expert 4',
+        name: 'Expert 4',
+        picture: 'https://www.w3schools.com/w3images/avatar6.png',
+        expertise: [
+          'Marketing', 'Market Analysis'
+        ],
+        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        rating: 4.8,
+        reviews: 21
+      },
+      {
+        id: 'Expert 5',
+        name: 'Expert 5',
+        picture: 'https://www.w3schools.com/w3images/avatar2.png',
+        expertise: [
+          'Mining'
+        ],
+        shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        rating: 4.9,
+        reviews: 48
       }
     ];
     const serviceCategories: ServiceCategory[] = [{
       title: 'Smart Contracts',
-      services: ['1', '2', '3', '4']
-    }, {title: 'Web Development', services: ['5', '6', '7', '8']}, {title: 'Graphic Design', services: ['9']}];
+      services: ['1', '2', '3', '4'],
+      icon: faCode
+    }, {
+      title: 'Web Development', services: ['5', '6', '7', '8'],
+      icon: faGlobe
+    }, {title: 'Graphic Design', services: ['9'], icon: faPaintBrush},
+      {title: 'Marketing', services: ['10'], icon: faBullhorn},
+      {title: 'Mining', services: ['11'], icon: faFan},
+      {title: 'Market Analysis', services: ['12'], icon: faChartLine}];
     const services: ExpertPlatformService[] = [
       {
         id: '1',
@@ -289,6 +319,30 @@ export class InMemoryDataService implements InMemoryDbService {
         category: 'Graphic Design',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
         startingPrice: 15
+      }, {
+        id: '10',
+        title: 'Build a marketing plan for your Crypto Business',
+        content: '',
+        expertId: 'Expert 4',
+        category: 'Marketing',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 599
+      }, {
+        id: '11',
+        title: 'Setup a Bitcoin Miner',
+        content: '',
+        expertId: 'Expert 5',
+        category: 'Mining',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 150
+      }, {
+        id: '12',
+        title: 'Create a diversified portfolio for your crypto investments',
+        content: '',
+        expertId: 'Expert 4',
+        category: 'Market Analysis',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+        startingPrice: 150
       }];
     return {posts, blogCategories, inEvidence, experts, serviceCategories, services, inEvidencePost};
   }

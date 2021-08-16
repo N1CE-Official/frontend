@@ -36,7 +36,7 @@ export class CatalogHomeComponent implements OnInit {
       this.services$ = this.originalServices$
         .pipe(map(list => list.filter(service => service.category === evt)));
     }
-    this.location.replaceState("/catalog/" + evt);
+    this.location.replaceState("/explore/" + evt);
   }
 
 }

@@ -1,0 +1,20 @@
+#categories ul, #categories ul li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#categories a {
+  text-decoration: none;
+  color: #222325;
+}
+
+div.category {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.category .category-title{
+  margin-top: 5px;
+}

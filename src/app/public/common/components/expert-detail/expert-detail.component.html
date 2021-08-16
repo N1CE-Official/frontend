@@ -1,32 +1,34 @@
-<ng-container *ngIf="(expert$ | async) as expert">
-  <div class="row">
-    <div class="col-md-3 text-center my-auto">
-      <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h5 class="card-title">{{expert.name}}</h5>
-        <p class="card-text">{{expert.shortBio}}</p>
-        <app-expert-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-expert-tags>
-        <app-expert-social-icons></app-expert-social-icons>
+<div class="container mt-4">
+  <ng-container *ngIf="(expert$ | async) as expert">
+    <div class="row">
+      <div class="col-md-3 text-center my-auto">
+        <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+      </div>
+      <div class="col-md-9">
+        <div class="card-body">
+          <h5 class="card-title">{{expert.name}}</h5>
+          <p class="card-text">{{expert.shortBio}}</p>
+          <app-expert-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-expert-tags>
+          <app-expert-social-icons></app-expert-social-icons>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <hr class="solid">
+    <div class="row">
+      <div class="col-12">
+        <hr class="solid">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <app-category-title [titleText]="'Custom Services'"></app-category-title>
-      <app-service-list *ngIf="(services$ | async) as services" [services]="services"></app-service-list>
+    <div class="row">
+      <div class="col-12">
+        <app-category-title [titleText]="'Custom Services'"></app-category-title>
+        <app-service-list *ngIf="(services$ | async) as services" [services]="services"></app-service-list>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <app-category-title [titleText]="'Published Content'"></app-category-title>
-      <app-blog-post-list *ngIf="(posts$ | async) as posts" [blogPosts]="posts"></app-blog-post-list>
+    <div class="row">
+      <div class="col-12">
+        <app-category-title [titleText]="'Published Content'"></app-category-title>
+        <app-blog-post-list *ngIf="(posts$ | async) as posts" [blogPosts]="posts"></app-blog-post-list>
+      </div>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
+</div>

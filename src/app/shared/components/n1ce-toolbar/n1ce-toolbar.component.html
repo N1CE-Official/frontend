@@ -3,20 +3,23 @@
   <button class="navbar-toggler hidden-sm-up" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <span class="example-spacer d-none d-lg-block"></span>
+  <span class="n1ce-spacer d-none d-lg-block"></span>
   <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="catalog" routerLinkActive="active">Catalog</a>
+        <a class="nav-link" routerLink="explore" routerLinkActive="active">Explore</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="blog" routerLinkActive="active">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact Us</a>
+        <a class="nav-link" routerLink="our-experts" routerLinkActive="active">Our Experts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="signup" routerLinkActive="active">Sign Up</a>
       </li>
     </ul>
     <button type="button" class="btn btn-n1ce btn-oval">Connect Wallet</button>

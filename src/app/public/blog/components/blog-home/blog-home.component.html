@@ -1,15 +1,18 @@
-<div class="row">
-  <div class="col-lg-9">
-    <app-blog-post-in-evidence
-      *ngIf="inEvidencePost$" [post]="inEvidencePost$ | async"></app-blog-post-in-evidence>
-    <app-blog-category [category]="inEvidenceCategory" [posts]="getPosts(inEvidenceCategory.title) | async"></app-blog-category>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-9">
+      <app-blog-post-in-evidence
+        *ngIf="inEvidencePost$" [post]="inEvidencePost$ | async"></app-blog-post-in-evidence>
+      <app-blog-category [category]="inEvidenceCategory"
+                         [posts]="getPosts(inEvidenceCategory.title) | async"></app-blog-category>
+    </div>
+    <div class="col-lg-3">
+      <app-blog-side-banner></app-blog-side-banner>
+    </div>
   </div>
-  <div class="col-lg-3">
-    <app-blog-side-banner></app-blog-side-banner>
-  </div>
-</div>
-<div class="row" *ngFor="let category of categories$ | async">
-  <div class="col-12">
-    <app-blog-category [category]="category" [posts]="getPosts(category.title) | async"></app-blog-category>
+  <div class="row" *ngFor="let category of categories$ | async">
+    <div class="col-12">
+      <app-blog-category [category]="category" [posts]="getPosts(category.title) | async"></app-blog-category>
+    </div>
   </div>
 </div>

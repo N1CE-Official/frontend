@@ -11,6 +11,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 img.img-round {
   border-radius: 50%;
 }
@@ -24,6 +29,7 @@ img.img-rounded{
 .btn.btn-n1ce {
   background-color: rgba(5, 178, 176, 1);
   color: white;
+  transition: background-color .7s, color .7s;
 }
 
 .btn.btn-n1ce:hover {
@@ -36,6 +42,7 @@ img.img-rounded{
   background-color: white;
   border: 1px solid rgba(5, 178, 176, 1);
   color: rgba(5, 178, 176, 1);
+  transition: background-color .7s, color .7s;
 }
 
 .btn.btn-n1ce-outline:hover {
@@ -57,6 +64,22 @@ img.img-rounded{
 
 .font-size-small {
   font-size: 13px;
+}
+
+.category #Rectangle_10 {
+  transition: width .7s;
+}
+
+.category .dot {
+  transition: opacity .7s;
+}
+
+.category:hover #Rectangle_10 {
+  width: 65px;
+}
+
+.category:hover .dot {
+  opacity: 0;
 }
 
 hr.solid {

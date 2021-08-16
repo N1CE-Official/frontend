@@ -9,10 +9,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faDribbble, faFacebookSquare, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faDribbble,
+  faFacebookSquare,
+  faInstagram,
+  faLinkedin, faMedium,
+  faTelegram,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faBullhorn,
+  faChartLine,
+  faCode,
+  faFan,
+  faGlobe,
+  faPaintBrush,
+  faStar
+} from '@fortawesome/free-solid-svg-icons';
 import { AppRoutingModule } from '../app-routing.module';
 import { CommonModule } from '@angular/common';
+import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.component';
 
 @NgModule({
   imports: [
@@ -25,14 +41,17 @@ import { CommonModule } from '@angular/common';
   declarations: [
     N1ceToolbarComponent,
     PageNotFoundComponent,
-    SystemMessagesComponent,],
+    SystemMessagesComponent,
+    N1ceFooterComponent,],
   exports: [
     N1ceToolbarComponent,
     PageNotFoundComponent,
     SystemMessagesComponent,
     AppRoutingModule,
     FontAwesomeModule,
-    CommonModule,],
+    CommonModule,
+    N1ceFooterComponent,
+  ],
   entryComponents: [
     N1ceToolbarComponent,
     PageNotFoundComponent,
@@ -48,6 +67,7 @@ export class SharedModule {
   }
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faInstagram, faDribbble, faStar)
+    library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faTelegram, faMedium,
+      faInstagram, faDribbble, faStar, faCode, faGlobe, faPaintBrush, faFan, faBullhorn, faChartLine)
   }
 }

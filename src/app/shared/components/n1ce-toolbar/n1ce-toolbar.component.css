@@ -1,4 +1,4 @@
-.example-spacer {
+.n1ce-spacer {
   flex: 100;
 }
 
@@ -19,7 +19,7 @@ img.brand-logo{
   padding-right: 30px;
 }
 
-.navbar .nav-link.active{
+.navbar .nav-link:hover, .navbar .nav-link.active{
   color: #009688;
 }
 

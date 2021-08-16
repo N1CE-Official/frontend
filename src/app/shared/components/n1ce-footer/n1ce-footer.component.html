@@ -1,0 +1,86 @@
+<footer>
+  <hr class="solid"/>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12 col-md-3">
+        <h5>Categories</h5>
+        <ul *ngIf="(categoryTitles$ | async) as categories">
+          <li *ngFor="let cat of categories">
+            <a routerLink="/explore/{{cat}}">{{cat}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h5>About</h5>
+        <ul>
+          <li>
+            <a routerLink="terms-conditions">Terms & Conditions</a>
+          </li>
+          <li>
+            <a routerLink="privacy-policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a routerLink="partnerships">Partnerships</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h5>Support</h5>
+        <ul>
+          <li>
+            <a routerLink="faq">F.A.Q</a>
+          </li>
+          <li>
+            <a routerLink="support">Support Center</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h5>N1CE And More</h5>
+        <ul>
+          <li>
+            <a href="http://n1ce.academy/">Academy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="solid"/>
+    <div class="row pb-3">
+      <div class="col-12">
+        <div class="d-flex">
+          <a class="footer-brand" href="#"><img src="assets/img/N1CE logo svg-01.svg" alt="..." class="brand-logo"></a>
+          <span class="n1ce-spacer"></span>
+          <div class="social-links">
+            <ul>
+              <li>
+                <a href="https://twitter.com/n1ceofficial">
+                  <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/n1ceofficial">
+                  <fa-icon [icon]="['fab', 'telegram']" size="lg"></fa-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/n1ce.community">
+                  <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/n1ceofficial">
+                  <fa-icon [icon]="['fab', 'instagram']" size="lg"></fa-icon>
+                </a>
+              </li>
+              <li>
+                <a href="http://n1ceofficial.medium.com/">
+                  <fa-icon [icon]="['fab', 'medium']" size="lg"></fa-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -16,8 +16,16 @@ import { ServiceDetailComponent } from './public/platform/components/service-det
 import { ServiceDetailResolverService } from './public/platform/resolvers/service-detail-resolver.service';
 import { ExpertBlogPostsResolverService } from './public/common/resolvers/expert-blog-posts-resolver.service';
 import { ExpertServiceResolverService } from './public/common/resolvers/expert-service-resolver.service';
+import { HomePageComponent } from './public/platform/components/home-page/home-page.component';
+import { HomeServiceCategoryResolverService } from './public/platform/resolvers/home-service-category-resolver.service';
 
 const routes: Routes = [
+  {
+    path: 'home', component: HomePageComponent, resolve: {
+      categories: HomeServiceCategoryResolverService,
+      services: PlatformServiceResolverService
+    }
+  },
   {
     path: 'blog', component: BlogHomeComponent, resolve: {
       categories: BlogCategoryResolverService,
@@ -43,13 +51,13 @@ const routes: Routes = [
     }
   },
   {
-    path: 'catalog', component: CatalogHomeComponent, resolve: {
+    path: 'explore', component: CatalogHomeComponent, resolve: {
       categoryTitles: ServiceCategoryResolverService,
       services: PlatformServiceResolverService
     }
   },
   {
-    path: 'catalog/:category', component: CatalogHomeComponent, resolve: {
+    path: 'explore/:category', component: CatalogHomeComponent, resolve: {
       categoryTitles: ServiceCategoryResolverService,
       services: PlatformServiceResolverService
     }

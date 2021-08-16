@@ -1,13 +1,16 @@
-<ng-container *ngIf="(services$ | async) as services">
-  <div class="row" *ngIf="(categoryTitles$ | async) as categories">
-    <div class="col-12">
-      Filter by Category
-      <app-catalog-filters [categories]="categories" [selectedCategory]="selectedCategory" (categoryChange)="filter($event)"></app-catalog-filters>
+<div class="container mt-4">
+  <ng-container *ngIf="(services$ | async) as services">
+    <div class="row" *ngIf="(categoryTitles$ | async) as categories">
+      <div class="col-12">
+        Filter by Category
+        <app-catalog-filters [categories]="categories" [selectedCategory]="selectedCategory"
+                             (categoryChange)="filter($event)"></app-catalog-filters>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <app-service-list [services]="services"></app-service-list>
+    <div class="row">
+      <div class="col-12">
+        <app-service-list [services]="services"></app-service-list>
+      </div>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
+</div>
