@@ -8,6 +8,7 @@ import { WalletService } from '../../services/wallet.service';
 })
 export class N1ceToolbarComponent implements OnInit {
   public isMenuCollapsed = true;
+  public connectedAccount!: string;
 
   constructor(
     public walletService: WalletService
@@ -18,5 +19,15 @@ export class N1ceToolbarComponent implements OnInit {
 
   connectWallet() {
     this.walletService.bootstrapWeb3();
+    this.walletService.accountsObservable.subscribe(
+      value => {
+        this.connectedAccount = this.shorten(value[0]);
+      }
+    )
+  }
+
+  shorten(str: string): string {
+    const suffix = str.substr(str.length - 4, 4);
+    return "0x" + "..." + suffix;
   }
 }

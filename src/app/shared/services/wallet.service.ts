@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 
 declare let require: any;
@@ -16,10 +15,10 @@ export class WalletService {
   private accounts!: string[];
   public ready = false;
 
-  public accountsObservable = new Subject<string[]>();
+  public accountsObservable = new EventEmitter<string[]>();
 
   constructor() {
-    this.bootstrapWeb3();
+    // this.bootstrapWeb3();
   }
 
   private async enableAccounts() {
@@ -39,7 +38,7 @@ export class WalletService {
 
     if (typeof window.web3 !== 'undefined') {
       // Use Mist/MetaMask's provider
-      this.web3 = new Web3(new Web3(window.web3.currentProvider));
+      this.web3 = new Web3(new Web3(window.ethereum));
     } else {
       console.log('No web3? You should consider trying MetaMask!');
 
@@ -47,10 +46,9 @@ export class WalletService {
       Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
       // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
       this.web3 = new Web3(new Web3.providers.HttpProvider(environment.RPCProvider));
-
     }
 
-    setInterval(this.refreshAccounts, 500);
+    // setInterval(this.refreshAccounts, 500);
 
     // check if privacy mode is activated and request access
 
@@ -88,7 +86,7 @@ export class WalletService {
         if (!this.accounts || this.accounts.length !== accs.length || this.accounts[0] !== accs[0]) {
           console.log('Observed new accounts');
 
-          this.accountsObservable.next(accs);
+          this.accountsObservable.emit(accs);
           this.accounts = accs;
         }
 

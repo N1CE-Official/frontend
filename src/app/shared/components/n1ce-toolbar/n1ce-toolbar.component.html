@@ -22,6 +22,6 @@
         <a class="nav-link" routerLink="signup" routerLinkActive="active">Sign Up</a>
       </li>
     </ul>
-    <button type="button" class="btn btn-n1ce btn-oval" (click)="connectWallet()">Connect Wallet</button>
+    <button type="button" class="btn btn-n1ce btn-oval" (click)="connectWallet()">{{connectedAccount ? connectedAccount : 'Connect Wallet'}}</button>
   </div>
 </nav>
