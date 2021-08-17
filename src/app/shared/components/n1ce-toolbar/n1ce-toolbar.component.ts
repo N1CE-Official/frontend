@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WalletService } from '../../services/wallet.service';
 
 @Component({
   selector: 'app-n1ce-toolbar',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class N1ceToolbarComponent implements OnInit {
   public isMenuCollapsed = true;
 
-  constructor() { }
+  constructor(
+    public walletService: WalletService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  connectWallet() {
+    this.walletService.bootstrapWeb3();
+  }
 }
