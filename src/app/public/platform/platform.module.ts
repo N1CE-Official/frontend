@@ -7,6 +7,7 @@ import { CatalogFiltersComponent } from './components/catalog-filters/catalog-fi
 import { PublicSharedModule } from '../shared/public.shared.module';
 import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 import { ServiceReviewBoxComponent } from './components/service-review-box/service-review-box.component';
+import { ServiceReviewCardComponent } from './components/service-review-card/service-review-card.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ServiceReviewBoxComponent } from './components/service-review-box/servi
     ServiceListComponent,
     CatalogFiltersComponent,
     ServiceDetailComponent,
-    ServiceReviewBoxComponent,],
+    ServiceReviewBoxComponent,
+    ServiceReviewCardComponent,],
   exports: [ServiceCardComponent,
     CatalogHomeComponent,
     PlatformCategoryComponent,

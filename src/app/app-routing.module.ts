@@ -22,6 +22,8 @@ import { HomeTopServicesResolverService } from './public/common/resolvers/home-t
 import { HomeLatestBlogPostsResolverService } from './public/common/resolvers/home-latest-blog-posts-resolver.service';
 import { HomeLatestExpertCandidatesResolverService } from './public/common/resolvers/home-latest-expert-candidates-resolver.service';
 import { ExpertCandidateDetailComponent } from './public/common/components/expert-candidate-detail/expert-candidate-detail.component';
+import { SearchResultsPageComponent } from './public/common/components/search-results-page/search-results-page.component';
+import { SearchResultsResolverService } from './public/common/resolvers/search-results-resolver.service';
 
 const routes: Routes = [
   {
@@ -73,6 +75,11 @@ const routes: Routes = [
     path: 'explore/:category', component: CatalogHomeComponent, resolve: {
       categoryTitles: ServiceCategoryResolverService,
       services: PlatformServiceResolverService
+    }
+  },
+  {
+    path: 'search-results/:str', component: SearchResultsPageComponent, resolve: {
+      searchResults: SearchResultsResolverService
     }
   },
   {path: '**', component: PageNotFoundComponent}

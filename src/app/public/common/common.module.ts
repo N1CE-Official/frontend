@@ -12,9 +12,12 @@ import { HomeVoteOurExpertsSectionComponent } from './components/home-vote-our-e
 import { HomeLowerBannerSectionComponent } from './components/home-lower-banner-section/home-lower-banner-section.component';
 import { ExpertCandidateDetailComponent } from './components/expert-candidate-detail/expert-candidate-detail.component';
 import { ExpertCandidateApprovalBoxComponent } from './components/expert-candidate-approval-box/expert-candidate-approval-box.component';
+import { SearchResultsPageComponent } from './components/search-results-page/search-results-page.component';
+import { FormsModule } from '@angular/forms';
+import { SearchResultCardComponent } from './components/search-result-card/search-result-card.component';
 
 @NgModule({
-  imports: [PublicSharedModule, BlogModule, PlatformModule],
+  imports: [PublicSharedModule, BlogModule, PlatformModule, FormsModule],
   declarations: [ExpertDetailComponent, ExpertCandidateDetailComponent,
     HomePageComponent,
     HomeTopBannerSectionComponent,
@@ -23,7 +26,9 @@ import { ExpertCandidateApprovalBoxComponent } from './components/expert-candida
     HomeTopServicesSectionComponent,
     HomeVoteOurExpertsSectionComponent,
     HomeLowerBannerSectionComponent,
-    ExpertCandidateApprovalBoxComponent,],
+    ExpertCandidateApprovalBoxComponent,
+    SearchResultsPageComponent,
+    SearchResultCardComponent,],
   exports: [ExpertDetailComponent,ExpertCandidateDetailComponent,],
   entryComponents: [ExpertDetailComponent,ExpertCandidateDetailComponent,]
 })

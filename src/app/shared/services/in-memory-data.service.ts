@@ -4,9 +4,9 @@ import {
   BlogCategory,
   BlogPost,
   Expert,
-  ExpertPlatformService,
+  ExpertPlatformService, SearchResult,
   ServiceCategory,
-  ServiceReview
+  ServiceReview, User
 } from '../classes/models';
 import { faBullhorn, faChartLine, faCode, faFan, faGlobe, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
@@ -109,8 +109,8 @@ export class InMemoryDataService implements InMemoryDbService {
         snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
       }, {
         id: 't2',
-        title: 'Trending Article 2',
-        content: '',
+        title: 'This is how you should invest your money in crypto',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis condimentum quam. Sed sed accumsan diam. Curabitur sed nisi malesuada, dignissim leo in, semper metus. Donec elementum leo at feugiat faucibus. Suspendisse volutpat ultricies erat, et convallis urna hendrerit id. Donec id elementum dolor, non condimentum dui. Nulla magna erat, pulvinar in felis a, dapibus rhoncus ipsum. Nulla non aliquam augue, sit amet mattis justo. Maecenas eu sapien in felis mollis faucibus malesuada ornare risus. Phasellus sed augue fringilla, feugiat lorem vitae, tempor arcu. Morbi ipsum velit, volutpat at lobortis ac, viverra ac risus.',
         expertId: 'Expert 3',
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
@@ -342,7 +342,8 @@ export class InMemoryDataService implements InMemoryDbService {
       }, {
         id: '12',
         title: 'Create a diversified portfolio for your crypto investments',
-        content: '',
+        content: 'I will create a highly diversified portfolio for your investments.\n' +
+          'Depending on your budget and on your willing to risk, we could discuss together the best investment strategy for you.',
         expertId: 'Expert 4',
         category: 'Market Analysis',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
@@ -357,7 +358,7 @@ export class InMemoryDataService implements InMemoryDbService {
         serviceId: '1',
         userId: 'user123',
         comment: 'The expert went beyond my expectations with its delivery, I can say that I\'m very satisfied.',
-        rating: 4.5
+        rating: 4
       },
       {
         id: 'r2',
@@ -365,6 +366,36 @@ export class InMemoryDataService implements InMemoryDbService {
         userId: 'user456',
         comment: 'The contract was very well written and the delivery was extremely fast. I would recommend this expert to anyone.',
         rating: 5
+      }
+    ];
+    const users: User[] = [
+      {
+        id: 'user123',
+        name: 'John Doe',
+        picture: 'https://static.thenounproject.com/png/363640-200.png'
+      },
+      {
+        id: 'user456',
+        name: 'Jane Doe',
+        picture: 'https://static.thenounproject.com/png/363640-200.png'
+      }
+    ];
+    const search: SearchResult[] = [
+      {
+        title: 'Create a diversified portfolio for your crypto investments',
+        type: 'Service',
+        link: '/service/12',
+        snippet: 'I will create a highly diversified portfolio for your investments...',
+        expertId: 'Expert 4',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      },
+      {
+        title: 'This is how you should invest your money in crypto',
+        type: 'Blog Post',
+        link: '/post/t2',
+        snippet: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis condimen...',
+        expertId: 'Expert 3',
+        featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }
     ];
     return {
@@ -378,7 +409,9 @@ export class InMemoryDataService implements InMemoryDbService {
       topServices,
       latestBlogPosts,
       latestExpertCandidates,
-      reviews
+      reviews,
+      users,
+      search,
     };
   }
 }

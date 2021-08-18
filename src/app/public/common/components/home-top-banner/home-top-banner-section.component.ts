@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-banner-section',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-top-banner-section.component.css']
 })
 export class HomeTopBannerSectionComponent implements OnInit {
+  searchString!: string;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {
+  }
 
   ngOnInit(): void {
+  }
+
+  public search() {
+    if (this.searchString) {
+      this.router.navigate(['/search-results/' + this.searchString]);
+    }
   }
 
 }

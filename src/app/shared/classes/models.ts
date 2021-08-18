@@ -14,10 +14,13 @@ export class BlogCategory {
   articlesPerRow?: number;
 }
 
-export class Expert {
+export class User {
   id: string = '';
   name?: string;
   picture?: string;
+}
+
+export class Expert extends User{
   shortBio?: string;
   expertise: string [] = [];
   rating: number = 0;
@@ -47,4 +50,13 @@ export class ServiceReview {
   userId: string = '';
   rating: number = 0;
   comment: string = '';
+}
+
+export class SearchResult {
+  type: string = '';
+  title: string = '';
+  link: string = '';
+  featuredImg?: string;
+  snippet: string = '';
+  expertId: string = '';
 }

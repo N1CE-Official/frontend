@@ -1,13 +1,16 @@
 <div *ngIf="expert" class="row">
-  <div class="mx-3">
-    <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile" routerLink="/expert/{{expert.id}}">
-  </div>
-  <div>
+  <div class="d-flex col-12">
     <div>
-      <span class="expert-name" routerLink="/expert/{{expert.id}}">{{expert.name}}</span>
+      <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile"
+           routerLink="/expert/{{expert.id}}">
     </div>
-    <div>
-      <a *ngFor="let tag of expert.expertise" class="mr-1 expert-tag" routerLink="/explore/{{tag}}">{{tag}}</a>
+    <div class="ml-3">
+      <div>
+        <span class="expert-name" routerLink="/expert/{{expert.id}}">{{expert.name}}</span>
+      </div>
+      <div>
+        <a *ngFor="let tag of expert.expertise" class="mr-1 expert-tag" routerLink="/explore/{{tag}}">{{tag}}</a>
+      </div>
     </div>
   </div>
 </div>

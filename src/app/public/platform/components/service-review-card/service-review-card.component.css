@@ -1,0 +1,14 @@
+.review-rating {
+  font-size: 11px;
+  margin-left: .25rem;
+}
+
+img.user-img {
+  width: 48px;
+  height: 48px;
+}
+
+.star {
+  color: #e7d636;
+  font-size: 11px;
+}

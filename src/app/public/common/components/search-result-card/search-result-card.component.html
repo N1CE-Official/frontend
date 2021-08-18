@@ -1,0 +1,10 @@
+<div class="card rounded-10" routerLink="{{res.link}}">
+  <img [src]="res.featuredImg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">
+      {{res.title}}
+    </h5>
+    <h6 class="card-subtitle mb-2" [className]="'card-subtitle mb-2 ' + typeClass">{{res.type}}</h6>
+    <p class="card-text text-muted">{{res.snippet}}</p>
+  </div>
+</div>

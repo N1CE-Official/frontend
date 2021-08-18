@@ -23,11 +23,11 @@ import {
   faCode,
   faFan,
   faGlobe,
-  faPaintBrush,
+  faPaintBrush, faSearch,
   faStar, faWallet
 } from '@fortawesome/free-solid-svg-icons';
 import {
-  faThumbsDown, faThumbsUp
+  faThumbsDown, faThumbsUp, faStar as starOutline
 } from '@fortawesome/free-regular-svg-icons';
 import { AppRoutingModule } from '../app-routing.module';
 import { CommonModule } from '@angular/common';
@@ -71,7 +71,7 @@ export class SharedModule {
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faTelegram, faMedium,
-      faInstagram, faDribbble, faStar, faCode, faGlobe, faPaintBrush, faFan, faBullhorn, faChartLine,
-      faThumbsUp, faThumbsDown, faWallet, )
+      faInstagram, faDribbble, faStar, starOutline, faCode, faGlobe, faPaintBrush, faFan, faBullhorn, faChartLine,
+      faThumbsUp, faThumbsDown, faWallet, faSearch)
   }
 }

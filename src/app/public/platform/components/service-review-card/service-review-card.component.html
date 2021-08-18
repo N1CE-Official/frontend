@@ -1,0 +1,18 @@
+<div class="card rounded-10 mb-2" *ngIf="review">
+  <div class="card-body">
+    <div class="d-flex" *ngIf="(user$ | async) as user">
+      <img [src]="user.picture" class="img-round user-img" alt="Profile">
+      <div class="ml-2 d-flex flex-column">
+        <span class="font-weight-bold">{{user.name}}</span>
+        <div>
+          <ng-container *ngFor="let i of numbers">
+            <fa-icon *ngIf="i" [icon]="['fas', 'star']" class="star"></fa-icon>
+            <fa-icon *ngIf="!i" [icon]="['far', 'star']" class="star"></fa-icon>
+          </ng-container>
+          <span class="review-rating">{{review.rating}}</span>
+        </div>
+      </div>
+    </div>
+    <p class="mt-2 mb-0 text-muted font-size-14">{{review.comment}}</p>
+  </div>
+</div>

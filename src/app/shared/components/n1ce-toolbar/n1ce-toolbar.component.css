@@ -35,4 +35,8 @@ a.navbar-brand {
   a.navbar-brand {
     margin: 0 auto;
   }
+
+  .navbar .nav-link {
+    padding-left: 10px;
+  }
 }

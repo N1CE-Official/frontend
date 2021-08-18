@@ -62,8 +62,40 @@ img.img-rounded{
   color: white;
 }
 
+.btn.btn-accent {
+  background-color: #e7d636;
+  color: #444444;
+  transition: background-color .7s, color .7s;
+}
+
+.btn.btn-accent:hover {
+  background-color: white;
+  border: 1px solid #e7d636;
+  color: rgba(5, 178, 176, 1);
+}
+
+.btn.btn-accent-outline {
+  background-color: white;
+  border: 1px solid #e7d636;
+  color: rgba(5, 178, 176, 1);
+  transition: background-color .7s, color .7s;
+}
+
+.btn.btn-accent-outline:hover {
+  background-color: #e7d636;
+  color: #444444;
+}
+
 .color-black {
   color: black;
+}
+
+.color-primary {
+  color: rgba(5, 178, 176, 1);
+}
+
+.color-accent {
+  color: #e7d636;
 }
 
 .whitespace-preline {

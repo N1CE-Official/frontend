@@ -2,3 +2,18 @@
   background-color: #009688;
   color: white;
 }
+
+.search-group .input-group-text {
+  background: white;
+}
+
+.search-group .form-control {
+  border-left: none;
+  height: 50px;
+}
+
+.search-group button.btn {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 500;
+}
