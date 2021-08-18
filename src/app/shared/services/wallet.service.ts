@@ -1,5 +1,6 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { ReplaySubject } from 'rxjs';
 
 declare let require: any;
 declare let ethereum: any;
@@ -15,7 +16,7 @@ export class WalletService {
   private accounts!: string[];
   public ready = false;
 
-  public accountsObservable = new EventEmitter<string[]>();
+  public accountsObservable = new ReplaySubject<string[]>(1);
 
   constructor() {
     // this.bootstrapWeb3();
@@ -57,6 +58,11 @@ export class WalletService {
     });
   }
 
+  public disconnect() {
+    this.web3.currentProvider = null;
+    this.accounts = [];
+  }
+
   public getProvider() {
     return this.web3.currentProvider;
   }
@@ -86,7 +92,7 @@ export class WalletService {
         if (!this.accounts || this.accounts.length !== accs.length || this.accounts[0] !== accs[0]) {
           console.log('Observed new accounts');
 
-          this.accountsObservable.emit(accs);
+          this.accountsObservable.next(accs);
           this.accounts = accs;
         }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { WalletService } from '../../services/wallet.service';
 
 @Component({
@@ -8,10 +8,11 @@ import { WalletService } from '../../services/wallet.service';
 })
 export class N1ceToolbarComponent implements OnInit {
   public isMenuCollapsed = true;
-  public connectedAccount!: string;
+  public connectedAccount!: string | null;
 
   constructor(
-    public walletService: WalletService
+    public walletService: WalletService,
+    private _cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -22,6 +23,7 @@ export class N1ceToolbarComponent implements OnInit {
     this.walletService.accountsObservable.subscribe(
       value => {
         this.connectedAccount = this.shorten(value[0]);
+        this._cdr.detectChanges();
       }
     )
   }
@@ -29,5 +31,11 @@ export class N1ceToolbarComponent implements OnInit {
   shorten(str: string): string {
     const suffix = str.substr(str.length - 4, 4);
     return "0x" + "..." + suffix;
+  }
+
+  disconnectWallet() {
+    this.walletService.disconnect();
+    this.connectedAccount = null;
+    this._cdr.detectChanges();
   }
 }

@@ -24,7 +24,7 @@ import {
   faFan,
   faGlobe,
   faPaintBrush,
-  faStar
+  faStar, faWallet
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faThumbsDown, faThumbsUp
@@ -72,6 +72,6 @@ export class SharedModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faTelegram, faMedium,
       faInstagram, faDribbble, faStar, faCode, faGlobe, faPaintBrush, faFan, faBullhorn, faChartLine,
-      faThumbsUp, faThumbsDown,)
+      faThumbsUp, faThumbsDown, faWallet, )
   }
 }
