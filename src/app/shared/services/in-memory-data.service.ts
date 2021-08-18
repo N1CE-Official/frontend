@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { BlogCategory, BlogPost, Expert, ExpertPlatformService, ServiceCategory } from '../classes/models';
+import {
+  BlogCategory,
+  BlogPost,
+  Expert,
+  ExpertPlatformService,
+  ServiceCategory,
+  ServiceReview
+} from '../classes/models';
 import { faBullhorn, faChartLine, faCode, faFan, faGlobe, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
@@ -344,6 +351,22 @@ export class InMemoryDataService implements InMemoryDbService {
     const topServices: string[] = ["1", "4", "10", "5"];
     const latestBlogPosts: string[] = ["1", "4", "t3", "5"];
     const latestExpertCandidates: string[] = ["Expert 2", "Expert 3"];
+    const reviews: ServiceReview[] = [
+      {
+        id: 'r1',
+        serviceId: '1',
+        userId: 'user123',
+        comment: 'The expert went beyond my expectations with its delivery, I can say that I\'m very satisfied.',
+        rating: 4.5
+      },
+      {
+        id: 'r2',
+        serviceId: '1',
+        userId: 'user456',
+        comment: 'The contract was very well written and the delivery was extremely fast. I would recommend this expert to anyone.',
+        rating: 5
+      }
+    ];
     return {
       posts,
       blogCategories,
@@ -354,7 +377,8 @@ export class InMemoryDataService implements InMemoryDbService {
       inEvidencePost,
       topServices,
       latestBlogPosts,
-      latestExpertCandidates
+      latestExpertCandidates,
+      reviews
     };
   }
 }

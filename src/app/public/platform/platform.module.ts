@@ -6,6 +6,7 @@ import { ServiceListComponent } from './components/service-list/service-list.com
 import { CatalogFiltersComponent } from './components/catalog-filters/catalog-filters.component';
 import { PublicSharedModule } from '../shared/public.shared.module';
 import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
+import { ServiceReviewBoxComponent } from './components/service-review-box/service-review-box.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ServiceDetailComponent } from './components/service-detail/service-deta
     PlatformCategoryComponent,
     ServiceListComponent,
     CatalogFiltersComponent,
-    ServiceDetailComponent,],
+    ServiceDetailComponent,
+    ServiceReviewBoxComponent,],
   exports: [ServiceCardComponent,
     CatalogHomeComponent,
     PlatformCategoryComponent,

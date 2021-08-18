@@ -9,6 +9,8 @@ import { ExpertService } from '../../../common/services/expert.service';
 })
 export class ExpertBadgeComponent implements OnInit, OnChanges {
   @Input() expertId!: string;
+  @Input() startingPrice: number = 80;
+
   expert!: Expert;
 
   constructor(public expertService: ExpertService) {

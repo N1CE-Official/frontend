@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ExpertPlatformService, ServiceCategory } from '../../../shared/classes/models';
+import { ExpertPlatformService, ServiceCategory, ServiceReview } from '../../../shared/classes/models';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { MessageService } from '../../../shared/services/message.service';
 
 @Injectable({
@@ -12,6 +12,7 @@ export class PlatformService {
   private servicesUrl = 'api/services';
   private categoriesUrl = 'api/serviceCategories';
   private topServicesUrl = 'api/topServices';
+  private reviewsUrl = 'api/reviews';
 
   constructor(
     private http: HttpClient,
@@ -28,6 +29,12 @@ export class PlatformService {
 
   public listServices(): Observable<ExpertPlatformService[]> {
     return this.http.get<ExpertPlatformService[]>(this.servicesUrl);
+  }
+
+  public listReviews(serviceId: string): Observable<ServiceReview[]> {
+    return this.http.get<ServiceReview[]>(this.reviewsUrl).pipe(
+      map(list => list.filter(r => r.serviceId === serviceId))
+    );
   }
 
   public getService(id: string): Observable<ExpertPlatformService> {

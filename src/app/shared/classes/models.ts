@@ -1,5 +1,3 @@
-import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-
 export class BlogPost {
   id: string = '';
   title?: string;
@@ -41,4 +39,12 @@ export class ExpertPlatformService {
   featuredImg?: string;
   category?: string;
   startingPrice?: number;
+}
+
+export class ServiceReview {
+  id: string = '';
+  serviceId: string = '';
+  userId: string = '';
+  rating: number = 0;
+  comment: string = '';
 }
