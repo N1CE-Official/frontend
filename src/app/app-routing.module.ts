@@ -24,6 +24,8 @@ import { HomeLatestExpertCandidatesResolverService } from './public/common/resol
 import { ExpertCandidateDetailComponent } from './public/common/components/expert-candidate-detail/expert-candidate-detail.component';
 import { SearchResultsPageComponent } from './public/common/components/search-results-page/search-results-page.component';
 import { SearchResultsResolverService } from './public/common/resolvers/search-results-resolver.service';
+import { PrivacyPolicyComponent } from './public/common/components/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './public/common/components/terms-conditions/terms-conditions.component';
 
 const routes: Routes = [
   {
@@ -81,6 +83,12 @@ const routes: Routes = [
     path: 'search-results/:str', component: SearchResultsPageComponent, resolve: {
       searchResults: SearchResultsResolverService
     }
+  },
+  {
+    path: 'privacy-policy', component: PrivacyPolicyComponent
+  },
+  {
+    path: 'terms-conditions', component: TermsConditionsComponent
   },
   {path: '**', component: PageNotFoundComponent}
 ];

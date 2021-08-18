@@ -15,6 +15,8 @@ import { ExpertCandidateApprovalBoxComponent } from './components/expert-candida
 import { SearchResultsPageComponent } from './components/search-results-page/search-results-page.component';
 import { FormsModule } from '@angular/forms';
 import { SearchResultCardComponent } from './components/search-result-card/search-result-card.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
 
 @NgModule({
   imports: [PublicSharedModule, BlogModule, PlatformModule, FormsModule],
@@ -28,7 +30,9 @@ import { SearchResultCardComponent } from './components/search-result-card/searc
     HomeLowerBannerSectionComponent,
     ExpertCandidateApprovalBoxComponent,
     SearchResultsPageComponent,
-    SearchResultCardComponent,],
+    SearchResultCardComponent,
+    PrivacyPolicyComponent,
+    TermsConditionsComponent,],
   exports: [ExpertDetailComponent,ExpertCandidateDetailComponent,],
   entryComponents: [ExpertDetailComponent,ExpertCandidateDetailComponent,]
 })
