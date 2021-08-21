@@ -1,0 +1,25 @@
+.signup-custom-control input {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  border-radius: 0;
+}
+
+.signup-custom-control .input-group-append .input-group-text {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  border-radius: 0;
+  color: #888888;
+}
+
+.card-img {
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 991px){
+  .card-img {
+    border-radius: 0 0 10px 10px;
+  }
+}

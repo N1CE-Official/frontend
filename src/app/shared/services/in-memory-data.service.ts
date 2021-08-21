@@ -352,6 +352,7 @@ export class InMemoryDataService implements InMemoryDbService {
     const topServices: string[] = ["1", "4", "10", "5"];
     const latestBlogPosts: string[] = ["1", "4", "t3", "5"];
     const latestExpertCandidates: string[] = ["Expert 2", "Expert 3"];
+    const topExperts: string[] = ["Expert 1", "Expert 4", "Expert 5"];
     const reviews: ServiceReview[] = [
       {
         id: 'r1',
@@ -412,6 +413,7 @@ export class InMemoryDataService implements InMemoryDbService {
       reviews,
       users,
       search,
+      topExperts,
     };
   }
 }

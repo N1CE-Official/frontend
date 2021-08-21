@@ -36,3 +36,9 @@
     </div>
   </ng-container>
 </div>
+<div class="service-footer d-md-none" *ngIf="(service$ | async) as service">
+  <app-expert-footer-for-services
+    *ngIf="service.expertId && service.startingPrice"
+    [expertId]="service.expertId" [startingPrice]="service.startingPrice">
+  </app-expert-footer-for-services>
+</div>

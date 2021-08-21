@@ -26,6 +26,12 @@ import { SearchResultsPageComponent } from './public/common/components/search-re
 import { SearchResultsResolverService } from './public/common/resolvers/search-results-resolver.service';
 import { PrivacyPolicyComponent } from './public/common/components/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './public/common/components/terms-conditions/terms-conditions.component';
+import { OurExpertsPageComponent } from './public/common/components/our-experts-page/our-experts-page.component';
+import { SignUpPageComponent } from './public/shared/components/sign-up-page/sign-up-page.component';
+import { LoginPageComponent } from './public/shared/components/login-page/login-page.component';
+import { ForgotPasswordComponent } from './public/shared/components/forgot-password/forgot-password.component';
+import { ExpertCandidatesResolverService } from './public/common/resolvers/expert-candidates-resolver.service';
+import { TopExpertsResolverService } from './public/common/resolvers/top-experts-resolver.service';
 
 const routes: Routes = [
   {
@@ -89,6 +95,21 @@ const routes: Routes = [
   },
   {
     path: 'terms-conditions', component: TermsConditionsComponent
+  },
+  {
+    path: 'our-experts', component: OurExpertsPageComponent, resolve: {
+      expertCandidates: ExpertCandidatesResolverService,
+      topExperts: TopExpertsResolverService
+    }
+  },
+  {
+    path: 'sign-up', component: SignUpPageComponent
+  },
+  {
+    path: 'login', component: LoginPageComponent
+  },
+  {
+    path: 'forgot-password', component: ForgotPasswordComponent
   },
   {path: '**', component: PageNotFoundComponent}
 ];

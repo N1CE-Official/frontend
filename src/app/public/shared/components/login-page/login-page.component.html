@@ -1,0 +1,118 @@
+<div class="container mt-4">
+  <div class="card rounded-10">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="card-body">
+          <div class="mt-4">
+            <h2>Login</h2>
+            <div class="mt-3">
+              Don't have an account yet? <a routerLink="/sign-up">Create your account</a>
+            </div>
+            <div>
+              <form (ngSubmit)="login()">
+                <div class="form-group signup-custom-control">
+                  <label for="email"></label>
+                  <div class="input-group">
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Your email address"
+                           [(ngModel)]="emailAddress" required/>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group signup-custom-control">
+                  <label for="password"></label>
+                  <div class="input-group">
+                    <input id="password" name="password" type="password" class="form-control"
+                           placeholder="Your password" [(ngModel)]="password"
+                           required/>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <fa-icon [icon]="['fas', 'lock']"></fa-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-6">
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberMe">
+                      <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                  </div>
+                  <div class="col-6 text-right">
+                    <button class="btn btn-link" (click)="openVerticallyCentered(content)">Forgot Password?</button>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-n1ce py-2 px-4 mt-3">Login</button>
+                <div class="mt-4">
+                  <span>Or login with:</span>
+                  <button class="btn btn-facebook btn-brand ml-3">
+                    <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
+                  </button>
+                  <button class="btn btn-twitter btn-brand ml-2">
+                    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                  </button>
+                  <button class="btn btn-google btn-brand ml-2">
+                    <fa-icon [icon]="['fab', 'google-plus-g']"></fa-icon>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img
+          src="https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          class="card-img" alt="...">
+        <div class="card-img-overlay signup-custom-overlay">
+          <div class="mt-4 text-center signup-custom-content">
+            <h2 class="signup-custom-title">Welcome</h2>
+            <p class="signup-custom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis condimentum quam.
+              Sed
+              sed accumsan
+              diam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Forgot Password?</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="forgotPassword()">
+      <div class="form-group signup-custom-control">
+        <label for="emailForgot"></label>
+        <div class="input-group">
+          <input id="emailForgot" name="emailForgot" type="email" class="form-control"
+                 placeholder="Enter your email address" [(ngModel)]="emailAddressForgot"
+                 required/>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <span>Instructions to reset your password will be sent to this email address.</span>
+        </div>
+        <div class="text-right">
+          <button type="submit" class="btn btn-n1ce py-2 px-4 mt-3">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

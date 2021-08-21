@@ -1,0 +1,14 @@
+<section id="top-experts" class="bg-light" *ngIf="(topExperts$ | async) as topExperts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Our Top Experts</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 my-2" *ngFor="let id of topExperts">
+        <app-expert-box [expertId]="id"></app-expert-box>
+      </div>
+    </div>
+  </div>
+</section>

@@ -6,6 +6,7 @@ export class BlogPost {
   expertId: string = '';
   featuredImg?: string;
   category: string = '';
+  publishingTime?: string;
 }
 
 export class BlogCategory {
@@ -26,6 +27,7 @@ export class Expert extends User{
   rating: number = 0;
   reviews: number = 0;
   candidatureVotes?: number = 0;
+  candidatureTime?: string;
 }
 
 export class ServiceCategory {
@@ -42,6 +44,7 @@ export class ExpertPlatformService {
   featuredImg?: string;
   category?: string;
   startingPrice?: number;
+  publishingTime?: string;
 }
 
 export class ServiceReview {
@@ -50,6 +53,7 @@ export class ServiceReview {
   userId: string = '';
   rating: number = 0;
   comment: string = '';
+  publishingTime?: string;
 }
 
 export class SearchResult {

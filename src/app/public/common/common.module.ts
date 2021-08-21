@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { SearchResultCardComponent } from './components/search-result-card/search-result-card.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
+import { OurExpertsPageComponent } from './components/our-experts-page/our-experts-page.component';
+import { VoteOurExpertsSectionComponent } from './components/vote-our-experts-section/vote-our-experts-section.component';
+import { TopExpertsSectionComponent } from './components/top-experts-section/top-experts-section.component';
 
 @NgModule({
   imports: [PublicSharedModule, BlogModule, PlatformModule, FormsModule],
@@ -32,7 +35,10 @@ import { TermsConditionsComponent } from './components/terms-conditions/terms-co
     SearchResultsPageComponent,
     SearchResultCardComponent,
     PrivacyPolicyComponent,
-    TermsConditionsComponent,],
+    TermsConditionsComponent,
+    OurExpertsPageComponent,
+    VoteOurExpertsSectionComponent,
+    TopExpertsSectionComponent,],
   exports: [ExpertDetailComponent,ExpertCandidateDetailComponent,],
   entryComponents: [ExpertDetailComponent,ExpertCandidateDetailComponent,]
 })

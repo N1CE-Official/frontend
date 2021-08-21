@@ -1,0 +1,11 @@
+<div *ngIf="expert" routerLink="/expert/{{expert.id}}" class="row container mx-auto">
+  <div class="d-flex col-12">
+    <div>
+      <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+    </div>
+    <div class="ml-2 my-auto">
+        <span class="expert-name">{{expert.name}}</span>
+    </div>
+    <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 ml-2">Hire (Starting from ${{startingPrice}})</button>
+  </div>
+</div>

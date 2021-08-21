@@ -9,9 +9,14 @@ import { ExpertSocialIconsComponent } from './components/expert-social-icons/exp
 import { ExpertTagsComponent } from './components/expert-tags/expert-tags.component';
 import { SharedModule } from '../../shared/shared.module';
 import { ExpertCandidateCardComponent } from './components/expert-candidate-card/expert-candidate-card.component';
+import { ExpertFooterForServicesComponent } from './components/expert-footer-for-services/expert-footer-for-services.component';
+import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [SharedModule],
+  imports: [SharedModule, FormsModule],
   declarations: [CategoryTitleComponent,
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
@@ -20,8 +25,12 @@ import { ExpertCandidateCardComponent } from './components/expert-candidate-card
     ExpertRatingComponent,
     ExpertSocialIconsComponent,
     ExpertTagsComponent,
-    ExpertCandidateCardComponent,],
-  exports: [CategoryTitleComponent,
+    ExpertCandidateCardComponent,
+    ExpertFooterForServicesComponent,
+    SignUpPageComponent,
+    LoginPageComponent,
+    ForgotPasswordComponent,],
+  exports: [FormsModule, CategoryTitleComponent,
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
     ExpertBadgeInEvidenceComponent,
@@ -30,7 +39,8 @@ import { ExpertCandidateCardComponent } from './components/expert-candidate-card
     ExpertSocialIconsComponent,
     ExpertTagsComponent,
     SharedModule,
-    ExpertCandidateCardComponent,],
+    ExpertCandidateCardComponent,
+    ExpertFooterForServicesComponent,],
   entryComponents: [CategoryTitleComponent,
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
@@ -39,7 +49,8 @@ import { ExpertCandidateCardComponent } from './components/expert-candidate-card
     ExpertRatingComponent,
     ExpertSocialIconsComponent,
     ExpertTagsComponent,
-    ExpertCandidateCardComponent,]
+    ExpertCandidateCardComponent,
+    ExpertFooterForServicesComponent,]
 })
 
 export class PublicSharedModule {

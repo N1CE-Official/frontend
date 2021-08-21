@@ -10,8 +10,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
-  faDribbble,
-  faFacebookSquare,
+  faDribbble, faFacebookF,
+  faFacebookSquare, faGooglePlusG,
   faInstagram,
   faLinkedin, faMedium,
   faTelegram,
@@ -20,9 +20,9 @@ import {
 import {
   faBullhorn,
   faChartLine,
-  faCode,
+  faCode, faEnvelope,
   faFan,
-  faGlobe,
+  faGlobe, faLock,
   faPaintBrush, faSearch,
   faStar, faWallet
 } from '@fortawesome/free-solid-svg-icons';
@@ -72,6 +72,6 @@ export class SharedModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faTelegram, faMedium,
       faInstagram, faDribbble, faStar, starOutline, faCode, faGlobe, faPaintBrush, faFan, faBullhorn, faChartLine,
-      faThumbsUp, faThumbsDown, faWallet, faSearch)
+      faThumbsUp, faThumbsDown, faWallet, faSearch, faEnvelope, faLock, faFacebookF, faGooglePlusG)
   }
 }

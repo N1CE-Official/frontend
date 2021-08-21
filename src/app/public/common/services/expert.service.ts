@@ -11,6 +11,7 @@ import { catchError } from 'rxjs/operators';
 export class ExpertService {
   private expertsUrl = 'api/experts';
   private latestExpertCandidatesUrl = 'api/latestExpertCandidates';
+  private topExpertsUrl = 'api/topExperts';
 
   constructor(
     private http: HttpClient,
@@ -26,6 +27,10 @@ export class ExpertService {
 
   public latestExpertCandidates(): Observable<string[]> {
     return this.http.get<string[]>(this.latestExpertCandidatesUrl);
+  }
+
+  public topExperts(): Observable<string[]> {
+    return this.http.get<string[]>(this.topExpertsUrl);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
