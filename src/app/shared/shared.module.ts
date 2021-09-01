@@ -10,28 +10,34 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
-  faDribbble, faFacebookF,
-  faFacebookSquare, faGooglePlusG,
+  faDribbble,
+  faFacebookF,
+  faFacebookSquare,
+  faGooglePlusG,
   faInstagram,
-  faLinkedin, faMedium,
+  faLinkedin,
+  faMedium,
   faTelegram,
   faTwitter
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faBullhorn,
   faChartLine,
-  faCode, faEnvelope,
+  faCode,
+  faEnvelope,
   faFan,
-  faGlobe, faLock,
-  faPaintBrush, faSearch,
-  faStar, faWallet
+  faGlobe,
+  faLock,
+  faPaintBrush,
+  faSearch,
+  faStar,
+  faWallet
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faThumbsDown, faThumbsUp, faStar as starOutline
-} from '@fortawesome/free-regular-svg-icons';
+import { faStar as starOutline, faThumbsDown, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import { AppRoutingModule } from '../app-routing.module';
 import { CommonModule } from '@angular/common';
 import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.component';
+import { TimeagoModule } from 'ngx-timeago';
 
 @NgModule({
   imports: [
@@ -40,7 +46,8 @@ import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.compon
     BrowserAnimationsModule, NgbModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
-    ), FontAwesomeModule,],
+    ), FontAwesomeModule,
+    TimeagoModule.forRoot()],
   declarations: [
     N1ceToolbarComponent,
     PageNotFoundComponent,
@@ -54,6 +61,7 @@ import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.compon
     FontAwesomeModule,
     CommonModule,
     N1ceFooterComponent,
+    TimeagoModule,
   ],
   entryComponents: [
     N1ceToolbarComponent,

@@ -199,11 +199,11 @@ hr.solid {
   cursor: pointer;
 }
 
-.ng-invalid:not(form) {
+.ng-invalid:not(.ng-pristine):not(form) {
   border-bottom: 1px solid #a94442 !important; /* red */
 }
 
-.ng-invalid:not(form) + .input-group-append .input-group-text{
+.ng-invalid:not(.ng-pristine):not(form) + .input-group-append .input-group-text{
   border-bottom: 1px solid #a94442 !important; /* red */
 }
 

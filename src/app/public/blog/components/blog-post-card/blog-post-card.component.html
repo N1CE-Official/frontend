@@ -5,7 +5,7 @@
     <p class="card-text article-text" routerLink="/post/{{post.id}}">{{post.snippet}}</p>
     <app-expert-badge *ngIf="post.expertId" [expertId]="post.expertId"></app-expert-badge>
     <div class="card-footer text-muted mt-2 font-size-small">
-      2 hours ago
+      <span *ngIf="post.publishingTime" timeago [date]="toDate(post.publishingTime)"></span>
     </div>
   </div>
 </div>

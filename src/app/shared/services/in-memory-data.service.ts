@@ -27,7 +27,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210822140000'
       }, {
         id: '2',
         title: 'Article 2',
@@ -35,7 +36,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 3',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210829140000'
       }, {
         id: '3',
         title: 'Article 3',
@@ -43,7 +45,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210831140000'
       }, {
         id: '4',
         title: 'Article 4',
@@ -51,7 +54,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090000'
       }, {
         id: '5',
         title: 'Article 5',
@@ -59,7 +63,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 3',
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090000'
       }, {
         id: '6',
         title: 'Article 6',
@@ -67,7 +72,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090000'
       }, {
         id: '7',
         title: 'Article 7',
@@ -75,7 +81,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090500'
       }, {
         id: '8',
         title: 'Article 8',
@@ -83,7 +90,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'DeFi',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090200'
       }, {
         id: 't1',
         title: 'Trending Article 1',
@@ -106,7 +114,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901092200'
       }, {
         id: 't2',
         title: 'This is how you should invest your money in crypto',
@@ -114,7 +123,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 3',
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901091200'
       }, {
         id: 't3',
         title: 'Trending Article 3',
@@ -122,7 +132,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090800'
       }, {
         id: 't4',
         title: 'Trending Article 4',
@@ -130,7 +141,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Trending',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+        snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+        publishingTime: '20210901090700'
       }
     ];
     const blogCategories: BlogCategory[] = [
@@ -161,7 +173,8 @@ export class InMemoryDataService implements InMemoryDbService {
       expertId: 'Expert 1',
       category: 'Trending',
       featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+      snippet: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      publishingTime: '20210901092200'
     };
     const experts: Expert [] = [
       {
@@ -253,7 +266,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 39
+        startingPrice: 39,
+        publishingTime: '20210901092200'
       },
       {
         id: '2',
@@ -262,7 +276,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 79
+        startingPrice: 79,
+        publishingTime: '20210901092200'
       },
       {
         id: '3',
@@ -271,7 +286,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 49
+        startingPrice: 49,
+        publishingTime: '20210901092200'
       }, {
         id: '4',
         title: 'Write a complete DApp smart contract using Solidity',
@@ -279,7 +295,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Smart Contracts',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 150
+        startingPrice: 150,
+        publishingTime: '20210901092200'
       },
       {
         id: '5',
@@ -288,7 +305,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Web Development',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 280
+        startingPrice: 280,
+        publishingTime: '20210901092200'
       },
       {
         id: '6',
@@ -297,7 +315,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'Web Development',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 99
+        startingPrice: 99,
+        publishingTime: '20210901092200'
       },
       {
         id: '7',
@@ -306,7 +325,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 2',
         category: 'Web Development',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 120
+        startingPrice: 120,
+        publishingTime: '20210901092200'
       }, {
         id: '8',
         title: 'Create a complex RESTful web service using nodeJs and express',
@@ -314,7 +334,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 1',
         category: 'Web Development',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 399
+        startingPrice: 399,
+        publishingTime: '20210901092200'
       }, {
         id: '9',
         title: 'Design a minimal logo for your crypto project',
@@ -322,7 +343,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 3',
         category: 'Graphic Design',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 15
+        startingPrice: 15,
+        publishingTime: '20210901092200'
       }, {
         id: '10',
         title: 'Build a marketing plan for your Crypto Business',
@@ -330,7 +352,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 4',
         category: 'Marketing',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 599
+        startingPrice: 599,
+        publishingTime: '20210901092200'
       }, {
         id: '11',
         title: 'Setup a Bitcoin Miner',
@@ -338,7 +361,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 5',
         category: 'Mining',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 150
+        startingPrice: 150,
+        publishingTime: '20210901092200'
       }, {
         id: '12',
         title: 'Create a diversified portfolio for your crypto investments',
@@ -347,7 +371,8 @@ export class InMemoryDataService implements InMemoryDbService {
         expertId: 'Expert 4',
         category: 'Market Analysis',
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        startingPrice: 150
+        startingPrice: 150,
+        publishingTime: '20210901092200'
       }];
     const topServices: string[] = ["1", "4", "10", "5"];
     const latestBlogPosts: string[] = ["1", "4", "t3", "5"];
@@ -359,14 +384,16 @@ export class InMemoryDataService implements InMemoryDbService {
         serviceId: '1',
         userId: 'user123',
         comment: 'The expert went beyond my expectations with its delivery, I can say that I\'m very satisfied.',
-        rating: 4
+        rating: 4,
+        publishingTime: '20210901092200'
       },
       {
         id: 'r2',
         serviceId: '1',
         userId: 'user456',
         comment: 'The contract was very well written and the delivery was extremely fast. I would recommend this expert to anyone.',
-        rating: 5
+        rating: 5,
+        publishingTime: '20210901092200'
       }
     ];
     const users: User[] = [

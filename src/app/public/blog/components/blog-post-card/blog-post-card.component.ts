@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { BlogPost } from '../../../../shared/classes/models';
 import { BlogService } from '../../services/blog.service';
+import { TimeUtils } from '../../../../shared/utils/time.utils';
 
 @Component({
   selector: 'app-blog-post-card',
@@ -11,7 +12,9 @@ export class BlogPostCardComponent implements OnInit, OnChanges {
   @Input() postId!: string;
   @Input() post!: BlogPost | null;
 
-  constructor(public blogService: BlogService) { }
+  constructor(
+    public blogService: BlogService) {
+  }
 
   ngOnInit(): void {
   }
@@ -22,6 +25,10 @@ export class BlogPostCardComponent implements OnInit, OnChanges {
         p => this.post = p
       )
     }
+  }
+
+  toDate(date: string): Date {
+    return TimeUtils.toDate(date);
   }
 
 }
