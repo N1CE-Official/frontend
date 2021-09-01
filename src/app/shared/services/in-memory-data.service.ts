@@ -198,7 +198,9 @@ export class InMemoryDataService implements InMemoryDbService {
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.4,
         reviews: 231,
-        candidatureVotes: 55
+        candidatureVotes: 55,
+        candidatureEndTime: '20210902113600',
+        candidatureStakedAmount: 123800
       },
       {
         id: 'Expert 3',
@@ -210,7 +212,9 @@ export class InMemoryDataService implements InMemoryDbService {
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.9,
         reviews: 48,
-        candidatureVotes: 124
+        candidatureVotes: 124,
+        candidatureEndTime: '20210907112200',
+        candidatureStakedAmount: 15480
       },
       {
         id: 'Expert 4',

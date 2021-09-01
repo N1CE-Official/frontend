@@ -38,6 +38,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { CommonModule } from '@angular/common';
 import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.component';
 import { TimeagoModule } from 'ngx-timeago';
+import { CountdownModule } from 'ngx-countdown';
 
 @NgModule({
   imports: [
@@ -47,7 +48,7 @@ import { TimeagoModule } from 'ngx-timeago';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
     ), FontAwesomeModule,
-    TimeagoModule.forRoot()],
+    TimeagoModule.forRoot(), CountdownModule],
   declarations: [
     N1ceToolbarComponent,
     PageNotFoundComponent,
@@ -61,7 +62,7 @@ import { TimeagoModule } from 'ngx-timeago';
     FontAwesomeModule,
     CommonModule,
     N1ceFooterComponent,
-    TimeagoModule,
+    TimeagoModule, CountdownModule,
   ],
   entryComponents: [
     N1ceToolbarComponent,

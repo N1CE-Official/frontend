@@ -27,7 +27,8 @@ export class Expert extends User{
   rating: number = 0;
   reviews: number = 0;
   candidatureVotes?: number = 0;
-  candidatureTime?: string;
+  candidatureEndTime?: string;
+  candidatureStakedAmount?: number = 0;
 }
 
 export class ServiceCategory {

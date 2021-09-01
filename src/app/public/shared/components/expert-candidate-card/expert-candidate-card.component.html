@@ -1,10 +1,20 @@
 <div *ngIf="expert" class="card author-card text-center p-3">
-  <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile" routerLink="/expert-candidate/{{expert.id}}">
+  <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile"
+       routerLink="/expert-candidate/{{expert.id}}">
   <div class="card-body">
     <h5 class="card-title" routerLink="/expert-candidate/{{expert.id}}">{{expert.name}}</h5>
-    <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 my-3" routerLink="/expert-candidate/{{expert.id}}">Vote and Earn</button>
+    <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 my-3" routerLink="/expert-candidate/{{expert.id}}">
+      Vote and Earn
+    </button>
     <p class="card-text">{{expert.shortBio}}</p>
     <app-expert-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-expert-tags>
     <app-expert-social-icons></app-expert-social-icons>
+    <div *ngIf="leftSeconds && leftSeconds > 0" class="mt-3">
+      Ends in:
+      <countdown [config]="{leftTime: leftSeconds, format: 'DD:HH:mm:ss', formatDate : formatDate}"></countdown>
+    </div>
+    <div *ngIf="expert.candidatureStakedAmount">
+      Staked: {{expert.candidatureStakedAmount}} N1CE
+    </div>
   </div>
 </div>
