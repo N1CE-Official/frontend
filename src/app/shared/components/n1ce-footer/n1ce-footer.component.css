@@ -45,7 +45,7 @@ img.brand-logo.logo-small {
 }
 
 footer .social-links ul {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 }
 

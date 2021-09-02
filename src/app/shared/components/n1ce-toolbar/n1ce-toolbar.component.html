@@ -22,9 +22,9 @@
         <a class="nav-link" routerLink="sign-up" routerLinkActive="active">Sign Up</a>
       </li>
     </ul>
-    <button *ngIf="connectedAccount" type="button" class="btn btn-n1ce btn-oval" (click)="disconnectWallet()">
+    <button *ngIf="connectedAccount && n1ceBalance" type="button" class="btn btn-n1ce btn-oval" (click)="disconnectWallet()">
       <fa-icon [icon]="['fas', 'wallet']" class="mr-1"></fa-icon>
-      {{connectedAccount}}
+      {{connectedAccount}} | {{n1ceBalance}} N1CE
     </button>
     <button *ngIf="!connectedAccount" type="button" class="btn btn-n1ce btn-oval" (click)="connectWallet()">
       Connect Wallet

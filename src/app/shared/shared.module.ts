@@ -46,7 +46,7 @@ import { CountdownModule } from 'ngx-countdown';
     BrowserModule,
     BrowserAnimationsModule, NgbModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false}
+      InMemoryDataService, {dataEncapsulation: false, passThruUnknownUrl: true}
     ), FontAwesomeModule,
     TimeagoModule.forRoot(), CountdownModule],
   declarations: [

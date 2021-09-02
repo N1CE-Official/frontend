@@ -17,6 +17,7 @@ export class WalletService {
   public ready = false;
 
   public accountsObservable = new ReplaySubject<string[]>(1);
+  public balanceObservable = new ReplaySubject<any>(1);
 
   constructor() {
     // this.bootstrapWeb3();
@@ -76,7 +77,7 @@ export class WalletService {
   }
 
   public refreshAccounts = () => {
-    if (typeof window.web3 !== 'undefined') {
+    if (window.web3) {
       this.web3.eth.getAccounts((err: any, accs: any) => {
         if (err != null) {
           console.warn('There was an error fetching your accounts.');
@@ -100,4 +101,30 @@ export class WalletService {
       });
     }
   };
+
+  public async getBalance(walletAddress: string) {
+    // The minimum ABI required to get the ERC20 Token balance
+    const minABI = [
+      // balanceOf
+      {
+        constant: true,
+        inputs: [{ name: "_owner", type: "address" }],
+        name: "balanceOf",
+        outputs: [{ name: "balance", type: "uint256" }],
+        type: "function",
+      },
+    ];
+    const tokenAddress = "0xc14df1e2fff3708816495e7364ff274aceecad91";
+
+    const contract = new this.web3.eth.Contract(minABI, tokenAddress);
+
+    const result = await contract.methods.balanceOf(walletAddress).call();
+
+    const divisor = new this.web3.utils.BN(10).pow(new this.web3.utils.BN(18));
+    const intPart = this.web3.utils.toBN(result).div(divisor).toString();
+    const decPart = this.web3.utils.toBN(result).mod(divisor).toString().substring(0, 3);
+    const format = intPart + "." + decPart;
+
+    this.balanceObservable.next(format);
+  }
 }

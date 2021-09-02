@@ -9,6 +9,7 @@ import { WalletService } from '../../services/wallet.service';
 export class N1ceToolbarComponent implements OnInit {
   public isMenuCollapsed = true;
   public connectedAccount!: string | null;
+  public n1ceBalance!: any;
 
   constructor(
     public walletService: WalletService,
@@ -16,16 +17,24 @@ export class N1ceToolbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.walletService.bootstrapWeb3();
+    this.walletService.accountsObservable.subscribe(
+      walletAddress => {
+        this.connectedAccount = this.shorten(walletAddress[0]);
+        this._cdr.detectChanges();
+        this.walletService.getBalance(walletAddress[0]);
+      }
+    );
+    this.walletService.balanceObservable.subscribe(
+      balance => {
+        this.n1ceBalance = balance;
+        this._cdr.detectChanges();
+      }
+    );
   }
 
   connectWallet() {
     this.walletService.bootstrapWeb3();
-    this.walletService.accountsObservable.subscribe(
-      value => {
-        this.connectedAccount = this.shorten(value[0]);
-        this._cdr.detectChanges();
-      }
-    )
   }
 
   shorten(str: string): string {
