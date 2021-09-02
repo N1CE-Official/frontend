@@ -48,36 +48,45 @@
     <div class="row pb-3">
       <div class="col-12">
         <div class="d-flex">
-          <a class="footer-brand" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="..." class="brand-logo"></a>
+          <a class="footer-brand" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="N1CE Logo"
+                                                     class="brand-logo"></a>
           <span class="n1ce-spacer"></span>
-          <div class="social-links">
-            <ul>
-              <li>
-                <a href="https://twitter.com/n1ceofficial">
-                  <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
-                </a>
-              </li>
-              <li>
-                <a href="https://t.me/n1ceofficial">
-                  <fa-icon [icon]="['fab', 'telegram']" size="lg"></fa-icon>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/n1ce.community">
-                  <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/n1ceofficial">
-                  <fa-icon [icon]="['fab', 'instagram']" size="lg"></fa-icon>
-                </a>
-              </li>
-              <li>
-                <a href="http://n1ceofficial.medium.com/">
-                  <fa-icon [icon]="['fab', 'medium']" size="lg"></fa-icon>
-                </a>
-              </li>
-            </ul>
+          <div class="vertical-middle text-center">
+            <div class="mb-1 price" *ngIf="(price$ | async) as price">
+              <div class="vertical-middle">
+                <img src="assets/img/n1ce_token_logo.png" alt="N1CE Token Logo" class="brand-logo logo-small">N1CE/USD =
+                ${{price.n1ce.usd}}
+              </div>
+            </div>
+            <div class="social-links">
+              <ul>
+                <li>
+                  <a href="https://twitter.com/n1ceofficial">
+                    <fa-icon [icon]="['fab', 'twitter']" size="lg"></fa-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/n1ceofficial">
+                    <fa-icon [icon]="['fab', 'telegram']" size="lg"></fa-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/n1ce.community">
+                    <fa-icon [icon]="['fab', 'facebook-square']" size="lg"></fa-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/n1ceofficial">
+                    <fa-icon [icon]="['fab', 'instagram']" size="lg"></fa-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://n1ceofficial.medium.com/">
+                    <fa-icon [icon]="['fab', 'medium']" size="lg"></fa-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

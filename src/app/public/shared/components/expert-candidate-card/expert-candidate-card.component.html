@@ -11,7 +11,7 @@
     <app-expert-social-icons></app-expert-social-icons>
     <div *ngIf="leftSeconds && leftSeconds > 0" class="mt-3">
       Ends in:
-      <countdown [config]="{leftTime: leftSeconds, format: 'DD:HH:mm:ss', formatDate : formatDate}"></countdown>
+      <countdown [config]="{leftTime: leftSeconds, format: 'DDd HH:mm:ss', formatDate : formatDate}"></countdown>
     </div>
     <div *ngIf="expert.candidatureStakedAmount">
       Staked: {{expert.candidatureStakedAmount}} N1CE

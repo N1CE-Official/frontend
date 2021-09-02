@@ -29,11 +29,17 @@ img.brand-logo:hover {
   filter: none;
 }
 
+img.brand-logo.logo-small {
+  object-fit: inherit;
+  width: 40px;
+  height: auto;
+}
+
 .n1ce-spacer {
   flex: 100;
 }
 
-.social-links {
+.vertical-middle {
   margin-top: auto;
   margin-bottom: auto;
 }
