@@ -14,7 +14,9 @@ declare let window: any;
 export class WalletService {
   private web3: any;
   private accounts!: string[];
+
   public ready = false;
+  public currentBalance!: number;
 
   public accountsObservable = new ReplaySubject<string[]>(1);
   public balanceObservable = new ReplaySubject<any>(1);
@@ -60,6 +62,7 @@ export class WalletService {
   }
 
   public disconnect() {
+    this.ready = false;
     this.web3.currentProvider = null;
     this.accounts = [];
   }
@@ -123,8 +126,8 @@ export class WalletService {
     const divisor = new this.web3.utils.BN(10).pow(new this.web3.utils.BN(18));
     const intPart = this.web3.utils.toBN(result).div(divisor).toString();
     const decPart = this.web3.utils.toBN(result).mod(divisor).toString().substring(0, 3);
-    const format = intPart + "." + decPart;
+    this.currentBalance = parseFloat(intPart + "." + decPart);
 
-    this.balanceObservable.next(format);
+    this.balanceObservable.next(this.currentBalance);
   }
 }

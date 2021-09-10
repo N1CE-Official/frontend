@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from '../../../../auth/auth.service';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -13,7 +15,9 @@ export class LoginPageComponent implements OnInit {
   modalRef!: NgbActiveModal;
 
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public authService: AuthService,
+    public router: Router
   ) {
   }
 
@@ -22,7 +26,23 @@ export class LoginPageComponent implements OnInit {
 
   public login() {
     if (this.emailAddress && this.password) {
-      return true;
+      this.authService.login().subscribe(() => {
+        if (this.authService.isLoggedIn) {
+          // Usually you would use the redirect URL from the auth service.
+          // However to keep the example simple, we will always redirect to `/admin`.
+          const redirectUrl = '/admin';
+
+          // Set our navigation extras object
+          // that passes on our global query params and fragment
+          const navigationExtras: NavigationExtras = {
+            queryParamsHandling: 'preserve',
+            preserveFragment: true
+          };
+
+          // Redirect the user
+          this.router.navigate([redirectUrl], navigationExtras);
+        }
+      });
     }
     return false;
   }

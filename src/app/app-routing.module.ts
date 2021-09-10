@@ -28,10 +28,12 @@ import { PrivacyPolicyComponent } from './public/common/components/privacy-polic
 import { TermsConditionsComponent } from './public/common/components/terms-conditions/terms-conditions.component';
 import { OurExpertsPageComponent } from './public/common/components/our-experts-page/our-experts-page.component';
 import { SignUpPageComponent } from './public/shared/components/sign-up-page/sign-up-page.component';
-import { LoginPageComponent } from './public/shared/components/login-page/login-page.component';
 import { ForgotPasswordComponent } from './public/shared/components/forgot-password/forgot-password.component';
 import { ExpertCandidatesResolverService } from './public/common/resolvers/expert-candidates-resolver.service';
 import { TopExpertsResolverService } from './public/common/resolvers/top-experts-resolver.service';
+import { AuthGuard } from './auth/auth.guard';
+import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+import { LoginPageComponent } from './public/shared/components/login-page/login-page.component';
 
 const routes: Routes = [
   {
@@ -111,11 +113,19 @@ const routes: Routes = [
   {
     path: 'forgot-password', component: ForgotPasswordComponent
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    canLoad: [AuthGuard]
+  },
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+    preloadingStrategy: SelectivePreloadingStrategyService
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

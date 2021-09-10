@@ -13,3 +13,55 @@ span.votes {
 .vote-btn:hover {
   color: #009688;
 }
+
+.stake-custom-control input {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  border-radius: 0;
+}
+
+.stake-custom-control .input-group-append {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  border-radius: 0;
+}
+
+.stake-custom-control .input-group-append .input-group-text {
+  background-color: transparent;
+  color: #888888;
+  border: none;
+}
+
+.separator {
+  box-sizing: border-box;
+  margin: 0 12px;
+  width: 1px;
+  height: 32px;
+  background-color: #EAECEF;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.stake-custom-control input::-webkit-outer-spin-button,
+.stake-custom-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.stake-custom-control input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.ng-invalid:not(.ng-pristine):not(form) {
+  border-bottom: 1px solid #CCCCCC !important;
+}
+
+.ng-invalid:not(.ng-pristine):not(form) + .input-group-append .input-group-text {
+  border-bottom: none !important;
+}
+
+.is-invalid ~ .invalid-feedback {
+  display: block;
+}

@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { WalletService } from '../../services/wallet.service';
+import { AuthService } from '../../../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-n1ce-toolbar',
@@ -13,7 +15,9 @@ export class N1ceToolbarComponent implements OnInit {
 
   constructor(
     public walletService: WalletService,
-    private _cdr: ChangeDetectorRef
+    private _cdr: ChangeDetectorRef,
+    public authService: AuthService,
+    public router: Router
   ) { }
 
   ngOnInit(): void {
@@ -46,5 +50,10 @@ export class N1ceToolbarComponent implements OnInit {
     this.walletService.disconnect();
     this.connectedAccount = null;
     this._cdr.detectChanges();
+  }
+
+  signOut() {
+    this.authService.logout();
+    window.location.reload();
   }
 }

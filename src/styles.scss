@@ -191,11 +191,16 @@ h2.signup-custom-title::after {
   margin-top: 10px;
 }
 
+.no-effects:hover, .no-effects:focus {
+  text-decoration: none;
+  box-shadow: none;
+}
+
 hr.solid {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-[ng-reflect-router-link] {
+[ng-reflect-router-link], .clickable {
   cursor: pointer;
 }
 

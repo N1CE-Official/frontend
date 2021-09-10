@@ -27,16 +27,55 @@ a.navbar-brand {
   margin-left: 140px;
 }
 
-@media screen and (max-width: 991px) {
+img.author-img {
+  width: 48px;
+  height: 48px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+div.overlay-container {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.overlay-content {
+  position: absolute;
+}
+
+.top-left {
+  left: 0;
+  top: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.badge {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1249px) {
   img.brand-logo{
     height: 50px;
   }
 
   a.navbar-brand {
-    margin: 0 auto;
+    margin-left: 50px;
   }
 
   .navbar .nav-link {
     padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  a.navbar-brand {
+    margin: 0 auto;
   }
 }

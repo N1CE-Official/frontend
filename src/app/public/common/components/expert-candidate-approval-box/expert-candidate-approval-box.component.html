@@ -1,11 +1,50 @@
 <div class="card rounded-10 text-center bg-n1ce border-0">
   <div class="card-body">
-    <button class="btn btn-oval bg-white vote-btn">
+    <button class="btn btn-oval bg-white vote-btn" (click)="showStakeDialog(content)">
       <fa-icon [icon]="['far', 'thumbs-up']" size="lg"></fa-icon>
     </button>
     <span *ngIf="votes" class="votes">{{votes}}</span>
-    <button class="btn btn-oval bg-white vote-btn">
+    <button class="btn btn-oval bg-white vote-btn" (click)="showStakeDialog(content)">
       <fa-icon [icon]="['far', 'thumbs-down']" size="lg"></fa-icon>
     </button>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Forgot Password?</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="stake()">
+      <div class="form-group stake-custom-control">
+        <label for="stakingAmount"></label>
+        <div class="input-group" [ngClass]="validAmount()? '' : 'is-invalid'">
+          <input id="stakingAmount" name="stakingAmount" type="number" class="form-control" [(ngModel)]="stakingAmount"
+                 placeholder="Choose the amount to stake" required/>
+          <div class="input-group-append">
+            <button type="button" class="btn btn-link color-primary pr-0 no-effects" (click)="setMaxAmount()">MAX</button>
+            <div class="input-group-text pl-0">
+              <div class="separator"></div>
+              <span>N1CE</span>
+            </div>
+          </div>
+        </div>
+        <div class="invalid-feedback">
+          {{invalidMessage()}}
+        </div>
+        <div class="mt-4">
+          <span>Your tokens will be locked for 7 days. When the selection process ends, you will receive rewards based on your choice and staked amount.</span>
+        </div>
+        <div class="text-right">
+          <button type="submit" class="btn btn-n1ce py-2 px-4 mt-3">Stake</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-n1ce-outline" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
