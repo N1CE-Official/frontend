@@ -8,7 +8,7 @@
     <div class="col-6 col-md-4 col-xl-2" *ngFor="let cat of categories">
       <div class="category" routerLink="/explore/{{cat.title}}">
         <fa-icon [icon]="cat.icon" size="2x"></fa-icon>
-        <app-category-title [titleText]="cat.title" class="mt-3"></app-category-title>
+        <app-n1ce-custom-title [titleText]="cat.title" class="mt-3"></app-n1ce-custom-title>
       </div>
     </div>
   </div>

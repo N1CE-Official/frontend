@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <app-user-orders></app-user-orders>
+    <app-user-favorite-services></app-user-favorite-services>
+    <app-user-favorite-posts></app-user-favorite-posts>
+    <app-home-lower-banner-section></app-home-lower-banner-section>
+  </div>
+  <div class="col-12 col-lg-3 offset-0 offset-lg-1">
+    <div class="mt-3">
+      <div class="card rounded-10">
+        <div class="card-body">
+          <div class="card-title">
+            <div class="d-inline-flex">
+              <img src="{{authService.loggedUser.picture}}" class="img-round author-img mx-auto" alt="Profile">
+              <h5 class="my-auto ml-2">{{authService.loggedUser.name}}</h5>
+            </div>
+          </div>
+          <div class="card-text">
+            Member since: <ng-container>{{printTime(authService.loggedUser.memberSince) | date}}</ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

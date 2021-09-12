@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CategoryTitleComponent } from './category-title.component';
+import { N1ceCustomTitleComponent } from './n1ce-custom-title.component';
 
 describe('ArticleTitleComponent', () => {
-  let component: CategoryTitleComponent;
-  let fixture: ComponentFixture<CategoryTitleComponent>;
+  let component: N1ceCustomTitleComponent;
+  let fixture: ComponentFixture<N1ceCustomTitleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CategoryTitleComponent ]
+      declarations: [ N1ceCustomTitleComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CategoryTitleComponent);
+    fixture = TestBed.createComponent(N1ceCustomTitleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

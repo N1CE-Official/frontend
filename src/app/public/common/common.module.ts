@@ -39,8 +39,8 @@ import { TopExpertsSectionComponent } from './components/top-experts-section/top
     OurExpertsPageComponent,
     VoteOurExpertsSectionComponent,
     TopExpertsSectionComponent,],
-  exports: [ExpertDetailComponent,ExpertCandidateDetailComponent,],
-  entryComponents: [ExpertDetailComponent,ExpertCandidateDetailComponent,]
+  exports: [ExpertDetailComponent, ExpertCandidateDetailComponent, HomeLowerBannerSectionComponent,],
+  entryComponents: [ExpertDetailComponent, ExpertCandidateDetailComponent,]
 })
 
 export class CommonModule {

@@ -22,7 +22,8 @@ export class AuthService {
         this.loggedUser = {
           id: 'Test User',
           name: 'Test User',
-          picture: 'https://www.w3schools.com/howto/img_avatar.png'
+          picture: 'https://www.w3schools.com/howto/img_avatar.png',
+          memberSince: '20210904'
         };
       })
     );

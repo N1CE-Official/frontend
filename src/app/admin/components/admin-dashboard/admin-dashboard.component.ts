@@ -3,8 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { SelectivePreloadingStrategyService } from '../../selective-preloading-strategy.service';
-import { AuthService } from '../../auth/auth.service';
+import { SelectivePreloadingStrategyService } from '../../../selective-preloading-strategy.service';
+import { AuthService } from '../../../auth/auth.service';
+import { TimeUtils } from '../../../shared/utils/time.utils';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -34,5 +35,9 @@ export class AdminDashboardComponent implements OnInit {
     this.token = this.route
       .fragment
       .pipe(map(fragment => fragment || 'None'));
+  }
+
+  printTime(memberSince: string): Date {
+    return TimeUtils.toDate(memberSince, false);
   }
 }

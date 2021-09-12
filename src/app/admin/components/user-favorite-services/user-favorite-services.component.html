@@ -1,0 +1,10 @@
+<div class="my-3">
+  <app-n1ce-custom-title [titleText]="'Your Favorite Services'"></app-n1ce-custom-title>
+  <ng-container *ngIf="(favoriteServices$ | async) as favoriteServices">
+    <div class="mt-3 row">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let fav of favoriteServices">
+        <app-service-card [serviceId]="fav.serviceId"></app-service-card>
+      </div>
+    </div>
+  </ng-container>
+</div>

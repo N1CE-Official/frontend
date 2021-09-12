@@ -4,9 +4,14 @@ import {
   BlogCategory,
   BlogPost,
   Expert,
-  ExpertPlatformService, SearchResult,
+  ExpertPlatformService,
+  Order,
+  SearchResult,
   ServiceCategory,
-  ServiceReview, User
+  ServiceReview,
+  User,
+  UserFavoritePost,
+  UserFavoriteService
 } from '../classes/models';
 import { faBullhorn, faChartLine, faCode, faFan, faGlobe, faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
@@ -186,7 +191,9 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.6,
-        reviews: 189
+        reviews: 189,
+        memberSince: '20210901',
+        expertSince: '20210910'
       },
       {
         id: 'Expert 2',
@@ -200,7 +207,8 @@ export class InMemoryDataService implements InMemoryDbService {
         reviews: 231,
         candidatureVotes: 55,
         candidatureEndTime: '20210915113600',
-        candidatureStakedAmount: 123800
+        candidatureStakedAmount: 123800,
+        memberSince: '20210901'
       },
       {
         id: 'Expert 3',
@@ -214,7 +222,8 @@ export class InMemoryDataService implements InMemoryDbService {
         reviews: 48,
         candidatureVotes: 124,
         candidatureEndTime: '20210918112200',
-        candidatureStakedAmount: 15480
+        candidatureStakedAmount: 15480,
+        memberSince: '20210901'
       },
       {
         id: 'Expert 4',
@@ -225,7 +234,9 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.8,
-        reviews: 21
+        reviews: 21,
+        memberSince: '20210901',
+        expertSince: '20210910'
       },
       {
         id: 'Expert 5',
@@ -236,7 +247,9 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         shortBio: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
         rating: 4.9,
-        reviews: 48
+        reviews: 48,
+        memberSince: '20210901',
+        expertSince: '20210910'
       }
     ];
     const serviceCategories: ServiceCategory[] = [
@@ -404,12 +417,14 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 'user123',
         name: 'John Doe',
-        picture: 'https://static.thenounproject.com/png/363640-200.png'
+        picture: 'https://static.thenounproject.com/png/363640-200.png',
+        memberSince: '20210902'
       },
       {
         id: 'user456',
         name: 'Jane Doe',
-        picture: 'https://static.thenounproject.com/png/363640-200.png'
+        picture: 'https://static.thenounproject.com/png/363640-200.png',
+        memberSince: '20210903'
       }
     ];
     const search: SearchResult[] = [
@@ -430,6 +445,24 @@ export class InMemoryDataService implements InMemoryDbService {
         featuredImg: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       }
     ];
+    const orders: Order[] = [
+      {
+        id: 'Order1', userId: 'Test User', serviceId: '1', startDate: '20210912090000', price: 99
+      }
+    ];
+    const userFavoriteServices: UserFavoriteService[] = [
+      {
+        userId: 'Test User', serviceId: '1'
+      }
+    ];
+    const userFavoritePosts: UserFavoritePost[] = [
+      {
+        userId: 'Test User', postId: '3'
+      },
+      {
+        userId: 'Test User', postId: 't1'
+      },
+    ];
     return {
       posts,
       blogCategories,
@@ -445,6 +478,9 @@ export class InMemoryDataService implements InMemoryDbService {
       users,
       search,
       topExperts,
+      orders,
+      userFavoriteServices,
+      userFavoritePosts,
     };
   }
 }

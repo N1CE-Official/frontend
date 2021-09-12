@@ -45,13 +45,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div ngbDropdown class="d-lg-none ml-3" display="dynamic" placement="bottom-right">
-      <div class="overlay-container">
-        <div class="overlay-content top-left">
-          <img src="{{authService.loggedUser.picture}}" id="profilePic" ngbDropdownToggle
-               class="img-round author-img mx-auto clickable" alt="Profile">
-        </div>
-        <span class="badge badge-pill badge-danger clickable overlay-content bottom-right" routerLink="admin/notifications">1</span>
-      </div>
+      <img src="{{authService.loggedUser.picture}}" id="profilePic" ngbDropdownToggle
+           class="img-round author-img mx-auto clickable" alt="Profile">
       <div ngbDropdownMenu aria-labelledby="profilePic">
         <button ngbDropdownItem routerLink="admin/profile">Profile</button>
         <button ngbDropdownItem (click)="signOut()">Sign Out</button>
@@ -70,7 +65,12 @@
           <a class="nav-link" routerLink="blog" routerLinkActive="active">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="message-center" routerLinkActive="active">Messages</a>
+          <div class="overlay-container">
+            <div class="overlay-content top-left">
+              <a class="nav-link" routerLink="message-center" routerLinkActive="active">Messages</a>
+            </div>
+            <span class="badge badge-pill badge-danger clickable overlay-content bottom-right">1</span>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="admin" routerLinkActive="active">Dashboard</a>
@@ -85,13 +85,8 @@
         Connect Wallet
       </button>
       <div ngbDropdown class="ml-3 d-none d-lg-block" display="dynamic" placement="bottom-right">
-        <div class="overlay-container">
-          <div class="overlay-content top-left">
-            <img src="{{authService.loggedUser.picture}}" id="profilePic" ngbDropdownToggle
-                 class="img-round author-img mx-auto clickable" alt="Profile">
-          </div>
-          <span class="badge badge-pill badge-danger clickable overlay-content bottom-right" routerLink="admin/notifications">1</span>
-        </div>
+        <img src="{{authService.loggedUser.picture}}" id="profilePic" ngbDropdownToggle
+             class="img-round author-img mx-auto clickable" alt="Profile">
         <div ngbDropdownMenu aria-labelledby="profilePic">
           <button ngbDropdownItem routerLink="admin/profile">Profile</button>
           <button ngbDropdownItem (click)="signOut()">Sign Out</button>

@@ -1,5 +1,4 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { CategoryTitleComponent } from './components/category-title/category-title.component';
 import { ExpertBadgeComponent } from './components/expert-badge/expert-badge.component';
 import { ExpertBadgeForServicesComponent } from './components/expert-badge-for-services/expert-badge-for-services.component';
 import { ExpertBadgeInEvidenceComponent } from './components/expert-badge-in-evidence/expert-badge-in-evidence.component';
@@ -14,10 +13,12 @@ import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.comp
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [SharedModule, FormsModule],
-  declarations: [CategoryTitleComponent,
+  imports: [
+    SharedModule, FormsModule, RouterModule,],
+  declarations: [
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
     ExpertBadgeInEvidenceComponent,
@@ -30,7 +31,9 @@ import { FormsModule } from '@angular/forms';
     SignUpPageComponent,
     LoginPageComponent,
     ForgotPasswordComponent,],
-  exports: [FormsModule, CategoryTitleComponent,
+  exports: [
+    FormsModule,
+    RouterModule,
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
     ExpertBadgeInEvidenceComponent,
@@ -41,7 +44,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     ExpertCandidateCardComponent,
     ExpertFooterForServicesComponent,],
-  entryComponents: [CategoryTitleComponent,
+  entryComponents: [
     ExpertBadgeComponent,
     ExpertBadgeForServicesComponent,
     ExpertBadgeInEvidenceComponent,

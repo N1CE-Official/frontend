@@ -19,6 +19,7 @@ export class User {
   id: string = '';
   name?: string;
   picture?: string;
+  memberSince: string = '';
 }
 
 export class Expert extends User{
@@ -29,6 +30,7 @@ export class Expert extends User{
   candidatureVotes?: number = 0;
   candidatureEndTime?: string;
   candidatureStakedAmount?: number = 0;
+  expertSince?: string;
 }
 
 export class ServiceCategory {
@@ -64,4 +66,23 @@ export class SearchResult {
   featuredImg?: string;
   snippet: string = '';
   expertId: string = '';
+}
+
+export class Order {
+  id: string = '';
+  userId: string = '';
+  serviceId: string = '';
+  startDate: string = '';
+  endDate?: string;
+  price: number = 0;
+}
+
+export class UserFavoriteService {
+  userId: string = '';
+  serviceId: string = '';
+}
+
+export class UserFavoritePost {
+  userId: string = '';
+  postId: string = '';
 }

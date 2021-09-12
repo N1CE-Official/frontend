@@ -20,13 +20,13 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <app-category-title [titleText]="'Custom Services'"></app-category-title>
+        <app-n1ce-custom-title [titleText]="'Custom Services'"></app-n1ce-custom-title>
         <app-service-list *ngIf="(services$ | async) as services" [services]="services"></app-service-list>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <app-category-title [titleText]="'Published Content'"></app-category-title>
+        <app-n1ce-custom-title [titleText]="'Published Content'"></app-n1ce-custom-title>
         <app-blog-post-list *ngIf="(posts$ | async) as posts" [blogPosts]="posts"></app-blog-post-list>
       </div>
     </div>

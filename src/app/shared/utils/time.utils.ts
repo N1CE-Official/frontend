@@ -13,9 +13,13 @@ export class TimeUtils {
     ['S', 1] // million seconds
   ];
 
-  static toDate(date: string): Date {
+  static toDate(date: string, time: boolean = true): Date {
     if (date) {
-      const parsed = moment(date, 'YYYYMMDDHHmmss');
+      let format = 'YYYYMMDD';
+      if (time) {
+        format += 'HHmmss';
+      }
+      const parsed = moment(date, format);
       return parsed.toDate();
     }
     return new Date();

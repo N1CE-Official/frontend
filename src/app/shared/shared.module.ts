@@ -2,8 +2,6 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { N1ceToolbarComponent } from './components/n1ce-toolbar/n1ce-toolbar.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SystemMessagesComponent } from './components/system-messages/system-messages.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -34,35 +32,35 @@ import {
   faWallet
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as starOutline, faThumbsDown, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
-import { AppRoutingModule } from '../app-routing.module';
-import { CommonModule } from '@angular/common';
 import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.component';
 import { TimeagoModule } from 'ngx-timeago';
 import { CountdownModule } from 'ngx-countdown';
+import { N1ceCustomTitleComponent } from './components/n1ce-custom-title/n1ce-custom-title.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule, NgbModule, HttpClientModule,
+    RouterModule, CommonModule,
+    NgbModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false, passThruUnknownUrl: true}
     ), FontAwesomeModule,
-    TimeagoModule.forRoot(), CountdownModule],
+    TimeagoModule.forRoot(), CountdownModule,],
   declarations: [
     N1ceToolbarComponent,
     PageNotFoundComponent,
     SystemMessagesComponent,
-    N1ceFooterComponent,],
+    N1ceFooterComponent,
+    N1ceCustomTitleComponent,],
   exports: [
-    N1ceToolbarComponent,
+    N1ceToolbarComponent, CommonModule,
     PageNotFoundComponent,
     SystemMessagesComponent,
-    AppRoutingModule,
     FontAwesomeModule,
-    CommonModule,
     N1ceFooterComponent,
     TimeagoModule, CountdownModule,
+    N1ceCustomTitleComponent,
   ],
   entryComponents: [
     N1ceToolbarComponent,

@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AdminComponent } from './admin/admin.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { ManageCrisesComponent } from './manage-crises/manage-crises.component';
-import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 import { AuthGuard } from '../auth/auth.guard';
+import { UserOrdersComponent } from './components/user-orders/user-orders.component';
+import { UserFavoriteServicesComponent } from './components/user-favorite-services/user-favorite-services.component';
+import { UserFavoritePostsComponent } from './components/user-favorite-posts/user-favorite-posts.component';
+import { UserOrdersResolverService } from './resolvers/user-orders-resolver.service';
+import { UserFavoriteServiceResolverService } from './resolvers/user-favorite-service-resolver.service';
+import { UserFavoritePostsResolverService } from './resolvers/user-favorite-posts-resolver.service';
 
 const adminRoutes: Routes = [
   {
@@ -18,9 +22,18 @@ const adminRoutes: Routes = [
         path: '',
         canActivateChild: [AuthGuard],
         children: [
-          { path: 'crises', component: ManageCrisesComponent },
-          { path: 'heroes', component: ManageHeroesComponent },
-          { path: '', component: AdminDashboardComponent }
+          {path: 'orders', component: UserOrdersComponent},
+          {path: 'favorite-services', component: UserFavoriteServicesComponent},
+          {path: 'favorite-posts', component: UserFavoritePostsComponent},
+          {
+            path: '', component: AdminDashboardComponent, resolve: {
+              orders: UserOrdersResolverService,
+              favoriteServices: UserFavoriteServiceResolverService,
+              favoritePosts: UserFavoritePostsResolverService
+            }, data: {
+              userId: 'Test User'
+            }
+          }
         ]
       }
     ]
@@ -35,4 +48,5 @@ const adminRoutes: Routes = [
     RouterModule
   ]
 })
-export class AdminRoutingModule {}
+export class AdminRoutingModule {
+}
