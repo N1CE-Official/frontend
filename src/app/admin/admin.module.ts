@@ -7,12 +7,15 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { UserOrdersComponent } from './components/user-orders/user-orders.component';
 import { UserFavoriteServicesComponent } from './components/user-favorite-services/user-favorite-services.component';
 import { UserFavoritePostsComponent } from './components/user-favorite-posts/user-favorite-posts.component';
-import { N1ceCustomTitleComponent } from './components/n1ce-custom-title/n1ce-custom-title.component';
 import { OrderCardComponent } from './components/order-card/order-card.component';
 import { PlatformModule } from '../public/platform/platform.module';
 import { CommonModule } from '@angular/common';
 import { BlogModule } from '../public/blog/blog.module';
 import { CommonModule as CommonN1CEModule } from '../public/common/common.module';
+import { FavoriteServiceCardComponent } from './components/favorite-service-card/favorite-service-card.component';
+import { SharedModule } from '../shared/shared.module';
+import { PublicSharedModule } from '../public/shared/public.shared.module';
+import { FavoriteBlogPostCardComponent } from './components/favorite-blog-post-card/favorite-blog-post-card.component';
 
 @NgModule({
   imports: [
@@ -20,7 +23,9 @@ import { CommonModule as CommonN1CEModule } from '../public/common/common.module
     PlatformModule,
     CommonModule,
     BlogModule,
-    CommonN1CEModule
+    CommonN1CEModule,
+    SharedModule,
+    PublicSharedModule
   ],
   declarations: [
     AdminComponent,
@@ -28,8 +33,9 @@ import { CommonModule as CommonN1CEModule } from '../public/common/common.module
     UserOrdersComponent,
     UserFavoriteServicesComponent,
     UserFavoritePostsComponent,
-    N1ceCustomTitleComponent,
     OrderCardComponent,
+    FavoriteServiceCardComponent,
+    FavoriteBlogPostCardComponent,
   ]
 })
 export class AdminModule {}

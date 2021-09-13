@@ -1,15 +1,15 @@
 <div *ngIf="expert" class="row">
   <div class="d-flex col-12">
     <div>
-      <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile"
+      <img src="{{expert.picture}}" class="img-round author-img mx-auto clickable" alt="Profile"
            routerLink="/expert/{{expert.id}}">
     </div>
     <div class="ml-3">
       <div>
-        <span class="expert-name" routerLink="/expert/{{expert.id}}">{{expert.name}}</span>
+        <span class="expert-name clickable" routerLink="/expert/{{expert.id}}">{{expert.name}}</span>
       </div>
       <div>
-        <a *ngFor="let tag of expert.expertise" class="mr-1 expert-tag" routerLink="/explore/{{tag}}">{{tag}}</a>
+        <a *ngFor="let tag of expert.expertise" class="mr-1 expert-tag clickable" routerLink="/explore/{{tag}}">{{tag}}</a>
       </div>
     </div>
   </div>

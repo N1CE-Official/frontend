@@ -21,17 +21,17 @@ import {
 import {
   faBullhorn,
   faChartLine,
-  faCode,
+  faCode, faEllipsisV,
   faEnvelope,
   faFan,
-  faGlobe,
+  faGlobe, faHeart,
   faLock,
   faPaintBrush,
   faSearch,
   faStar,
   faWallet
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as starOutline, faThumbsDown, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import { faStar as starOutline, faThumbsDown, faThumbsUp, faHeart as heartOutline } from '@fortawesome/free-regular-svg-icons';
 import { N1ceFooterComponent } from './components/n1ce-footer/n1ce-footer.component';
 import { TimeagoModule } from 'ngx-timeago';
 import { CountdownModule } from 'ngx-countdown';
@@ -79,6 +79,6 @@ export class SharedModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookSquare, faLinkedin, faTwitter, faTelegram, faMedium,
       faInstagram, faDribbble, faStar, starOutline, faCode, faGlobe, faPaintBrush, faFan, faBullhorn, faChartLine,
-      faThumbsUp, faThumbsDown, faWallet, faSearch, faEnvelope, faLock, faFacebookF, faGooglePlusG)
+      faThumbsUp, faThumbsDown, faWallet, faSearch, faEnvelope, faLock, faFacebookF, faGooglePlusG, faEllipsisV, faHeart, heartOutline)
   }
 }

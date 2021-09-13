@@ -6,7 +6,7 @@
         <h5>Categories</h5>
         <ul *ngIf="(categoryTitles$ | async) as categories">
           <li *ngFor="let cat of categories">
-            <a routerLink="/explore/{{cat}}">{{cat}}</a>
+            <a class="clickable" routerLink="/explore/{{cat}}">{{cat}}</a>
           </li>
         </ul>
       </div>
@@ -14,10 +14,10 @@
         <h5>About</h5>
         <ul>
           <li>
-            <a routerLink="terms-conditions">Terms & Conditions</a>
+            <a class="clickable" routerLink="terms-conditions">Terms & Conditions</a>
           </li>
           <li>
-            <a routerLink="privacy-policy">Privacy Policy</a>
+            <a class="clickable" routerLink="privacy-policy">Privacy Policy</a>
           </li>
           <li>
             <a href="https://forms.gle/Dh7ZdLKmDJhvevDy6" target="_blank">Partnerships</a>
@@ -28,10 +28,10 @@
         <h5>Support</h5>
         <ul>
           <li>
-            <a routerLink="faq">F.A.Q</a>
+            <a class="clickable" routerLink="faq">F.A.Q</a>
           </li>
           <li>
-            <a routerLink="support">Support Center</a>
+            <a class="clickable" routerLink="support">Support Center</a>
           </li>
         </ul>
       </div>
@@ -49,7 +49,7 @@
       <div class="col-12">
         <div class="d-flex">
           <a class="footer-brand" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="N1CE Logo"
-                                                     class="brand-logo"></a>
+                                                     class="brand-logo clickable"></a>
           <span class="n1ce-spacer"></span>
           <div class="vertical-middle text-center">
             <div class="mb-1 price" *ngIf="(price$ | async) as price">

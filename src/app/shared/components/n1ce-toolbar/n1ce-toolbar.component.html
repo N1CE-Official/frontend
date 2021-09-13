@@ -1,6 +1,6 @@
 <ng-container *ngIf="!authService.isLoggedIn">
   <nav class="navbar fixed-top bg-white navbar-light navbar-expand-lg">
-    <a class="navbar-brand" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="..." class="brand-logo"></a>
+    <a class="navbar-brand clickable" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="..." class="brand-logo"></a>
     <button class="navbar-toggler hidden-sm-up" type="button" (click)="isMenuCollapsed = !isMenuCollapsed"
             data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -10,19 +10,19 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <a class="nav-link clickable" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="explore" routerLinkActive="active">Explore</a>
+          <a class="nav-link clickable" routerLink="explore" routerLinkActive="active">Explore</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="blog" routerLinkActive="active">Blog</a>
+          <a class="nav-link clickable" routerLink="blog" routerLinkActive="active">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="our-experts" routerLinkActive="active">Our Experts</a>
+          <a class="nav-link clickable" routerLink="our-experts" routerLinkActive="active">Our Experts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="sign-up" routerLinkActive="active">Sign Up</a>
+          <a class="nav-link clickable" routerLink="sign-up" routerLinkActive="active">Sign Up</a>
         </li>
       </ul>
       <button *ngIf="connectedAccount && n1ceBalance" type="button" class="btn btn-n1ce btn-oval"
@@ -38,7 +38,7 @@
 </ng-container>
 <ng-container *ngIf="authService.isLoggedIn">
   <nav class="navbar fixed-top bg-white navbar-light navbar-expand-lg">
-    <a class="navbar-brand" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="..." class="brand-logo"></a>
+    <a class="navbar-brand clickable" routerLink=""><img src="assets/img/N1CE logo svg-01.svg" alt="..." class="brand-logo"></a>
     <button class="navbar-toggler hidden-sm-up" type="button" (click)="isMenuCollapsed = !isMenuCollapsed"
             data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
       <img src="{{authService.loggedUser.picture}}" id="profilePic" ngbDropdownToggle
            class="img-round author-img mx-auto clickable" alt="Profile">
       <div ngbDropdownMenu aria-labelledby="profilePic">
-        <button ngbDropdownItem routerLink="admin/profile">Profile</button>
+        <button class="clickable" ngbDropdownItem routerLink="admin/profile">Profile</button>
         <button ngbDropdownItem (click)="signOut()">Sign Out</button>
       </div>
     </div>
@@ -56,24 +56,24 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <a class="nav-link clickable" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="explore" routerLinkActive="active">Explore</a>
+          <a class="nav-link clickable" routerLink="explore" routerLinkActive="active">Explore</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="blog" routerLinkActive="active">Blog</a>
+          <a class="nav-link clickable" routerLink="blog" routerLinkActive="active">Blog</a>
         </li>
         <li class="nav-item">
           <div class="overlay-container">
             <div class="overlay-content top-left">
-              <a class="nav-link" routerLink="message-center" routerLinkActive="active">Messages</a>
+              <a class="nav-link clickable" routerLink="message-center" routerLinkActive="active">Messages</a>
             </div>
             <span class="badge badge-pill badge-danger clickable overlay-content bottom-right">1</span>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="admin" routerLinkActive="active">Dashboard</a>
+          <a class="nav-link clickable" routerLink="admin" routerLinkActive="active">Dashboard</a>
         </li>
       </ul>
       <button *ngIf="connectedAccount && n1ceBalance" type="button" class="btn btn-n1ce btn-oval"
@@ -88,7 +88,7 @@
         <img src="{{authService.loggedUser.picture}}" id="profilePic" ngbDropdownToggle
              class="img-round author-img mx-auto clickable" alt="Profile">
         <div ngbDropdownMenu aria-labelledby="profilePic">
-          <button ngbDropdownItem routerLink="admin/profile">Profile</button>
+          <button class="clickable" ngbDropdownItem routerLink="admin/profile">Profile</button>
           <button ngbDropdownItem (click)="signOut()">Sign Out</button>
         </div>
       </div>

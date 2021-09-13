@@ -1,4 +1,4 @@
-<div *ngIf="expert" routerLink="/expert/{{expert.id}}" class="row">
+<div *ngIf="expert" routerLink="/expert/{{expert.id}}" class="row clickable">
   <div class="col-3">
     <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
   </div>
@@ -7,7 +7,7 @@
       <span class="expert-name">{{expert.name}}</span>
     </div>
     <div>
-      <a *ngFor="let tag of expert.expertise" class="mr-1 expert-tag" routerLink="/explore/{{tag}}">{{tag}}</a>
+      <a *ngFor="let tag of expert.expertise" class="mr-1 expert-tag clickable" routerLink="/explore/{{tag}}">{{tag}}</a>
     </div>
   </div>
 </div>
