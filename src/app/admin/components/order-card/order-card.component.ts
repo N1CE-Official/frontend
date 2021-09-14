@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Order } from '../../../shared/classes/models';
+import { TimeUtils } from '../../../shared/utils/time.utils';
 
 @Component({
   selector: 'app-order-card',
@@ -16,4 +17,7 @@ export class OrderCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getDate(date: string) : Date{
+    return TimeUtils.toDate(date, true);
+  }
 }

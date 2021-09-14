@@ -14,6 +14,7 @@ import { BlogModule } from '../public/blog/blog.module';
 import { CommonModule as CommonN1CEModule } from '../public/common/common.module';
 import { SharedModule } from '../shared/shared.module';
 import { PublicSharedModule } from '../public/shared/public.shared.module';
+import { SubmitApplicationPage } from './components/selection-process/submit-application-page/submit-application-page.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { PublicSharedModule } from '../public/shared/public.shared.module';
     UserFavoriteServicesComponent,
     UserFavoritePostsComponent,
     OrderCardComponent,
+    SubmitApplicationPage,
   ]
 })
 export class AdminModule {

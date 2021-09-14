@@ -11,6 +11,7 @@ import { UserFavoritePostsComponent } from './components/user-favorite-posts/use
 import { UserOrdersResolverService } from './resolvers/user-orders-resolver.service';
 import { UserFavoriteServiceResolverService } from './resolvers/user-favorite-service-resolver.service';
 import { UserFavoritePostsResolverService } from './resolvers/user-favorite-posts-resolver.service';
+import { SubmitApplicationPage } from './components/selection-process/submit-application-page/submit-application-page.component';
 
 const adminRoutes: Routes = [
   {
@@ -25,6 +26,7 @@ const adminRoutes: Routes = [
           {path: 'orders', component: UserOrdersComponent},
           {path: 'favorite-services', component: UserFavoriteServicesComponent},
           {path: 'favorite-posts', component: UserFavoritePostsComponent},
+          {path: 'submit-application', component: SubmitApplicationPage},
           {
             path: '', component: AdminDashboardComponent, resolve: {
               orders: UserOrdersResolverService,

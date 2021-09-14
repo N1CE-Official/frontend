@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 })
 export class ServiceCardComponent implements OnInit, OnChanges {
   @Input() serviceId!: string;
+  @Input() showFavIcon: boolean = true;
+
   service!: ExpertPlatformService;
   expert!: Expert;
   public currentFavoriteIcon: IconProp = heartOutline;

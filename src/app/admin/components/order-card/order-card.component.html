@@ -2,13 +2,11 @@
   <div class="card rounded-10">
     <div class="card-body">
       <div class="card-title" routerLink="/order/{{order.id}}">
-        Order #{{order.id}}
+        <h5>Order #{{order.id}}</h5>
+        <span>Buy price: ${{order.price}}</span><br/>
+        <span>Date: {{getDate(order.startDate) | date: 'medium'}}</span>
       </div>
-      <app-service-card [serviceId]="order.serviceId"></app-service-card>
-      <div class="card-text mt-2">
-        <span>Service bought for ${{order.price}}</span><br/>
-        <span>On date: {{order.startDate | date}}</span>
-      </div>
+      <app-service-card [serviceId]="order.serviceId" [showFavIcon]="false"></app-service-card>
     </div>
   </div>
 </ng-container>
