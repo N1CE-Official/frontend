@@ -1,11 +1,12 @@
-<div *ngIf="expert" routerLink="/expert/{{expert.id}}" class="row container mx-auto clickable">
+<div *ngIf="expert" class="row container mx-auto">
   <div class="d-flex col-12">
     <div>
-      <img src="{{expert.picture}}" class="img-round author-img mx-auto" alt="Profile">
+      <img src="{{expert.picture}}" class="img-round author-img mx-auto clickable" alt="Profile" routerLink="/expert/{{expert.id}}">
     </div>
     <div class="ml-2 my-auto">
-        <span class="expert-name">{{expert.name}}</span>
+        <span class="expert-name clickable" routerLink="/expert/{{expert.id}}">{{expert.name}}</span>
     </div>
     <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 ml-2">Hire (Starting from ${{startingPrice}})</button>
+    <fa-icon [icon]="currentFavoriteIcon" class="clickable ml-2 my-auto" size="2x" (click)="setFavorite()"></fa-icon>
   </div>
 </div>

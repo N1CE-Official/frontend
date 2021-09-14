@@ -8,8 +8,9 @@
     <div class="article-footer">
       <div class="pt-3 px-3 pb-0">
         <app-expert-badge-in-evidence *ngIf="post.expertId" [expertId]="post.expertId"></app-expert-badge-in-evidence>
-        <div class="card-footer text-white mt-2 font-size-small">
-          <span *ngIf="post.publishingTime" timeago [date]="toDate(post.publishingTime)"></span>
+        <div class="card-footer text-white mt-2">
+          <span class="font-size-small mr-3" *ngIf="post.publishingTime" timeago [date]="toDate(post.publishingTime)"></span>
+          <fa-icon [icon]="currentFavoriteIcon" class="clickable" (click)="setFavorite()"></fa-icon>
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 <ng-container *ngIf="order">
   <div class="card rounded-10">
     <div class="card-body">
-      <div class="card-title">
-        {{order.id}}
+      <div class="card-title" routerLink="/order/{{order.id}}">
+        Order #{{order.id}}
       </div>
-      <div class="card-text">
-        {{order.price}}
+      <app-service-card [serviceId]="order.serviceId"></app-service-card>
+      <div class="card-text mt-2">
+        <span>Service bought for ${{order.price}}</span><br/>
+        <span>On date: {{order.startDate | date}}</span>
       </div>
     </div>
   </div>

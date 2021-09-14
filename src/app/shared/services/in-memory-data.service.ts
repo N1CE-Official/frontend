@@ -447,7 +447,7 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     const orders: Order[] = [
       {
-        id: 'Order1', userId: 'Test User', serviceId: '1', startDate: '20210912090000', price: 99
+        id: '1', userId: 'Test User', serviceId: '1', startDate: '20210912090000', price: 99
       }
     ];
     const userFavoriteServices: UserFavoriteService[] = [

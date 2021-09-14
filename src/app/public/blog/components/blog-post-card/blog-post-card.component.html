@@ -1,11 +1,14 @@
 <div *ngIf="post" class="card rounded-18">
   <img src="{{post.featuredImg}}" class="card-img-top img-rounded clickable" alt="..." routerLink="/post/{{post.id}}">
-  <div class="card-body">
+  <div class="card-body py-1">
     <h5 class="card-title clickable" routerLink="/post/{{post.id}}">{{post.title}}</h5>
     <p class="card-text article-text clickable" routerLink="/post/{{post.id}}">{{post.snippet}}</p>
     <app-expert-badge *ngIf="post.expertId" [expertId]="post.expertId"></app-expert-badge>
     <div class="card-footer text-muted mt-2 font-size-small">
       <span *ngIf="post.publishingTime" timeago [date]="toDate(post.publishingTime)"></span>
     </div>
+  </div>
+  <div class="card-body text-right pt-0">
+    <fa-icon [icon]="currentFavoriteIcon" class="clickable" (click)="setFavorite()"></fa-icon>
   </div>
 </div>

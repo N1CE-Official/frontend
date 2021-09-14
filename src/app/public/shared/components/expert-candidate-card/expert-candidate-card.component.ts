@@ -2,6 +2,8 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 import { ExpertBadgeComponent } from '../expert-badge/expert-badge.component';
 import { ExpertService } from '../../../common/services/expert.service';
 import { TimeUtils } from '../../../../shared/utils/time.utils';
+import { AuthGuard } from '../../../../auth/auth.guard';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-expert-candidate-card',
@@ -11,8 +13,12 @@ import { TimeUtils } from '../../../../shared/utils/time.utils';
 export class ExpertCandidateCardComponent extends ExpertBadgeComponent implements OnInit, OnChanges {
   leftSeconds!: number;
 
-  constructor(public expertService: ExpertService) {
-    super(expertService)
+  constructor(
+    public expertService: ExpertService,
+    public authGuard: AuthGuard,
+    public router: Router
+  ) {
+    super(expertService, authGuard, router)
   }
 
   ngOnInit(): void {

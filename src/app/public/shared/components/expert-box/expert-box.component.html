@@ -1,8 +1,13 @@
 <div *ngIf="expert" class="card author-card text-center p-3">
-  <img src="{{expert.picture}}" class="img-round author-img mx-auto clickable" alt="Profile" routerLink="/expert/{{expert.id}}">
+  <img src="{{expert.picture}}" class="img-round author-img mx-auto clickable" alt="Profile"
+       routerLink="/expert/{{expert.id}}">
   <div class="card-body">
     <h5 class="card-title clickable" routerLink="/expert/{{expert.id}}">{{expert.name}}</h5>
-    <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 my-3">Hire (Starting from ${{startingPrice}})</button>
+    <div>
+      <button class="btn btn-n1ce btn-oval font-size-small px-4 py-2 my-3">Hire (Starting from ${{startingPrice}})
+      </button>
+      <fa-icon [icon]="currentFavoriteIcon" class="clickable ml-2" size="lg" (click)="setFavorite()"></fa-icon>
+    </div>
     <p class="card-text">{{expert.shortBio}}</p>
     <app-expert-tags *ngIf="expert.expertise" [tags]="expert.expertise"></app-expert-tags>
     <app-expert-social-icons></app-expert-social-icons>

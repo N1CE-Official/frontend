@@ -12,10 +12,8 @@ import { PlatformModule } from '../public/platform/platform.module';
 import { CommonModule } from '@angular/common';
 import { BlogModule } from '../public/blog/blog.module';
 import { CommonModule as CommonN1CEModule } from '../public/common/common.module';
-import { FavoriteServiceCardComponent } from './components/favorite-service-card/favorite-service-card.component';
 import { SharedModule } from '../shared/shared.module';
 import { PublicSharedModule } from '../public/shared/public.shared.module';
-import { FavoriteBlogPostCardComponent } from './components/favorite-blog-post-card/favorite-blog-post-card.component';
 
 @NgModule({
   imports: [
@@ -34,8 +32,7 @@ import { FavoriteBlogPostCardComponent } from './components/favorite-blog-post-c
     UserFavoriteServicesComponent,
     UserFavoritePostsComponent,
     OrderCardComponent,
-    FavoriteServiceCardComponent,
-    FavoriteBlogPostCardComponent,
   ]
 })
-export class AdminModule {}
+export class AdminModule {
+}
