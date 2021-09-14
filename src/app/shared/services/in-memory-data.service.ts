@@ -206,7 +206,7 @@ export class InMemoryDataService implements InMemoryDbService {
         rating: 4.4,
         reviews: 231,
         candidatureVotes: 55,
-        candidatureEndTime: '20210915113600',
+        candidatureEndTime: '20210925113600',
         candidatureStakedAmount: 123800,
         memberSince: '20210901'
       },
@@ -221,7 +221,7 @@ export class InMemoryDataService implements InMemoryDbService {
         rating: 4.9,
         reviews: 48,
         candidatureVotes: 124,
-        candidatureEndTime: '20210918112200',
+        candidatureEndTime: '20210928112200',
         candidatureStakedAmount: 15480,
         memberSince: '20210901'
       },

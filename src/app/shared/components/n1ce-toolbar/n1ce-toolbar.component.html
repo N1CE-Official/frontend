@@ -25,7 +25,7 @@
           <a class="nav-link clickable" routerLink="sign-up" routerLinkActive="active">Sign Up</a>
         </li>
       </ul>
-      <button *ngIf="connectedAccount && n1ceBalance" type="button" class="btn btn-n1ce btn-oval"
+      <button *ngIf="connectedAccount" type="button" class="btn btn-n1ce btn-oval"
               (click)="disconnectWallet()">
         <fa-icon [icon]="['fas', 'wallet']" class="mr-1"></fa-icon>
         {{connectedAccount}} | {{n1ceBalance}} N1CE
@@ -79,7 +79,7 @@
           <a class="nav-link clickable" routerLink="our-experts" routerLinkActive="active">Our Experts</a>
         </li>
       </ul>
-      <button *ngIf="connectedAccount && n1ceBalance" type="button" class="btn btn-n1ce btn-oval"
+      <button *ngIf="connectedAccount" type="button" class="btn btn-n1ce btn-oval"
               (click)="disconnectWallet()">
         <fa-icon [icon]="['fas', 'wallet']" class="mr-1"></fa-icon>
         {{connectedAccount}} | {{n1ceBalance}} N1CE

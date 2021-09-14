@@ -1,1 +1,52 @@
-<p>Submit Application Page works!</p>
+<div class="card rounded-10">
+  <div class="card-body">
+    <div class="col-12 col-lg-6">
+      <h4>Hi {{authService.loggedUser.name}}</h4>
+      <form>
+        <div class="form-row mt-2">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="category">Please select your expertise:</label>
+              <select id="category" name="category" class="form-control" required>
+                <option>Smart Contracts</option>
+                <option>Web Development</option>
+                <option>Graphic Design</option>
+                <option>Marketing</option>
+                <option>Mining</option>
+                <option>Market Analysis</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="bio">Write a short biography describing what you do:</label>
+              <textarea id="bio" name="bio" class="form-control" rows="4" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-12">
+            <div class="form-group">
+              <label>Upload 3 proofs of your competences:</label>
+              <div class="custom-file mb-3">
+                <input type="file" class="custom-file-input" id="proof1" name="proof1" required>
+                <label class="custom-file-label" for="proof1">Choose file 1</label>
+              </div>
+              <div class="custom-file mb-3">
+                <input type="file" class="custom-file-input" id="proof2" name="proof2" required>
+                <label class="custom-file-label" for="proof2">Choose file 2</label>
+              </div>
+              <div class="custom-file mb-3">
+                <input type="file" class="custom-file-input" id="proof3" name="proof3" required>
+                <label class="custom-file-label" for="proof3">Choose file 3</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-n1ce py-2 px-4">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
